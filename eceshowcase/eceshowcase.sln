@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangePage", "ChangePage\ChangePage.csproj", "{D7FE658C-71CF-4FF8-85AE-8EC57219BBD5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eceshowcase", "ChangePage\eceshowcase.csproj", "{D7FE658C-71CF-4FF8-85AE-8EC57219BBD5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -12,14 +12,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ChangePage.Pages
+namespace eceshowcase.Pages
 {
     /// <summary>
     /// Interaction logic for Electrical.xaml
     /// </summary>
-    public partial class Computer : UserControl, ISwitchable
+    public partial class Software : UserControl
     {
-        public Computer()
+        public Software()
         {
             InitializeComponent();
         }
@@ -28,14 +28,5 @@ namespace ChangePage.Pages
         {
             Switcher.Switch(new MainMenu());
         }
-
-        #region ISwitchable Members
-
-        public void UtilizeState(object state)
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion
     }
 }
