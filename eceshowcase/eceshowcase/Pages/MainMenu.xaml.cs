@@ -26,17 +26,17 @@ namespace eceshowcase.Pages
             InitializeComponent();
         }
 
-        private void softwareTextBlock_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void softwareButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Switcher.Switch(new Software());
         }
 
-        private void electricalTextBlock_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void electricalButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Switcher.Switch(new Electrical());
         }
 
-        private void computerTextBlock_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void computerButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Switcher.Switch(new Computer());
         }

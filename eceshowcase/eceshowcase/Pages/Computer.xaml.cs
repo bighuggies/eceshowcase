@@ -21,7 +21,7 @@ namespace eceshowcase.Pages
     {
         public Computer()
         {
-            Switcher.pageSwitcher.TransitionType = PageTransitionType.SlideAndFadeRight;
+            Switcher.pageSwitcher.TransitionType = PageTransitionType.SlideAndFadeLeft;
 
             InitializeComponent();
         }
