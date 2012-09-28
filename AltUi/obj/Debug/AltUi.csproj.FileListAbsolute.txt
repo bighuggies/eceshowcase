@@ -10,3 +10,5 @@
 \\engad.foe.auckland.ac.nz\engdfs\home\abor036\My Documents\Expression\Blend 4\Projects\AltUi\AltUi\obj\Debug\AltUi.pdb
 \\engad.foe.auckland.ac.nz\engdfs\Home\abor036\My Documents\Expression\Blend 4\Projects\AltUi\AltUi\obj\Debug\Simple Styles.baml
 \\engad.foe.auckland.ac.nz\engdfs\Home\abor036\My Documents\Expression\Blend 4\Projects\AltUi\AltUi\obj\Debug\App.baml
+\\engad.foe.auckland.ac.nz\engdfs\Home\abor036\My Documents\Expression\Blend 4\Projects\AltUi\AltUi\obj\Debug\StartPage.baml
+\\engad.foe.auckland.ac.nz\engdfs\Home\abor036\My Documents\Expression\Blend 4\Projects\AltUi\AltUi\obj\Debug\StartPage.g.cs
