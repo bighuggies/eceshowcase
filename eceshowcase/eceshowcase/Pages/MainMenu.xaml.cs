@@ -21,8 +21,9 @@ namespace eceshowcase.Pages
     {
         public MainMenu()
         {
-            InitializeComponent();
             Switcher.pageSwitcher.TransitionType = PageTransitionType.GrowAndFade;
+
+            InitializeComponent();
         }
 
         private void softwareTextBlock_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)

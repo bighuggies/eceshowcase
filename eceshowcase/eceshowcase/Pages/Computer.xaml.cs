@@ -21,8 +21,9 @@ namespace eceshowcase.Pages
     {
         public Computer()
         {
+            Switcher.pageSwitcher.TransitionType = PageTransitionType.SlideAndFadeRight;
+
             InitializeComponent();
-            Switcher.pageSwitcher.TransitionType = PageTransitionType.SlideAndFade;
         }
 
         private void Button_Click(object sender, System.Windows.RoutedEventArgs e)

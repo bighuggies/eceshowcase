@@ -18,7 +18,7 @@ namespace eceshowcase
 
         // Register TransitionType dependency property to PageSwitcher object. Initialised to SlideAndFade.
         public static readonly DependencyProperty TransitionTypeProperty = DependencyProperty.Register("TransitionType",
-            typeof(PageTransitionType), typeof(PageSwitcher), new PropertyMetadata(PageTransitionType.SlideAndFade));
+            typeof(PageTransitionType), typeof(PageSwitcher));
 
         public PageTransitionType TransitionType
         {
@@ -132,8 +132,8 @@ namespace eceshowcase
     public enum PageTransitionType
     {
         Fade,
-        Slide,
-        SlideAndFade,
+        SlideAndFadeLeft,
+        SlideAndFadeRight,
         Grow,
         GrowAndFade
     }
