@@ -35,7 +35,7 @@
         </Style>
 
         <!-- ButtonBase -->
-        <Style x:Key="Penis"
+        <Style x:Key="ButtonBase"
 			TargetType="{x:Type s:SurfaceButton}" 
 			BasedOn="{StaticResource ControlBaseStyle}">
             <Setter Property="IsTabStop"
@@ -192,7 +192,7 @@
                     <Run Text="welcome"/>
                 </Paragraph>
                 <Paragraph>
-                    <Run Text="i really suk"/>
+                    <Run Text="Hi there. Welcome to hell."/>
                 </Paragraph>
                 <Paragraph>
                     <Run Text="Zoran Salcic"/>

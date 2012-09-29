@@ -21,6 +21,7 @@ namespace eceshowcase.Pages
     {
         public MainMenu2()
         {
+            Switcher.pageSwitcher.Background = this.Background;
             Switcher.pageSwitcher.TransitionType = PageTransitionType.GrowAndFade;
 
             InitializeComponent();
