@@ -1,18 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Animation;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Threading.Tasks;
-using System.Diagnostics;
 
 namespace eceshowcase
 {
@@ -73,7 +64,7 @@ namespace eceshowcase
 
         private void newPage_loaded(object sender, RoutedEventArgs e)
         {
-            Storyboard showPage = Resources["GrowIn"] as Storyboard;
+            Storyboard showPage = Resources["SlideAndFadeLeftIn"] as Storyboard;
             showPage.Begin(display);
         }
 
