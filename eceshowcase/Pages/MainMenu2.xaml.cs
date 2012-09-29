@@ -15,35 +15,25 @@ using System.Windows.Shapes;
 namespace eceshowcase.Pages
 {
     /// <summary>
-    /// Interaction logic for MainMenu.xaml
+    /// Interaction logic for MainMenu2.xaml
     /// </summary>
-    public partial class MainMenu : UserControl
+    public partial class MainMenu2 : UserControl
     {
-        public MainMenu()
+        public MainMenu2()
         {
             Switcher.pageSwitcher.TransitionType = PageTransitionType.GrowAndFade;
 
             InitializeComponent();
         }
 
-        private void softwareButton_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void softwareButton_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Switcher.Switch(new Software());
-        }
-
-        private void electricalButton_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            Switcher.Switch(new Electrical());
-        }
-
-        private void computerButton_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            Switcher.Switch(new Computer());
+            Switcher.Switch(new Software2());
         }
 
         private void UI_Click(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new MainMenu2());
+            Switcher.Switch(new MainMenu());
         }
     }
 }

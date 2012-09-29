@@ -76,3 +76,7 @@ C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\ec
 C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\eceshowcase.Properties.Resources.resources
 C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\GenerateResource.read.1.tlog
 C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\Pages\MainMenu2.baml
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\Pages\Software2.baml
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\Pages\MainMenu2.g.cs
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\Pages\Software2.g.cs

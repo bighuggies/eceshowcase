@@ -66,8 +66,14 @@
     <Compile Include="Pages\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\MainMenu2.xaml.cs">
+      <DependentUpon>MainMenu2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Software.xaml.cs">
       <DependentUpon>Software.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Software2.xaml.cs">
+      <DependentUpon>Software2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Switcher.cs" />
     <Page Include="PageSwitcher.xaml">
@@ -95,7 +101,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\MainMenu2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Software.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Software2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
