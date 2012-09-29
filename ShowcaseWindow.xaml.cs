@@ -57,14 +57,14 @@ namespace eceshowcase
 
         private void UnloadPage(Page page)
         {
-            Storyboard hidePage = (Resources["GrowOut"] as Storyboard).Clone();
+            Storyboard hidePage = (Resources["FadeOut"] as Storyboard).Clone();
             hidePage.Completed += hidePage_Completed;
             hidePage.Begin(display);
         }
 
         private void newPage_loaded(object sender, RoutedEventArgs e)
         {
-            Storyboard showPage = Resources["SlideAndFadeLeftIn"] as Storyboard;
+            Storyboard showPage = Resources["FadeIn"] as Storyboard;
             showPage.Begin(display);
         }
 

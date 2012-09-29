@@ -34,5 +34,10 @@ namespace eceshowcase
         {
             window.ShowPage(new DetailPage(window));
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            window.ShowPage(new MapPage(window));
+        }
     }
 }
