@@ -15,14 +15,19 @@ using Microsoft.Surface;
 using Microsoft.Surface.Presentation;
 using Microsoft.Surface.Presentation.Controls;
 using Microsoft.Surface.Presentation.Input;
+using System.Xml;
 
 namespace eceshowcase
 {
     /// <summary>
     /// Interaction logic for SurfaceWindow1.xaml
     /// </summary>
+    /// 
+
     public partial class SurfaceWindow1 : SurfaceWindow
     {
+        XmlDocument courses_list = new XmlDocument();
+        const string COURSELISTURL = @"\Resources\courses.xml";
         /// <summary>
         /// Default constructor.
         /// </summary>
@@ -32,8 +37,22 @@ namespace eceshowcase
 
             // Add handlers for window availability events
             AddWindowAvailabilityHandlers();
+
         }
 
+        /// <summary>
+        /// Runs when window loaded
+        /// </summary>
+        void Window1_Loaded(object sender, RoutedEventArgs e)
+        {
+            PopulateCourseButtons();
+            /// TODO: Add default screen to right side too
+        }
+
+        void PopulateCourseButtons()
+        {
+            ///
+        }
         /// <summary>
         /// Occurs when the window is about to close. 
         /// </summary>
@@ -98,6 +117,16 @@ namespace eceshowcase
         private void OnWindowUnavailable(object sender, EventArgs e)
         {
             //TODO: disable audio, animations here
+        }
+
+        private void updateButton_Click(object sender, RoutedEventArgs e)
+        {
+            //
+        }
+
+        private void CourseWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            //
         }
     }
 }
