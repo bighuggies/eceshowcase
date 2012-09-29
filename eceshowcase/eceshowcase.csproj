@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1D628EC4-1DA9-4065-A89F-E2CF09859F59}</ProjectGuid>
+    <ProjectGuid>{E4B8202A-CAF8-4AFC-BE6B-6E039B940726}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>eceshowcase</RootNamespace>
@@ -34,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -56,7 +57,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="SurfaceWindow1.xaml">
+    <Compile Include="Pages\Computer.xaml.cs">
+      <DependentUpon>Computer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Electrical.xaml.cs">
+      <DependentUpon>Electrical.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MainMenu2.xaml.cs">
+      <DependentUpon>MainMenu2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Software.xaml.cs">
+      <DependentUpon>Software.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Software2.xaml.cs">
+      <DependentUpon>Software2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Switcher.cs" />
+    <Page Include="PageSwitcher.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -64,10 +84,35 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="SurfaceWindow1.xaml.cs">
-      <DependentUpon>SurfaceWindow1.xaml</DependentUpon>
+    <Compile Include="CenterConverter.cs" />
+    <Compile Include="PageSwitcher.xaml.cs">
+      <DependentUpon>PageSwitcher.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Computer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Electrical.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MainMenu2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Software.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Software2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

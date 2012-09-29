@@ -1,0 +1,82 @@
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\bin\Debug\Resources\icon.png
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\bin\Debug\eceshowcase.xml
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\bin\Debug\eceshowcase.exe
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\bin\Debug\eceshowcase.pdb
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\ResolveAssemblyReference.cache
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\Pages\Computer.baml
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\Pages\Electrical.baml
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\Pages\MainMenu.baml
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\Pages\Software.baml
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\PageSwitcher.g.cs
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\Pages\Computer.g.cs
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\Pages\Electrical.g.cs
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\Pages\MainMenu.g.cs
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\Pages\Software.g.cs
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\App.g.cs
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\eceshowcase_Content.g.cs
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\GeneratedInternalTypeHelper.g.cs
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\eceshowcase_MarkupCompile.cache
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\eceshowcase_MarkupCompile.lref
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\PageSwitcher.baml
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\eceshowcase.g.resources
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\eceshowcase.Properties.Resources.resources
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\GenerateResource.read.1.tlog
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\GenerateResource.write.1.tlog
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\eceshowcase.exe
+c:\users\jason\documents\visual studio 2010\Projects\eceshowcase\eceshowcase\obj\Debug\eceshowcase.pdb
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\eceshowcase.exe
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\eceshowcase.pdb
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\bin\Debug\Resources\icon.png
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\bin\Debug\eceshowcase.xml
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\bin\Debug\eceshowcase.exe
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\bin\Debug\eceshowcase.pdb
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\Pages\Computer.baml
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\Pages\Electrical.baml
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\Pages\MainMenu.baml
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\Pages\Software.baml
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\PageSwitcher.g.cs
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\Pages\Computer.g.cs
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\Pages\Electrical.g.cs
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\Pages\MainMenu.g.cs
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\Pages\Software.g.cs
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\App.g.cs
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\eceshowcase_Content.g.cs
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\eceshowcase_MarkupCompile.cache
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\eceshowcase_MarkupCompile.lref
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\PageSwitcher.baml
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\eceshowcase.g.resources
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\eceshowcase.Properties.Resources.resources
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\eceshowcase\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\eceshowcase.exe
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\eceshowcase.pdb
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\bin\Debug\Resources\icon.png
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\bin\Debug\eceshowcase.xml
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\bin\Debug\eceshowcase.exe
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\bin\Debug\eceshowcase.pdb
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\Pages\Computer.baml
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\Pages\Electrical.baml
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\Pages\MainMenu.baml
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\Pages\Software.baml
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\PageSwitcher.g.cs
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\Pages\Computer.g.cs
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\Pages\Electrical.g.cs
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\Pages\MainMenu.g.cs
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\Pages\Software.g.cs
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\App.g.cs
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\eceshowcase_Content.g.cs
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\eceshowcase_MarkupCompile.cache
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\eceshowcase_MarkupCompile.lref
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\PageSwitcher.baml
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\eceshowcase.g.resources
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\eceshowcase.Properties.Resources.resources
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\Pages\MainMenu2.baml
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\Pages\Software2.baml
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\Pages\MainMenu2.g.cs
+C:\Users\Jason\Documents\Courses\Softeng306\eceshowcase\eceshowcase\obj\Debug\Pages\Software2.g.cs
