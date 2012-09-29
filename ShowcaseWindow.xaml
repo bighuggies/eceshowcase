@@ -5,7 +5,11 @@
         Title="ECE Showcase"
         Height="1080"
         Width="1920"
-        Background="Black">
+        Background="Black"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized">
     <Window.Resources>
         <Style TargetType="{x:Type ContentPresenter}">
             <Setter Property="LayoutTransform">
