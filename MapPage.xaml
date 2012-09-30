@@ -60,5 +60,15 @@
                            Margin="8px">back</TextBlock>
             </StackPanel>
         </Button>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Bottom" Padding="64,16" Background="#CCFFFFFF" FontSize="20pt">
+            Building 303<LineBreak/>
+            Level 2, Science Centre<LineBreak/>
+            38 Princes Street<LineBreak/>
+            Auckland<LineBreak/>
+            <LineBreak/>
+            Phone: +64 9 373 7599 ext 88158<LineBreak/>
+            Fax: +64 9 373 7461<LineBreak/>
+            Email: ece-info@auckland.ac.nz
+        </TextBlock>
     </Grid>
 </Page>
