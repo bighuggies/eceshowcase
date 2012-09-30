@@ -26,5 +26,34 @@ namespace eceshowcase
             InitializeComponent();
             detailPage = dp;
         }
+
+        private void HideYoKids()
+        {
+            foreach (var c in views.Children)
+            {
+                ((FrameworkElement)c).Visibility = System.Windows.Visibility.Hidden;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            HideYoKids();
+            generalView.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            HideYoKids();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            HideYoKids();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            HideYoKids();
+        }
     }
 }
