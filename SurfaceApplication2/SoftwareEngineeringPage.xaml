@@ -8,7 +8,7 @@
   <Grid >
         
  
-        <Label Name="TitleGrid" Margin="12,12,12,458" Content="Software Engineering" FontSize="64" Foreground="White"/>
+        <Label Name="TitleGrid" Margin="12,12,12,458" Content="software engineering" FontSize="64" Foreground="White"/>
 
         <Grid Name="Menu" Margin="0,0,0,0">
             <Button Content="Overview" Foreground="White" Height="30" HorizontalAlignment="Left" Margin="12,106,0,0" Name="overView" VerticalAlignment="Top" Width="174" Click="OverView_Click" Background="{x:Null}" BorderBrush="#00707070" />
@@ -17,9 +17,9 @@
         </Grid>
         <Grid Name="Overview" Margin="12,468,12,0"  Background="Transparent">           
              <Label Content="Overview" Foreground="White" Height="53" HorizontalAlignment="Left" Margin="30,33,0,0" Name="labelOverview" VerticalAlignment="Top" FontSize="40" Width="200" />
-            <Button Content="Topic" Height="100" HorizontalAlignment="Left" Margin="135,279,0,0" Name="TopicButton" VerticalAlignment="Top" Width="100" />
-            <Button Content="Stories" Height="100" HorizontalAlignment="Left" Margin="30,384,0,0" Name="StoriesButton" VerticalAlignment="Top" Width="100" />
-            <Button Content="Companies" Height="100" HorizontalAlignment="Left" Margin="135,384,0,0" Name="CompaniesButton" VerticalAlignment="Top" Width="100" />
+            <Button Content="Topic" Height="100" HorizontalAlignment="Left" Margin="135,279,0,0" Name="TopicButton" VerticalAlignment="Top" Width="100" Click="TopicButton_Click" />
+            <Button Content="Stories" Height="100" HorizontalAlignment="Left" Margin="30,384,0,0" Name="StoriesButton" VerticalAlignment="Top" Width="100" Click="StoriesButton_Click" />
+            <Button Content="Companies" Height="100" HorizontalAlignment="Left" Margin="135,384,0,0" Name="CompaniesButton" VerticalAlignment="Top" Width="100" Click="CompaniesButton_Click" />
             <Button Content="General" Height="100" HorizontalAlignment="Left" Margin="30,279,0,0" Name="GeneralButton" VerticalAlignment="Top" Width="100" Click="GeneralButton_Click" />
             <TextBlock Height="153" HorizontalAlignment="Left" Margin="30,92,0,0" Name="textBlock1" VerticalAlignment="Top" Width="529" Foreground="White" FontSize="19">
                 This programme is co-taught with the Department of Computer Science. This means you receive a strong engineering perspective, as well as a range of skills and knowledge in leading edge computing applications, computing technology and computer systems.
@@ -35,13 +35,42 @@ Students are required to gain work experience over holiday periods and there is 
             </TextBlock>
             </Grid>
             <Grid Name="Topics" Margin="584,33,6,54">
-                
+                <TextBlock Height="433" HorizontalAlignment="Left" Margin="0,0,0,0" Name="TopicText" VerticalAlignment="Top" Width="1168" Foreground="White" FontSize="25">
+                Main Topics include<LineBreak />
+                    Quality Assurance<LineBreak />
+                    Code Patterns and Design<LineBreak />
+                    Software Architechture<LineBreak />
+                    Project Design<LineBreak />
+                    Algorithms and Optimisation <LineBreak />
+                    Database Designa and Managament <LineBreak />
+                    Human Computer Interaction <LineBreak />
+                </TextBlock>
             </Grid>
-            <Grid Name="Stories" Margin="584,33,6,54">
-                
+            <Grid Name="Stories" Margin="584,33,6,12">
+                <Image Name="HOD" Source="Resources/cwat.jpg" Margin="0,0,-997,77" />
+                <TextBlock Height="295" HorizontalAlignment="Left" Margin="200,97,0,0" Name="HODStories" VerticalAlignment="Top" Width="529" Foreground="White" FontSize="25">
+                My main research interest is speech production for both humans and machines. My research includes building models of speech articulators, speech synthesis, robot speech, and acoustic phonetics.
+                <LineBreak/>
+                <LineBreak/>
+                Catherine Watson 
+                <LineBreak/>
+                Senior Lecturer/ SE Programme Director</TextBlock>
             </Grid>
             <Grid Name="Companies" Margin="584,33,6,54">
-                
+                <TextBlock Height="433" HorizontalAlignment="Left" Margin="0,0,0,0" Name="CompaniesText" VerticalAlignment="Top" Width="1168" Foreground="White" FontSize="25">
+                Orion Health<LineBreak />
+                Vista<LineBreak />
+                Datacom<LineBreak />
+                Microsoft<LineBreak />
+                Google<LineBreak />
+                Kiwiplan<LineBreak />
+                Mozilla<LineBreak />
+                CodeThugLife<LineBreak />
+                Coding Is Us    <LineBreak />
+                We Make Software    <LineBreak />
+                Vodafone <LineBreak />
+                Telecom <LineBreak />
+                </TextBlock>
             </Grid>
         </Grid>
         <Grid Name="Courses" Margin="12,468,12,0"  Background="Transparent">
@@ -51,7 +80,7 @@ Students are required to gain work experience over holiday periods and there is 
         <Grid Name="Faculty" Margin="12,468,12,12"  Background="Transparent">           
             <TextBlock Text="Lorizzle ipsum funky fresh check out this amizzle, consectetuer adipiscing elit. Nullizzle check it out velizzle, fo shizzle volutpizzle, gizzle quis, gravida vel, nizzle. Phat eget funky fresh. Sed erizzle. Break yo neck, yall izzle yo mamma dapibizzle shut the shizzle up tempizzle dope. Da bomb pellentesque nibh et turpis. Vestibulum gizzle tortizzle. Yo daahng dawg rhoncizzle fo shizzle. In hac habitasse shut the shizzle up dictumst. Crackalackin dapibus. Curabitur bizzle doggy, pretizzle eu, mattizzle izzle, eleifend vitae, nunc. Away suscipizzle. Integizzle sempizzle velit sizzle nizzle." Foreground="White" Height="259" HorizontalAlignment="Left" Margin="30,92,0,0" Name="labelFacultyContent" VerticalAlignment="Top" TextWrapping="Wrap" Width="504" FontSize="19" />
             <Label Content="Faculty" Foreground="White"  Height="70" HorizontalAlignment="Left" Margin="30,33,0,0" Name="labelFaculty" VerticalAlignment="Top" FontSize="40" Width="200" />
-            
+
         </Grid>
         <Grid Height="333" HorizontalAlignment="Left" Margin="12,142,0,0" Name="grid1" VerticalAlignment="Top" Width="1874">
             <Grid.ColumnDefinitions>

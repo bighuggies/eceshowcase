@@ -32,9 +32,7 @@ namespace SurfaceApplication2
 
             // Add handlers for window availability events
             AddWindowAvailabilityHandlers();
-            Overview.Visibility = Visibility.Visible;
-            Courses.Visibility = Visibility.Hidden;
-            Faculty.Visibility = Visibility.Hidden;
+            ShowOverview();
         }
 
         /// <summary>
@@ -109,10 +107,7 @@ namespace SurfaceApplication2
             Courses.Visibility = Visibility.Hidden;
             Faculty.Visibility = Visibility.Hidden;
 
-            General.Visibility = Visibility.Visible;
-            Topics.Visibility = Visibility.Hidden;
-            Stories.Visibility = Visibility.Hidden;
-            Companies.Visibility = Visibility.Hidden;
+            ShowGeneral();
         }
         private void OverView_Click(object sender, RoutedEventArgs e)
         {
@@ -145,10 +140,55 @@ namespace SurfaceApplication2
 
         private void GeneralButton_Click(object sender, RoutedEventArgs e)
         {
+            ShowGeneral();
+        }
+
+        private void CompaniesButton_Click(object sender, RoutedEventArgs e)
+        {
+            ShowCompanies();
+        }
+
+        private void StoriesButton_Click(object sender, RoutedEventArgs e)
+        {
+            ShowStories();
+        }
+
+
+        private void TopicButton_Click(object sender, RoutedEventArgs e)
+        {
+            ShowTopics();
+        }
+
+        private void ShowTopics()
+        {
+            General.Visibility = Visibility.Hidden;
+            Topics.Visibility = Visibility.Visible;
+            Stories.Visibility = Visibility.Hidden;
+            Companies.Visibility = Visibility.Hidden;
+        }
+
+        private void ShowStories()
+        {
+            General.Visibility = Visibility.Hidden;
+            Topics.Visibility = Visibility.Hidden;
+            Stories.Visibility = Visibility.Visible;
+            Companies.Visibility = Visibility.Hidden;
+        }
+
+        private void ShowGeneral()
+        {
             General.Visibility = Visibility.Visible;
             Topics.Visibility = Visibility.Hidden;
             Stories.Visibility = Visibility.Hidden;
             Companies.Visibility = Visibility.Hidden;
+        }
+
+        private void ShowCompanies()
+        {
+            General.Visibility = Visibility.Hidden;
+            Topics.Visibility = Visibility.Hidden;
+            Stories.Visibility = Visibility.Hidden;
+            Companies.Visibility = Visibility.Visible;
         }
     }
 }
