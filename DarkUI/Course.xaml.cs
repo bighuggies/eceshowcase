@@ -23,6 +23,8 @@ namespace DarkUI
     /// </summary>
     public partial class SurfaceWindow1 : SurfaceWindow
     {
+        Dictionary<String, String> coursesInfo;
+
         /// <summary>
         /// Default constructor.
         /// </summary>
@@ -32,6 +34,9 @@ namespace DarkUI
 
             // Add handlers for window availability events
             AddWindowAvailabilityHandlers();
+            coursesInfo = new Dictionary<String, String>();
+            coursesInfo.Add("SE306", "Software engineering 306: An interesting paper about project management. LOLWUT HELLO HOW DID THIS GET HERE");
+            coursesInfo.Add("SE211", "HERP DERP");
         }
 
         /// <summary>
@@ -103,6 +108,18 @@ namespace DarkUI
         private void SurfaceWindow_Loaded(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void setContentPanel(String courseName)
+        {
+            CourseHeader.Text = courseName;
+            ContentDisplay.Text = coursesInfo[courseName];
+        }
+
+        private void label1_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Label l = (Label)sender;
+            setContentPanel(l.Content.ToString());
         }
     }
 }
