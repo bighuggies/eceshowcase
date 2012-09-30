@@ -6,12 +6,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" 
                  x:Class="eceshowcase.SurfaceWindow1"
-    Title="eceshowcase" Width="1920" Height="1080" Loaded="CourseWindow_Loaded"
-    >
-	<Window.Resources>
-		<XmlDataProvider x:Key="CourseData" Source="Resources\courses.xml"/>
-	</Window.Resources>
-	<Grid x:Name="mainGrid" DataContext="{Binding Source={StaticResource CourseData}}">
+    Title="eceshowcase" Width="1920" Height="1080">
+    
+	<Grid x:Name="mainGrid" >
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto" />
 			<RowDefinition Height="*" />
@@ -21,7 +18,7 @@
 			<ColumnDefinition Width="4*" />
 		</Grid.ColumnDefinitions>
 		
-		<Label x:Name="ProgramTitleLabel" Grid.Row="0" Grid.Column="0" Content="{Binding XPath=/Courses/Programs/Software/@name}"  VerticalAlignment="Top" d:LayoutOverrides="Width" FontSize="80"/>
+		<Label x:Name="ProgramTitleLabel" Grid.Row="0" Grid.Column="0" Content="Program Name Placeholder"  VerticalAlignment="Top" d:LayoutOverrides="Width" FontSize="80"/>
 		<Grid x:Name="YearListGrid" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" >
 			<Grid.RowDefinitions>
 			<RowDefinition Height="Auto" />
@@ -35,23 +32,31 @@
 		</Grid.ColumnDefinitions>
             
 			<GroupBox x:Name="Year1Group" Header="Year One" Grid.Row="0" d:LayoutOverrides="Width, Height">
-				<WrapPanel ItemHeight="100" ItemWidth="150" ItemsControl.>
-                    <Button Content="{Binding XPath=/Courses/FirstYear/Course/code}" Click="updateButton_Click" FontSize="22"/>
-					<Button Content="CourseName" Click="updateButton_Click" FontSize="22"/>
-					<Button Content="CourseName" Click="updateButton_Click" FontSize="22" />
-					<Button Content="CourseName" Click="updateButton_Click" FontSize="22"/>
-					<Button Content="CourseName" Click="updateButton_Click" FontSize="22"/>
-					<Button Content="CourseName" Click="updateButton_Click" FontSize="22"/>
-					<Button Content="CourseName" Click="updateButton_Click" FontSize="22"/>
+				<WrapPanel x:Name="Year1Panel" ItemHeight="100" ItemWidth="150">
+                    <!-- Populated by window constructor -->
 				</WrapPanel>
 			</GroupBox>
 			<GroupBox x:Name="Year2Group" Header="Year Two" Grid.Row="1" d:LayoutOverrides="Width, Height"/>
-
-			<GroupBox x:Name="Year3Group" Header="Year Three" Grid.Row="2" d:LayoutOverrides="Width, Height">
+            <WrapPanel x:Name="Year2Panel" ItemHeight="100" ItemWidth="150">
                 
-			</GroupBox>
-			<GroupBox x:Name="Year4Group" Header="Year Four" Grid.Row="3" d:LayoutOverrides="Width, Height" />
+            </WrapPanel>
 
+            <GroupBox x:Name="Year3Group" Header="Year Three" Grid.Row="2" d:LayoutOverrides="Width, Height">
+                <WrapPanel x:Name="Year3Panel" ItemHeight="100" ItemWidth="150">
+
+                </WrapPanel>
+            </GroupBox>
+            <GroupBox x:Name="Year4Group" Header="Year Four" Grid.Row="3" d:LayoutOverrides="Width, Height">
+                <WrapPanel x:Name="Year4Panel" ItemHeight="100" ItemWidth="150">
+
+                </WrapPanel>
+            </GroupBox>
+
+        </Grid>
+        
+        <Grid Grid.Row="1" Grid.Column="1" x:Name="CourseInfoGrid">
+            <TextBlock x:Name="DisplayCourseName" FontSize="48" Foreground="AliceBlue"/>
+            <TextBlock x:Name="DisplayCourseInfo" FontSize="24" Foreground="AliceBlue"/>
         </Grid>
 	
 	

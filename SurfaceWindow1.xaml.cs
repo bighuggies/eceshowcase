@@ -16,6 +16,9 @@ using Microsoft.Surface.Presentation;
 using Microsoft.Surface.Presentation.Controls;
 using Microsoft.Surface.Presentation.Input;
 using System.Xml;
+using System.IO;
+
+
 
 namespace eceshowcase
 {
@@ -26,33 +29,77 @@ namespace eceshowcase
 
     public partial class SurfaceWindow1 : SurfaceWindow
     {
-        XmlDocument courses_list = new XmlDocument();
-        const string COURSELISTURL = @"\Resources\courses.xml";
+
+        private Dictionary<string, string[]> derp = new Dictionary<string, string[]>();
+        private string[] firstyear = new string[] { "CHEMMAT 121", "ELECTENG 101", "ENGGEN 115", "ENGGEN 121", "ENGGEN 131", "ENGGEN 140", "ENGSCI 111" };
         /// <summary>
         /// Default constructor.
         /// </summary>
         public SurfaceWindow1()
         {
             InitializeComponent();
+            LoadCourseData();
+            GenerateButtons();
 
             // Add handlers for window availability events
             AddWindowAvailabilityHandlers();
 
         }
+        
+        // Read in the correct course list from XML
+        private void LoadCourseData()
+        {
+            derp.Add("CHEMMAT 121", new string[] {"Chemical Engineering", "has more women than software"});
+        }
+
+        private void GenerateButtons(){
+            // create maps
+            // firstyear = 
+            // secondyear =
+            // thirdyear = 
+            // fourthyear = 
+            // for course in firstyear
+
+            //foreach (string course in firstyear)
+            foreach (KeyValuePair<string, string[]> pair in derp) 
+            {
+                Button myButton = new Button();
+                //myButton.Content = course;
+                myButton.Content = pair.Key; //name
+                //myButton.Tag = ("Turnips"); // TEMP SOLUTION
+                myButton.Click += CourseButton_Click;
+                Year1Panel.Children.Add(myButton);
+            }
+        }
+
+        private void CourseButton_Click(object sender, RoutedEventArgs e)
+        {
+            //var record = ((Button)e.OriginalSource).Tag;
+            var ActiveButton = ((Button)e.OriginalSource);
+            
+            //MessageBox.Show(record.ToString());
+            //DisplayText.Text = record.ToString();
+            string CourseKey = ActiveButton.Content.ToString();
+            DisplayCourseName.Text = CourseKey;
+            DisplayCourseInfo.Text = derp[CourseKey][0];
+
+            
+        }
+
 
         /// <summary>
         /// Runs when window loaded
         /// </summary>
         void Window1_Loaded(object sender, RoutedEventArgs e)
         {
-            PopulateCourseButtons();
-            /// TODO: Add default screen to right side too
+
         }
 
         void PopulateCourseButtons()
         {
             ///
         }
+
         /// <summary>
         /// Occurs when the window is about to close. 
         /// </summary>
@@ -119,14 +166,8 @@ namespace eceshowcase
             //TODO: disable audio, animations here
         }
 
-        private void updateButton_Click(object sender, RoutedEventArgs e)
-        {
-            //
-        }
 
-        private void CourseWindow_Loaded(object sender, RoutedEventArgs e)
-        {
-            //
-        }
+
+      
     }
 }

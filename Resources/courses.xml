@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Courses>
-  <FirstYear>
+  <Program name="FirstYear" >
     <Course code="CHEMMAT 121">
       <name>Materials Science</name>
       <points>15</points>
@@ -36,10 +36,10 @@
       <points>15</points>
       <type>Prescribed</type>
     </Course>
-  </FirstYear>
+  </Program>
 
   <Programs>
-    <ComputerSystems name="Computer Systems Engineering">
+    <Program name="Computer Systems Engineering">
       <SecondYear>
         <Course code="COMPSYS 201">
           <name>Fundamentals of Computer Engineering</name>
@@ -132,7 +132,7 @@
         </Course>
       </ThirdYear>
       <FourthYear></FourthYear>
-    </ComputerSystems>
+    </Program>
     <Electrical name="Electrical and Electronic Engineering">
       <SecondYear></SecondYear>
       <ThirdYear></ThirdYear>
