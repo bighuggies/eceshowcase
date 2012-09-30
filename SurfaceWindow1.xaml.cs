@@ -48,9 +48,12 @@ namespace eceshowcase
         }
         
         // Read in the correct course list from XML
+        // CHECK THAT THE ALGORITHM DOES NOT CAUSE A MEASURABLE DELAY IN VIEWING
+        // XML IS IN BIN/DEBUG
+        // 
         private void LoadCourseData()
         {
-            string ProgramName;
+            string ProgramName = "CSE"; // TO BE SET WHEN PAGE IS INITIALISED
             XmlTextReader reader = new XmlTextReader ("courses.xml");
             try
             {
@@ -59,6 +62,8 @@ namespace eceshowcase
                     switch (reader.NodeType)
                     {
                         case XmlNodeType.Element:
+                            // if reader.Name == Program && (reader.Value == ProgramName || reader.Value == "Common")
+                            // set a bool to check if it is inside the right program
                             Console.Write("<" + reader.Name);
 
                             while (reader.MoveToNextAttribute()) // Read the attributes.
@@ -88,6 +93,8 @@ namespace eceshowcase
             // thirdyear = 
             // fourthyear = 
             // for course in firstyear
+
+            // ALL TO BE DELETED ONCE THE XML READER IS WORKING
             firstyear.Add("CHEMMAT 121", new string[] { "Chemical Engineering", "has more women than software" });
             firstyear.Add("ELECTENG 101", new string[] { "Electrical Engineering", "has more women than software" });
             firstyear.Add("ENGGEN 115", new string[] { "Intro to Engineering Design", "has more women than software" });
