@@ -108,6 +108,11 @@ namespace SurfaceApplication2
             Overview.Visibility = Visibility.Visible;
             Courses.Visibility = Visibility.Hidden;
             Faculty.Visibility = Visibility.Hidden;
+
+            General.Visibility = Visibility.Visible;
+            Topics.Visibility = Visibility.Hidden;
+            Stories.Visibility = Visibility.Hidden;
+            Companies.Visibility = Visibility.Hidden;
         }
         private void OverView_Click(object sender, RoutedEventArgs e)
         {
@@ -126,6 +131,24 @@ namespace SurfaceApplication2
             Overview.Visibility = Visibility.Hidden;
             Courses.Visibility = Visibility.Hidden;
             Faculty.Visibility = Visibility.Visible;
+        }
+
+        private void image2_ImageFailed(object sender, ExceptionRoutedEventArgs e)
+        {
+
+        }
+
+        private void SurfaceWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void GeneralButton_Click(object sender, RoutedEventArgs e)
+        {
+            General.Visibility = Visibility.Visible;
+            Topics.Visibility = Visibility.Hidden;
+            Stories.Visibility = Visibility.Hidden;
+            Companies.Visibility = Visibility.Hidden;
         }
     }
 }

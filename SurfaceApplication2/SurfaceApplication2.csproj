@@ -104,9 +104,13 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\pic.jpg" />
+    <Resource Include="Resources\diverse1.jpg" />
+    <Resource Include="Resources\diverse2.jpg" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\whitegirl1.jpg" />
     <Content Include="SurfaceApplication2.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
