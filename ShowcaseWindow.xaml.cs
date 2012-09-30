@@ -64,7 +64,7 @@ namespace eceshowcase
 
         private void newPage_loaded(object sender, RoutedEventArgs e)
         {
-            Storyboard showPage = Resources["FadeIn"] as Storyboard;
+            Storyboard showPage = (Resources["FadeIn"] as Storyboard).Clone();
             showPage.Begin(display);
         }
 

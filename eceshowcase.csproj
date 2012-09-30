@@ -139,6 +139,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\back.png" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

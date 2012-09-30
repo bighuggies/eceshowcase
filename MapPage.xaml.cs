@@ -26,5 +26,10 @@ namespace eceshowcase
             InitializeComponent();
             window = w;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            window.ShowPage(new FrontPage(window));
+        }
     }
 }
