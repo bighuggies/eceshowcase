@@ -15,22 +15,16 @@ using System.Windows.Shapes;
 namespace eceshowcase
 {
     /// <summary>
-    /// Interaction logic for DetailPage.xaml
+    /// Interaction logic for OverviewSubpage.xaml
     /// </summary>
-    public partial class DetailPage : Page
+    public partial class OverviewSubpage : Page
     {
-        private ShowcaseWindow window;
+        DetailPage detailPage;
 
-        public DetailPage(ShowcaseWindow w)
+        public OverviewSubpage(DetailPage dp)
         {
             InitializeComponent();
-            window = w;
-            child.Content = new OverviewSubpage(this);
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            window.ShowPage(new FrontPage(window));
+            detailPage = dp;
         }
     }
 }

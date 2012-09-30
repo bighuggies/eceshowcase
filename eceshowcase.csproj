@@ -80,6 +80,9 @@
     <Compile Include="MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OverviewSubpage.xaml.cs">
+      <DependentUpon>OverviewSubpage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ShowcaseWindow.xaml.cs">
       <DependentUpon>ShowcaseWindow.xaml</DependentUpon>
     </Compile>
@@ -103,6 +106,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MapPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OverviewSubpage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -140,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\back.png" />
+    <Resource Include="Resources\back-white.png" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

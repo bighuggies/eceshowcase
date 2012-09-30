@@ -7,7 +7,8 @@
       mc:Ignorable="d"
       Title="MapPage"
       Height="1080"
-      Width="1920">
+      Width="1920"
+      FontFamily="Segoe UI Light">
     <Page.Resources>
         <bing:ApplicationIdCredentialsProvider x:Key="Credentials"
                                                ApplicationId="AgLyknzJBYKAb9nHA75q_EYfQRqHsNW79H87o9itaJvE_BYCpHcVfkttCVJuk6nr" />
@@ -33,7 +34,10 @@
                   HorizontalAlignment="Stretch"
                   VerticalAlignment="Stretch"
                   AnimationLevel="Full"
+                  Center="-36.852512,174.767838"
+                  ZoomLevel="17"
                   CredentialsProvider="{StaticResource Credentials}">
+            <bing:Pushpin Location="-36.852512,174.767838" />
         </bing:Map>
         <Button HorizontalAlignment="Left"
                 VerticalAlignment="Top"

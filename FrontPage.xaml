@@ -12,35 +12,6 @@
       Background="#FF004050"
       FontFamily="Segoe UI Light">
     <Page.Resources>
-        <!-- Base Grid style for 55 dpi -->
-        <Style TargetType="{x:Type Control}"
-               x:Key="ControlBaseStyle">
-            <Setter Property="FocusVisualStyle"
-                    Value="{x:Null}" />
-            <Setter Property="SnapsToDevicePixels"
-                    Value="False" />
-            <Setter Property="FontFamily"
-                    Value="Segoe360" />
-            <Setter Property="FontWeight"
-                    Value="Normal" />
-            <Setter Property="FontSize"
-                    Value="17" />
-            <Setter Property="Padding"
-                    Value="6,2,10,10" />
-            <Setter Property="MinHeight"
-                    Value="38" />
-            <Setter Property="MinWidth"
-                    Value="38" />
-            <Setter Property="Margin"
-                    Value="1" />
-            <Setter Property="HorizontalContentAlignment"
-                    Value="Left" />
-            <Setter Property="VerticalContentAlignment"
-                    Value="Top" />
-            <Setter Property="BorderThickness"
-                    Value="2" />
-        </Style>
-
         <!-- ButtonBase -->
         <Style x:Key="ButtonFocusVisual">
             <Setter Property="Control.Template">
@@ -99,7 +70,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="120px" />
-            <RowDefinition Height="1.5*" />
+            <RowDefinition Height="120px" />
             <RowDefinition Height="6*" />
             <RowDefinition Height="1.3*" />
             <RowDefinition Height="1.2*" />
@@ -294,7 +265,7 @@
                     <Run Text="welcome" />
                 </Paragraph>
                 <Paragraph>
-                    <Run Text="i really suk" />
+                    <Run Text="&lt;message goes here&gt;" />
                 </Paragraph>
                 <Paragraph>
                     <Run Text="Zoran Salcic" />

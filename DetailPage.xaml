@@ -4,14 +4,79 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d"
-	Title="DetailPage">
-
+      Width="1920"
+      Height="1080"
+      Background="#FF008287"
+      FontFamily="Segoe UI Light"
+	  Title="DetailPage">
+    <Page.Resources>
+        <Style x:Key="Tile"
+               TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border BorderThickness="{TemplateBinding BorderThickness}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Background="{TemplateBinding Background}"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter x:Name="ButtonContentPresenter"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
     <Grid>
-        <Label Content="CATS"
-               FontSize="72"
-               Foreground="Red"
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120px" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="120px" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120px" />
+            <RowDefinition Height="120px" />
+            <RowDefinition Height="80px" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="20px" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="1"
+                    Orientation="Horizontal">
+            <Button HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Foreground="White"
+                Margin="16"
+                FontSize="32"
+                FontFamily="Segoe UI"
+                Background="Transparent"
+                BorderBrush="White"
+                BorderThickness="0"
+                Click="Button_Click"
+                Style="{DynamicResource Tile}">
+                <Image Height="64"
+                    Stretch="Fill"
+                    Width="64"
+                    Margin="8px"
+                    Source="Resources/back-white.png" />
+            </Button>
+            <Label Content="title placeholder"
+               FontSize="74.667"
+               Background="#000079FF"
+               Foreground="White"
+               Grid.ColumnSpan="4"
                HorizontalAlignment="Left"
-               Name="label1"
-               VerticalAlignment="Top" />
+               VerticalAlignment="Top"
+               d:LayoutOverrides="GridBox"
+               FontFamily="Segoe UI Light" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+            <Button FontSize="52px" Padding="25,0" Margin="0,0,25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0,0,0,3" BorderBrush="White">overview</Button>
+            <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0">courses</Button>
+            <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0">faculty</Button>
+        </StackPanel>
+        <Frame Grid.Column="1" Grid.Row="3" Name="child" />
     </Grid>
 </Page>
