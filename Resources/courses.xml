@@ -1,149 +1,153 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Courses>
-  <Program name="FirstYear" >
-    <Course code="CHEMMAT 121">
-      <name>Materials Science</name>
-      <points>15</points>
-      <type>Prescribed</type>
-    </Course>
-    <Course code="ELECTENG 101">
-      <name>Electrical and Digital Systems</name>
-      <points>15</points>
-      <type>Prescribed</type>
-    </Course>
-    <Course code="ENGGEN 115">
-      <name>Introduction to Engineering Design</name>
-      <points>15</points>
-      <type>Prescribed</type>
-    </Course>
-    <Course code="ENGGEN 121">
-      <name>Engineering Mechanics</name>
-      <points>15</points>
-      <type>Prescribed</type>
-    </Course>
-    <Course code="ENGGEN 131">
-      <name>Engineering Computation and Software Development</name>
-      <points>15</points>
-      <type>Prescribed</type>
-    </Course>
-    <Course code="ENGGEN 140">
-      <name>Engineering Biology and Chemistry</name>
-      <points>15</points>
-      <type>Prescribed</type>
-    </Course>
-    <Course code="ENGSCI 111">
-      <name>Mathematical Modelling 1</name>
-      <points>15</points>
-      <type>Prescribed</type>
-    </Course>
+<Programs>
+  <Program name="Common">
+    <Year id="1">
+      <Course code="CHEMMAT 121">
+        <name>Materials Science</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="ELECTENG 101">
+        <name>Electrical and Digital Systems</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="ENGGEN 115">
+        <name>Introduction to Engineering Design</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="ENGGEN 121">
+        <name>Engineering Mechanics</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="ENGGEN 131">
+        <name>Engineering Computation and Software Development</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="ENGGEN 140">
+        <name>Engineering Biology and Chemistry</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="ENGSCI 111">
+        <name>Mathematical Modelling 1</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+    </Year>
   </Program>
 
-  <Programs>
-    <Program name="Computer Systems Engineering">
-      <SecondYear>
-        <Course code="COMPSYS 201">
-          <name>Fundamentals of Computer Engineering</name>
-          <points>15</points>
-          <type>Prescribed</type>
-        </Course>
-        <Course code="ELECTENG 202">
-          <name>Circuits and Systems</name>
-          <points>15</points>
-          <type>Prescribed</type>
-        </Course>
-        <Course code="ELECTENG 210">
-          <name>Electronics 1</name>
-          <points>15</points>
-          <type>Prescribed</type>
-        </Course>
-        <Course code="ENGSCI 211">
-          <name>Mathematical Modelling 2</name>
-          <points>15</points>
-          <type>Prescribed</type>
-        </Course>
-        <Course code="COMPSYS 202">
-          <name>Object Oriented Design and Programming</name>
-          <points>15</points>
-          <type>Prescribed</type>
-        </Course>
-        <Course code="ELECTENG 204">
-          <name>Engineering Electromagnetics</name>
-          <points>15</points>
-          <type>Prescribed</type>
-        </Course>
-        <Course code="ELECTENG 209">
-          <name>Analogue and Digital Design</name>
-          <points>15</points>
-          <type>Prescribed</type>
-        </Course>
-        <Course code="ENGGEN 204">
-          <name>Technical Communication for Engineers</name>
-          <points>15</points>
-          <type>Prescribed</type>
-        </Course>
-      </SecondYear>
+  <Program name="Computer Systems Engineering">
+    <Year id="2">
+      <Course code="COMPSYS 201">
+        <name>Fundamentals of Computer Engineering</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="ELECTENG 202">
+        <name>Circuits and Systems</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="ELECTENG 210">
+        <name>Electronics 1</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="ENGSCI 211">
+        <name>Mathematical Modelling 2</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="COMPSYS 202">
+        <name>Object Oriented Design and Programming</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="ELECTENG 204">
+        <name>Engineering Electromagnetics</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="ELECTENG 209">
+        <name>Analogue and Digital Design</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="ENGGEN 204">
+        <name>Technical Communication for Engineers</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+    </Year>
       
       
-      <ThirdYear>
-        <Course code="COMPSYS 302">
-          <name>Design: Software Practice</name>
-          <points>15</points>
-          <type>Prescribed</type>
-        </Course>
-        <Course code="COMPSYS 305">
-          <name>Digital Systems Design 1</name>
-          <points>15</points>
-          <type>Prescribed</type>
-        </Course>
-        <Course code="ENGGEN 303">
-          <name>Management for Engineers</name>
-          <points>15</points>
-          <type>Prescribed</type>
-        </Course>
-        <Course code="ENGSCI 313">
-          <name>Mathematical Modelling 3ECE</name>
-          <points>15</points>
-          <type>Prescribed</type>
-        </Course>
-        <Course code="COMPSYS 301">
-          <name>Design: Hardware Software Systems</name>
-          <points>15</points>
-          <type>Prescribed</type>
-        </Course>
-        <Course code="ELECTENG 303">
-          <name>Systems and Control</name>
-          <points>15</points>
-          <type>Prescribed</type>
-        </Course>
-        <Course code="COMPSYS 303">
-          <name>Microcomputers and Embedded Systems</name>
-          <points>15</points>
-          <type>Elective</type>
-        </Course>
-        <Course code="COMPSYS 304">
-          <name>Computer Architecture 1</name>
-          <points>15</points>
-          <type>Elective</type>
-        </Course>
-        <Course code="SOFTENG 325">
-          <name>Software Architecture</name>
-          <points>15</points>
-          <type>Elective</type>
-        </Course>
-      </ThirdYear>
-      <FourthYear></FourthYear>
-    </Program>
-    <Electrical name="Electrical and Electronic Engineering">
-      <SecondYear></SecondYear>
-      <ThirdYear></ThirdYear>
-      <FourthYear></FourthYear>
-    </Electrical>
-    <Software name="Software Engineering">
-      <SecondYear></SecondYear>
-      <ThirdYear></ThirdYear>
-      <FourthYear></FourthYear>
-    </Software>
-    
-  </Programs>
+    <Year id="3">
+      <Course code="COMPSYS 302">
+        <name>Design: Software Practice</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="COMPSYS 305">
+        <name>Digital Systems Design 1</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="ENGGEN 303">
+        <name>Management for Engineers</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="ENGSCI 313">
+        <name>Mathematical Modelling 3ECE</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="COMPSYS 301">
+        <name>Design: Hardware Software Systems</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="ELECTENG 303">
+        <name>Systems and Control</name>
+        <points>15</points>
+        <type>Prescribed</type>
+      </Course>
+      <Course code="COMPSYS 303">
+        <name>Microcomputers and Embedded Systems</name>
+        <points>15</points>
+        <type>Elective</type>
+      </Course>
+      <Course code="COMPSYS 304">
+        <name>Computer Architecture 1</name>
+        <points>15</points>
+        <type>Elective</type>
+      </Course>
+      <Course code="SOFTENG 325">
+        <name>Software Architecture</name>
+        <points>15</points>
+        <type>Elective</type>
+      </Course>
+    </Year>
+    <FourthYear></FourthYear>
+  </Program>
   
-</Courses>
+  
+  
+  <Program name="Electrical and Electronic Engineering">
+    <Year id="2"></Year>
+    <Year id="3"></Year>
+    <Year id="4"></Year>
+  </Program>
+  
+  
+  <Program name="Software Engineering">
+    <SecondYear></SecondYear>
+    <ThirdYear></ThirdYear>
+    <FourthYear></FourthYear>
+  </Program>
+  
+</Programs>

@@ -16,7 +16,6 @@ using Microsoft.Surface.Presentation;
 using Microsoft.Surface.Presentation.Controls;
 using Microsoft.Surface.Presentation.Input;
 using System.Xml;
-using System.IO;
 
 
 
@@ -29,9 +28,11 @@ namespace eceshowcase
 
     public partial class SurfaceWindow1 : SurfaceWindow
     {
-
-        private Dictionary<string, string[]> derp = new Dictionary<string, string[]>();
-        private string[] firstyear = new string[] { "CHEMMAT 121", "ELECTENG 101", "ENGGEN 115", "ENGGEN 121", "ENGGEN 131", "ENGGEN 140", "ENGSCI 111" };
+        // Store the course data from XML
+        private Dictionary<string, string[]> firstyear = new Dictionary<string, string[]>();
+        private Dictionary<string, string[]> secondyear = new Dictionary<string, string[]>();
+        private Dictionary<string, string[]> thirdyear = new Dictionary<string, string[]>();
+        private Dictionary<string, string[]> fourthyear = new Dictionary<string, string[]>();
         /// <summary>
         /// Default constructor.
         /// </summary>
@@ -49,24 +50,58 @@ namespace eceshowcase
         // Read in the correct course list from XML
         private void LoadCourseData()
         {
-            derp.Add("CHEMMAT 121", new string[] {"Chemical Engineering", "has more women than software"});
-        }
+            string ProgramName;
+            XmlTextReader reader = new XmlTextReader ("courses.xml");
+            try
+            {
+                while (reader.Read())
+                {
+                    switch (reader.NodeType)
+                    {
+                        case XmlNodeType.Element:
+                            Console.Write("<" + reader.Name);
 
-        private void GenerateButtons(){
+                            while (reader.MoveToNextAttribute()) // Read the attributes.
+                                Console.Write(" " + reader.Name + "='" + reader.Value + "'");
+                            Console.WriteLine(">");
+                            break;
+                        case XmlNodeType.Text:
+                            Console.WriteLine(reader.Value);
+                            break;
+                        case XmlNodeType.EndElement:
+                            Console.Write("</" + reader.Name);
+                            Console.WriteLine(">");
+                            break;
+                    }
+                }
+                Console.ReadLine();
+            }
+            catch (XmlException e)
+            {
+                Console.WriteLine(e.StackTrace);
+            }
+
+            // Multithread?
             // create maps
             // firstyear = 
             // secondyear =
             // thirdyear = 
             // fourthyear = 
             // for course in firstyear
+            firstyear.Add("CHEMMAT 121", new string[] { "Chemical Engineering", "has more women than software" });
+            firstyear.Add("ELECTENG 101", new string[] { "Electrical Engineering", "has more women than software" });
+            firstyear.Add("ENGGEN 115", new string[] { "Intro to Engineering Design", "has more women than software" });
+            firstyear.Add("ENGGEN 121", new string[] { "Engineering Mechanics", "has more women than software" });
+        }
 
+        private void GenerateButtons(){
+
+            // 
             //foreach (string course in firstyear)
-            foreach (KeyValuePair<string, string[]> pair in derp) 
+            foreach (KeyValuePair<string, string[]> pair in firstyear) 
             {
                 Button myButton = new Button();
-                //myButton.Content = course;
                 myButton.Content = pair.Key; //name
-                //myButton.Tag = ("Turnips"); // TEMP SOLUTION
                 myButton.Click += CourseButton_Click;
                 Year1Panel.Children.Add(myButton);
             }
@@ -81,7 +116,7 @@ namespace eceshowcase
             //DisplayText.Text = record.ToString();
             string CourseKey = ActiveButton.Content.ToString();
             DisplayCourseName.Text = CourseKey;
-            DisplayCourseInfo.Text = derp[CourseKey][0];
+            DisplayCourseInfo.Text = firstyear[CourseKey][0];
 
             
         }
