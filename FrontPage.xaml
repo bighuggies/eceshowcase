@@ -9,8 +9,7 @@
       Title="eceshowcase"
       Width="1920"
       Height="1080"
-      Background="#FF004050"
-      FontFamily="Segoe UI Light">
+      FontFamily="Segoe UI Light" Background="White">
     <Page.Resources>
         <!-- ButtonBase -->
         <Style x:Key="ButtonFocusVisual">
@@ -81,8 +80,7 @@
 		</Grid.Background>-->
         <Label Content="electrical and computer engineering"
                FontSize="74.667"
-               Background="#000079FF"
-               Foreground="White"
+               Foreground="#FF4F2D7F"
                Grid.ColumnSpan="4"
                HorizontalAlignment="Left"
                VerticalAlignment="Top"
@@ -99,7 +97,6 @@
                 Padding="16"
                 Style="{DynamicResource Tile}"
                 Foreground="{x:Null}"
-                Grid.RowSpan="2"
                 Click="Button_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1"
@@ -135,8 +132,7 @@
                 HorizontalContentAlignment="Left"
                 Padding="16"
                 Style="{DynamicResource Tile}"
-                Foreground="{x:Null}"
-                Grid.RowSpan="2">
+                Foreground="{x:Null}">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1"
                                      StartPoint="0.5,0">
@@ -170,8 +166,7 @@
                 HorizontalContentAlignment="Left"
                 Padding="16"
                 Style="{DynamicResource Tile}"
-                Foreground="{x:Null}"
-                Grid.RowSpan="2">
+                Foreground="{x:Null}">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1"
                                      StartPoint="0.5,0">
@@ -197,8 +192,8 @@
                        Foreground="White"
                        FontSize="32"><Run Text="computer systems engineering" /></TextBlock>
         </Button>
-        <Button Grid.Row="4"
-                Grid.ColumnSpan="3"
+        <Button Grid.Row="3"
+                Grid.ColumnSpan="2"
                 Margin="4"
                 FontSize="42"
                 VerticalContentAlignment="Bottom"
@@ -206,7 +201,7 @@
                 Padding="16"
                 Style="{DynamicResource Tile}"
                 Foreground="{x:Null}"
-                Grid.Column="1">
+                Grid.Column="1" Grid.RowSpan="2">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1"
                                      StartPoint="0.5,0">
@@ -222,9 +217,9 @@
                             <TranslateTransform />
                         </TransformGroup>
                     </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="#FF5233AB"
+                    <GradientStop Color="#FFB89E4E"
                                   Offset="0" />
-                    <GradientStop Color="#FF6445BD"
+                    <GradientStop Color="#FFEEBC16"
                                   Offset="1" />
                 </LinearGradientBrush>
             </Button.Background>
@@ -235,41 +230,28 @@
         <FlowDocumentScrollViewer Grid.Column="4"
                                   Margin="4"
                                   Grid.Row="2"
-                                  Foreground="White"
+                                  Foreground="#FF4F2D7F"
                                   VerticalScrollBarVisibility="Hidden">
+        	<FlowDocumentScrollViewer.Background>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="White"/>
+        			<GradientStop/>
+        			<GradientStop Color="Transparent" Offset="0.12"/>
+        			<GradientStop Color="Transparent" Offset="0.7"/>
+        		</LinearGradientBrush>
+        	</FlowDocumentScrollViewer.Background>
             <FlowDocument FontFamily="Segoe UI Light"
                           FontSize="20pt">
-                <FlowDocument.Background>
-                    <LinearGradientBrush EndPoint="0.5,1"
-                                         StartPoint="0.5,0">
-                        <LinearGradientBrush.RelativeTransform>
-                            <TransformGroup>
-                                <ScaleTransform CenterY="0.5"
-                                                CenterX="0.5" />
-                                <SkewTransform CenterY="0.5"
-                                               CenterX="0.5" />
-                                <RotateTransform Angle="-90"
-                                                 CenterY="0.5"
-                                                 CenterX="0.5" />
-                                <TranslateTransform />
-                            </TransformGroup>
-                        </LinearGradientBrush.RelativeTransform>
-                        <GradientStop Color="#FF252525"
-                                      Offset="0" />
-                        <GradientStop Color="#FF3F3F3F"
-                                      Offset="1" />
-                    </LinearGradientBrush>
-                </FlowDocument.Background>
                 <Paragraph FontSize="40pt"
                            Margin="0">
                     <Run Text="welcome" />
                 </Paragraph>
-                <Paragraph>
+                <Paragraph Foreground="Black">
                     This is a vibrant place for studying and research, where students and academic staff from different cultural and ethnical backgrounds meet, work together and achieve world-class results. Academic and research staff conduct research and have gained international reputation in a number of specific areas of interest not only for the present but also for the future world.
                 </Paragraph>
-                <Paragraph TextAlignment="Right">
-                    <Run Text="Zoran Salcic" />
-                </Paragraph>
+                <Paragraph TextAlignment="Right"><Run Text="Zoran Salcic"/><InlineUIContainer>
+                		<Image Source="zoran.jpg" Stretch="Fill" Height="132.501" Width="106" Margin="10,10,0,0"/>
+                	</InlineUIContainer></Paragraph>
             </FlowDocument>
         </FlowDocumentScrollViewer>
         <Button Grid.Row="3"
@@ -290,6 +272,40 @@
             <TextBlock TextWrapping="WrapWithOverflow"
                        Foreground="black"
                        FontSize="32"><Run Text="location info" /></TextBlock>
+        </Button>
+        <Button Grid.Row="3"
+        	Margin="0,4,4,4"
+        	FontSize="42"
+        	VerticalContentAlignment="Bottom"
+        	HorizontalContentAlignment="Right"
+        	Padding="16"
+        	Style="{DynamicResource Tile}"
+        	Foreground="{x:Null}"
+        	Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Right" Width="271.165">
+        	<Button.Background>
+        		<LinearGradientBrush EndPoint="0.5,1"
+        			StartPoint="0.5,0">
+        			<LinearGradientBrush.RelativeTransform>
+        				<TransformGroup>
+        					<ScaleTransform CenterY="0.5"
+        						CenterX="0.5" />
+        					<SkewTransform CenterY="0.5"
+        						CenterX="0.5" />
+        					<RotateTransform Angle="-90"
+        						CenterY="0.5"
+        						CenterX="0.5" />
+        					<TranslateTransform />
+        				</TransformGroup>
+        			</LinearGradientBrush.RelativeTransform>
+        			<GradientStop Color="#FF8830D4"
+        				Offset="0" />
+        			<GradientStop Color="#FF8916EE"
+        				Offset="1" />
+        		</LinearGradientBrush>
+        	</Button.Background>
+        	<TextBlock TextWrapping="WrapWithOverflow"
+        		Foreground="White"
+        		FontSize="32"><Run Text="department information" /></TextBlock>
         </Button>
     </Grid>
 </Page>
