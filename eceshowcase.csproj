@@ -154,7 +154,6 @@
     <Content Include="eceshowcase.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="zoran.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\map.png" />

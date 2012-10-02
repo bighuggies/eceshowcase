@@ -184,7 +184,7 @@
                     </LinearGradientBrush.RelativeTransform>
                     <GradientStop Color="#FF018901"
                                   Offset="0" />
-                    <GradientStop Color="#FF00A701"
+                    <GradientStop Color="#FF049905"
                                   Offset="1" />
                 </LinearGradientBrush>
             </Button.Background>
@@ -228,6 +228,7 @@
                        FontSize="32"><Run Text="for future students" /></TextBlock>
         </Button>
         <FlowDocumentScrollViewer Grid.Column="4"
+								  ScrollViewer.HorizontalScrollBarVisibility="Visible"
                                   Margin="4"
                                   Grid.Row="2"
                                   Foreground="#FF4F2D7F"
@@ -240,19 +241,14 @@
         			<GradientStop Color="Transparent" Offset="0.7"/>
         		</LinearGradientBrush>
         	</FlowDocumentScrollViewer.Background>
-            <FlowDocument FontFamily="Segoe UI Light"
-                          FontSize="20pt">
-                <Paragraph FontSize="40pt"
-                           Margin="0">
-                    <Run Text="welcome" />
-                </Paragraph>
-                <Paragraph Foreground="Black">
-                    This is a vibrant place for studying and research, where students and academic staff from different cultural and ethnical backgrounds meet, work together and achieve world-class results. Academic and research staff conduct research and have gained international reputation in a number of specific areas of interest not only for the present but also for the future world.
-                </Paragraph>
-                <Paragraph TextAlignment="Right"><Run Text="Zoran Salcic"/><InlineUIContainer>
-                		<Image Source="zoran.jpg" Stretch="Fill" Height="132.501" Width="106" Margin="10,10,0,0"/>
-                	</InlineUIContainer></Paragraph>
-            </FlowDocument>
+        	<FlowDocument FontFamily="Segoe UI Light"
+        		FontSize="20pt"
+				PageWidth="1000">
+        		<Paragraph FontSize="40pt"
+        			Margin="0"><Run Text="welcome" /></Paragraph>
+        		<Paragraph Foreground="Black"><Run Text="This is a vibrant place for studying and research, where students and academic staff from different cultural and ethnical backgrounds meet, work together and achieve world-class results. Academic and research staff conduct research and have gained international reputation in a number of specific areas of interest not only for the present but also for the future world."/></Paragraph>
+        		<Paragraph TextAlignment="Right"><Run Text="Zoran Salcic"/></Paragraph>
+        	</FlowDocument>
         </FlowDocumentScrollViewer>
         <Button Grid.Row="3"
                 Grid.RowSpan="2"
