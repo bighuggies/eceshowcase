@@ -54,38 +54,78 @@ namespace eceshowcase
         private void LoadCourseData()
         {
             string ProgramName = "CSE"; // TO BE SET WHEN PAGE IS INITIALISED
+            bool ReadingCorrectProgram = false;
             XmlTextReader reader = new XmlTextReader ("courses.xml");
-            try
+            while (reader.Read()) // each new line
             {
-                while (reader.Read())
+                if (ReadingCorrectProgram == false) // assume not in the right place so we must look for it
                 {
-                    switch (reader.NodeType)
+                    // This code will look for an element called Program with a value of common or the desired program
+                    // Once found it will set a boolean to true
+                    if (reader.NodeType == XmlNodeType.Element) // a tag
                     {
-                        case XmlNodeType.Element:
-                            // if reader.Name == Program && (reader.Value == ProgramName || reader.Value == "Common")
-                            // set a bool to check if it is inside the right program
-                            Console.Write("<" + reader.Name);
-
-                            while (reader.MoveToNextAttribute()) // Read the attributes.
-                                Console.Write(" " + reader.Name + "='" + reader.Value + "'");
-                            Console.WriteLine(">");
-                            break;
-                        case XmlNodeType.Text:
-                            Console.WriteLine(reader.Value);
-                            break;
-                        case XmlNodeType.EndElement:
-                            Console.Write("</" + reader.Name);
-                            Console.WriteLine(">");
-                            break;
+                        // looking for the program element
+                        if (reader.Name == "program")
+                        {
+                            // read program value
+                            while (reader.MoveToNextAttribute())
+                            {
+                                if (reader.Value == "Common" || reader.Value == ProgramName) // Must be a firstyear or correct department
+                                {
+                                    Console.WriteLine(" " + reader.Name + "='" + reader.Value + "'"); //temp
+                                    ReadingCorrectProgram = true; // in the right program data
+                                }
+                            }
+                            
+                        }
                     }
-                }
-                Console.ReadLine();
-            }
-            catch (XmlException e)
-            {
-                Console.WriteLine(e.StackTrace);
+                    
+                 } else // we are in the right program
+                        {
+                            if (reader.NodeType == XmlNodeType.EndElement) // it will always be set to false when leaving a program
+                            {
+                                if (reader.Name == "program")
+                                {
+                                    ReadingCorrectProgram = false;
+                                    continue;
+                                }
+                            }
+                            else if (reader.NodeType == XmlNodeType.Element)
+                            {
+                                string CourseCode;
+                                string YearValue;
+                                string CourseName;
+                                string CourseType;
+                                string CoursePrereq;
+                                string CourseInfo;
+                                if (reader.Name == "course") // everything stored as attributes :(
+                                { 
+                                    reader.MoveToAttribute("code"); 
+                                    CourseCode = reader.Value; // Shown on button
+                                    reader.MoveToAttribute("year"); 
+                                    YearValue = reader.Value; // Used in switch
+                                    reader.MoveToAttribute("name"); 
+                                    CourseName = reader.Value; 
+                                    reader.MoveToAttribute("type"); 
+                                    CourseType = reader.Value;
+                                    reader.MoveToAttribute("prereq");
+                                    CoursePrereq = reader.Value;
+                                    reader.MoveToAttribute("info");
+                                    CourseInfo = reader.Value; 
+
+                                    // Everything in theory stored but needs permanent storage
+                                    
+                                }
+                                
+                            }
+
+                            //Console.WriteLine(reader.Name);
+                            
+                            
+                        }
             }
 
+            
             // Multithread?
             // create maps
             // firstyear = 
@@ -95,15 +135,17 @@ namespace eceshowcase
             // for course in firstyear
 
             // ALL TO BE DELETED ONCE THE XML READER IS WORKING
-            firstyear.Add("CHEMMAT 121", new string[] { "Chemical Engineering", "has more women than software" });
-            firstyear.Add("ELECTENG 101", new string[] { "Electrical Engineering", "has more women than software" });
-            firstyear.Add("ENGGEN 115", new string[] { "Intro to Engineering Design", "has more women than software" });
-            firstyear.Add("ENGGEN 121", new string[] { "Engineering Mechanics", "has more women than software" });
+            firstyear.Add("CHEMMAT 121", new string[] { "Chemical Engineering"});
+            firstyear.Add("ELECTENG 101", new string[] { "Electrical Engineering" });
+            firstyear.Add("ENGGEN 115", new string[] { "Intro to Engineering Design" });
+            firstyear.Add("ENGGEN 121", new string[] { "Engineering Mechanics"});
+            firstyear.Add("ENGGEN 131", new string[] { "Intro to Computerz" });
         }
 
         private void GenerateButtons(){
 
-            // 
+            // use tag on button to know which year it belongs to OR combine the maps with an extra field
+            // OR change XML to have year as a attribute
             //foreach (string course in firstyear)
             foreach (KeyValuePair<string, string[]> pair in firstyear) 
             {
@@ -112,6 +154,7 @@ namespace eceshowcase
                 myButton.Click += CourseButton_Click;
                 Year1Panel.Children.Add(myButton);
             }
+
         }
 
         private void CourseButton_Click(object sender, RoutedEventArgs e)
@@ -122,6 +165,7 @@ namespace eceshowcase
             //MessageBox.Show(record.ToString());
             //DisplayText.Text = record.ToString();
             string CourseKey = ActiveButton.Content.ToString();
+            // Text labels
             DisplayCourseName.Text = CourseKey;
             DisplayCourseInfo.Text = firstyear[CourseKey][0];
 
