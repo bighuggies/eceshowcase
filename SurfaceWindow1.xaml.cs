@@ -29,10 +29,10 @@ namespace eceshowcase
     public partial class SurfaceWindow1 : SurfaceWindow
     {
         // Store the course data from XML
-        private Dictionary<string, string[]> firstyear = new Dictionary<string, string[]>();
-        private Dictionary<string, string[]> secondyear = new Dictionary<string, string[]>();
-        private Dictionary<string, string[]> thirdyear = new Dictionary<string, string[]>();
-        private Dictionary<string, string[]> fourthyear = new Dictionary<string, string[]>();
+        private Dictionary<string, string[]> CourseItems = new Dictionary<string, string[]>();
+        //private Dictionary<string, string[]> secondyear = new Dictionary<string, string[]>();
+        //private Dictionary<string, string[]> thirdyear = new Dictionary<string, string[]>();
+        //private Dictionary<string, string[]> fourthyear = new Dictionary<string, string[]>();
         /// <summary>
         /// Default constructor.
         /// </summary>
@@ -114,30 +114,7 @@ namespace eceshowcase
                                     CourseInfo = reader.Value; 
 
                                     // Everything in theory stored but needs permanent storage
-                                    
-                                    switch (YearValue)
-                                    {
-                                        case "1":
-                                            //Console.WriteLine(CourseCode);
-                                            //Console.WriteLine(CourseName);
-                                            //Console.WriteLine(CourseInfo);
-                                            firstyear.Add(CourseCode, new string[] { CourseName, CourseInfo });
-                                            break;
-
-                                        case "2":
-                                            //Console.WriteLine(CourseCode);
-                                            secondyear.Add(CourseCode, new string[] { CourseName, CourseInfo });
-                                            break;
-
-                                        case "3":
-                                            //Console.WriteLine(CourseCode);
-                                            thirdyear.Add(CourseCode, new string[] { CourseName, CourseInfo });
-                                            break;
-
-                                        default:
-                                            break;
-
-                                    }
+                                    CourseItems.Add(CourseCode, new string[] { CourseName, YearValue, CourseInfo });
                                     
                                 }      
                             }
@@ -153,12 +130,31 @@ namespace eceshowcase
             // use tag on button to know which year it belongs to OR combine the maps with an extra field
             // OR change XML to have year as a attribute
             //foreach (string course in firstyear)
-            foreach (KeyValuePair<string, string[]> pair in firstyear) 
+            foreach (KeyValuePair<string, string[]> pair in CourseItems) 
             {
                 Button myButton = new Button();
                 myButton.Content = pair.Key; //name
                 myButton.Click += CourseButton_Click;
-                Year1Panel.Children.Add(myButton);
+                myButton.Tag = pair.Value[1];
+                switch (pair.Value[1])
+                {
+                    case "1":
+                        Year1Panel.Children.Add(myButton);
+                        break;
+
+                    case "2":
+                        Year2Panel.Children.Add(myButton);
+                        break;
+
+                    case "3":
+                        Year3Panel.Children.Add(myButton);
+                        break;
+
+                    case "4":
+                        Year4Panel.Children.Add(myButton);
+                        break;
+                
+                }
             }
             
 
@@ -174,7 +170,7 @@ namespace eceshowcase
             string CourseKey = ActiveButton.Content.ToString();
             // Text labels
             DisplayCourseName.Text = CourseKey;
-            DisplayCourseInfo.Text = firstyear[CourseKey][0];
+            DisplayCourseInfo.Text = CourseItems[CourseKey][0];
 
             
         }

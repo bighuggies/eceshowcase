@@ -36,11 +36,11 @@
                     <!-- Populated by window constructor -->
 				</WrapPanel>
 			</GroupBox>
-			<GroupBox x:Name="Year2Group" Header="Year Two" Grid.Row="1" d:LayoutOverrides="Width, Height"/>
+            <GroupBox x:Name="Year2Group" Header="Year Two" Grid.Row="1" d:LayoutOverrides="Width, Height">
             <WrapPanel x:Name="Year2Panel" ItemHeight="100" ItemWidth="150">
                 
             </WrapPanel>
-
+            </GroupBox>
             <GroupBox x:Name="Year3Group" Header="Year Three" Grid.Row="2" d:LayoutOverrides="Width, Height">
                 <WrapPanel x:Name="Year3Panel" ItemHeight="100" ItemWidth="150">
 
