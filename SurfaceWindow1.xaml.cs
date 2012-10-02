@@ -55,7 +55,7 @@ namespace eceshowcase
         {
             string ProgramName = "CSE"; // TO BE SET WHEN PAGE IS INITIALISED
             bool ReadingCorrectProgram = false;
-            XmlTextReader reader = new XmlTextReader ("courses.xml");
+            XmlTextReader reader = new XmlTextReader ("D:\\Programming\\repos\\eceshowcase\\Resources\\courses.xml");
             while (reader.Read()) // each new line
             {
                 if (ReadingCorrectProgram == false) // assume not in the right place so we must look for it
@@ -115,31 +115,37 @@ namespace eceshowcase
 
                                     // Everything in theory stored but needs permanent storage
                                     
-                                }
-                                
+                                    switch (YearValue)
+                                    {
+                                        case "1":
+                                            //Console.WriteLine(CourseCode);
+                                            //Console.WriteLine(CourseName);
+                                            //Console.WriteLine(CourseInfo);
+                                            firstyear.Add(CourseCode, new string[] { CourseName, CourseInfo });
+                                            break;
+
+                                        case "2":
+                                            //Console.WriteLine(CourseCode);
+                                            secondyear.Add(CourseCode, new string[] { CourseName, CourseInfo });
+                                            break;
+
+                                        case "3":
+                                            //Console.WriteLine(CourseCode);
+                                            thirdyear.Add(CourseCode, new string[] { CourseName, CourseInfo });
+                                            break;
+
+                                        default:
+                                            break;
+
+                                    }
+                                    
+                                }      
                             }
 
-                            //Console.WriteLine(reader.Name);
-                            
-                            
+                            //Console.WriteLine(reader.Name);                               
                         }
             }
 
-            
-            // Multithread?
-            // create maps
-            // firstyear = 
-            // secondyear =
-            // thirdyear = 
-            // fourthyear = 
-            // for course in firstyear
-
-            // ALL TO BE DELETED ONCE THE XML READER IS WORKING
-            firstyear.Add("CHEMMAT 121", new string[] { "Chemical Engineering"});
-            firstyear.Add("ELECTENG 101", new string[] { "Electrical Engineering" });
-            firstyear.Add("ENGGEN 115", new string[] { "Intro to Engineering Design" });
-            firstyear.Add("ENGGEN 121", new string[] { "Engineering Mechanics"});
-            firstyear.Add("ENGGEN 131", new string[] { "Intro to Computerz" });
         }
 
         private void GenerateButtons(){
@@ -154,6 +160,7 @@ namespace eceshowcase
                 myButton.Click += CourseButton_Click;
                 Year1Panel.Children.Add(myButton);
             }
+            
 
         }
 

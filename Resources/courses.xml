@@ -53,93 +53,119 @@
   </program>
 
   <program name="CSE">
-      <course code="COMPSYS 201" year="2">
-        <name>Fundamentals of Computer Engineering</name>
-        <points>15</points>
-        <type>Prescribed</type>
+      <course code="COMPSYS 201" 
+              year="2"
+              name="Fundamentals of Computer Engineering"
+              type="Prescribed"
+              prereq=""
+              info="">
       </course>
-      <course code="ELECTENG 202" year="2">
-        <name>Circuits and Systems</name>
-        <points>15</points>
-        <type>Prescribed</type>
+      <course code="ELECTENG 202"
+              year="2"
+              name="Circuits and Systems"
+              type="Prescribed"
+              prereq=""
+              info="">
       </course>
-      <course code="ELECTENG 210" year="2">
-        <name>Electronics 1</name>
-        <points>15</points>
-        <type>Prescribed</type>
+      <course code="ELECTENG 210"
+              year="2"
+              name="Electronics 1"
+              type="Prescribed"
+              prereq=""
+              info="">
       </course>
-      <course code="ENGSCI 211" year="2">
-        <name>Mathematical Modelling 2</name>
-        <points>15</points>
-        <type>Prescribed</type>
+      <course code="ENGSCI 211"
+              year="2"
+              name="Mathematical Modelling 2"
+              type="Prescribed"
+              prereq=""
+              info="">
       </course>
-      <course code="COMPSYS 202" year="2">
-        <name>Object Oriented Design and programming</name>
-        <points>15</points>
-        <type>Prescribed</type>
+      <course code="COMPSYS 202"
+              year="2"
+              name="Object Oriented Design and Programming"
+              type="Prescribed"
+              prereq=""
+              info="">
       </course>
-      <course code="ELECTENG 204" year="2">
-        <name>Engineering Electromagnetics</name>
-        <points>15</points>
-        <type>Prescribed</type>
+      <course code="ELECTENG 204"
+              year="2"
+              name="Engineering Electromagnetics"
+              type="Prescribed"
+              prereq=""
+              info="">
       </course>
-      <course code="ELECTENG 209" year="2">
-        <name>Analogue and Digital Design</name>
-        <points>15</points>
-        <type>Prescribed</type>
+      <course code="ELECTENG 209"
+              year="2"
+              name="Analogue and Digital Design"
+              type="Prescribed"
+              prereq=""
+              info="">
       </course>
-      <course code="ENGGEN 204" year="2">
-        <name>Technical Communication for Engineers</name>
-        <points>15</points>
-        <type>Prescribed</type>
+      <course code="ENGGEN 204"
+              year="2"
+              name="Technical Communication for Engineers"
+              type="Prescribed"
+              prereq=""
+              info="">
       </course>
-      
-      
-      <course code="COMPSYS 302" year="3">
-        <name>Design: Software Practice</name>
-        <points>15</points>
-        <type>Prescribed</type>
+      <course code="COMPSYS 302"
+              year="3"
+              name="Design: Software Practice"
+              type="Prescribed"
+              prereq=""
+              info="">
       </course>
-      <course code="COMPSYS 305" year="3">
-        <name>Digital Systems Design 1</name>
-        <points>15</points>
-        <type>Prescribed</type>
+      <course code="COMPSYS 305"
+              year="3"
+              name="Digital Systems Design 1"
+              type="Prescribed"
+              prereq=""
+              info="">
       </course>
-      <course code="ENGGEN 303" year="3">
-        <name>Management for Engineers</name>
-        <points>15</points>
-        <type>Prescribed</type>
+      <course code="ENGGEN 303"
+              year="3"
+              name="Management for Engineers"
+              type="Prescribed"
+              prereq=""
+              info="">
       </course>
-      <course code="ENGSCI 313" year="3">
-        <name>Mathematical Modelling 3ECE</name>
-        <points>15</points>
-        <type>Prescribed</type>
+      <course code="ENGSCI 313"
+              year="3"
+              name="Mathematical Modelling 3ECE"
+              type="Prescribed"
+              prereq=""
+              info="">
       </course>
-      <course code="COMPSYS 301" year="3">
-        <name>Design: Hardware Software Systems</name>
-        <points>15</points>
-        <type>Prescribed</type>
+      <course code="COMPSYS 301"
+              year="3"
+              name="Design: Hardware Software Systems"
+              type="Prescribed"
+              prereq=""
+              info="">
       </course>
-      <course code="ELECTENG 303" year="3">
-        <name>Systems and Control</name>
-        <points>15</points>
-        <type>Prescribed</type>
+      <course code="ELECTENG 303"
+              year="3"
+              name="Systems and Control"
+              type="Elective"
+              prereq=""
+              info="">
       </course>
-      <course code="COMPSYS 303" year="3">
-        <name>Microcomputers and Embedded Systems</name>
-        <points>15</points>
-        <type>Elective</type>
+      <course code="COMPSYS 303" 
+              year="3"
+              name="Microcomputers and Embedded Systems"
+              type="Elective"
+              prereq=""
+              info="">
       </course>
-      <course code="COMPSYS 304" year="3">
-        <name>Computer Architecture 1</name>
-        <points>15</points>
-        <type>Elective</type>
+      <course code="COMPSYS 304"
+              year="3"
+              name="Computer Architecture 1"
+              type="Elective"
+              prereq=""
+              info="">
       </course>
-      <course code="SOFTENG 325" year="3">
-        <name>Software Architecture</name>
-        <points>15</points>
-        <type>Elective</type>
-      </course>
+
 
   </program>
   
@@ -151,7 +177,13 @@
   
   
   <program name="SE">
-
+    <course code="SOFTENG 325"
+        year="3"
+        name="Software Architecture"
+        type="Prescribed"
+        prereq=""
+        info="">
+    </course>
   </program>
   
 </programs>

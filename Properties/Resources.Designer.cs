@@ -59,32 +59,5 @@ namespace eceshowcase.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
-        ///&lt;programs&gt;
-        ///  &lt;program name=&quot;Common&quot;&gt;
-        ///    &lt;course code=&quot;CHEMMAT 121&quot; 
-        ///            year=&quot;1&quot;
-        ///            name=&quot;Materials Science&quot;
-        ///            type=&quot;Prescribed&quot;
-        ///            prereq=&quot;&quot;
-        ///            info=&quot;&quot;&gt;
-        ///    &lt;/course&gt;
-        ///    &lt;course code=&quot;ELECTENG 101&quot; 
-        ///            year=&quot;1&quot;
-        ///            name=&quot;Electrical and Digital Systems&quot;
-        ///            type=&quot;Prescribed&quot;
-        ///            prereq=&quot;&quot;
-        ///            info=&quot;&quot;&gt;
-        ///    &lt;/course&gt;
-        ///    &lt;course code=&quot;ENGGEN 115&quot; 
-        ///            year=&quot; [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string courses {
-            get {
-                return ResourceManager.GetString("courses", resourceCulture);
-            }
-        }
     }
 }
