@@ -17,20 +17,56 @@ namespace eceshowcase
     /// <summary>
     /// Interaction logic for DetailPage.xaml
     /// </summary>
-    public partial class DetailPage : Page
+    public partial class FutureStudentsPage : Page
     {
         private ShowcaseWindow window;
 
-        public DetailPage(ShowcaseWindow w)
+        public FutureStudentsPage(ShowcaseWindow w)
         {
             InitializeComponent();
             window = w;
-            child.Content = new OverviewSubpage(this);
+            //child.Content = new OverviewSubpage(this);
+            undergradGrid.Visibility = Visibility.Visible;
+            postgradGrid.Visibility = Visibility.Hidden;
+            accomodationGrid.Visibility = Visibility.Hidden;
+            scholGrid.Visibility = Visibility.Hidden;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             window.ShowPage(new FrontPage(window));
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            undergradGrid.Visibility = Visibility.Visible;
+            postgradGrid.Visibility = Visibility.Hidden;
+            accomodationGrid.Visibility = Visibility.Hidden;
+            scholGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            undergradGrid.Visibility = Visibility.Hidden;
+            postgradGrid.Visibility = Visibility.Visible;
+            accomodationGrid.Visibility = Visibility.Hidden;
+            scholGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            undergradGrid.Visibility = Visibility.Hidden;
+            postgradGrid.Visibility = Visibility.Hidden;
+            accomodationGrid.Visibility = Visibility.Visible;
+            scholGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            undergradGrid.Visibility = Visibility.Hidden;
+            postgradGrid.Visibility = Visibility.Hidden;
+            accomodationGrid.Visibility = Visibility.Hidden;
+            scholGrid.Visibility = Visibility.Visible;
         }
     }
 }
