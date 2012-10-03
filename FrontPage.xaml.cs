@@ -30,9 +30,19 @@ namespace eceshowcase
             window = w;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Electrical_Click(object sender, RoutedEventArgs e)
+        {
+            window.ShowPage(new DetailPage(window, "EEE"));
+        }
+
+        private void Software_Click(object sender, RoutedEventArgs e)
         {
             window.ShowPage(new DetailPage(window, "SE"));
+        }
+
+        private void Computer_Click(object sender, RoutedEventArgs e)
+        {
+            window.ShowPage(new DetailPage(window, "CSE"));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

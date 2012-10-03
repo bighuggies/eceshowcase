@@ -80,6 +80,9 @@
     <Compile Include="CoursesSubpage.xaml.cs">
       <DependentUpon>CoursesSubpage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FacultySubpage.xaml.cs">
+      <DependentUpon>FacultySubpage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
@@ -94,6 +97,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FacultySubpage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,6 +165,7 @@
     </Resource>
     <Resource Include="Resources\back.png" />
     <Resource Include="Resources\back-white.png" />
+    <Resource Include="Resources\Faculty.xml" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

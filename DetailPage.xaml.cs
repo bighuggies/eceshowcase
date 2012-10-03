@@ -30,8 +30,14 @@ namespace eceshowcase
 
             switch (id)
             {
+                case "EEE":
+                    PageTitle.Content = "electrical and electronic engineering";
+                        break;
                 case "SE":
                     PageTitle.Content = "software engineering";
+                    break;
+                case "CSE":
+                    PageTitle.Content = "computer systems engineering";
                     break;
             }
 
@@ -64,6 +70,7 @@ namespace eceshowcase
 
                 case "faculty":
                     FacultyButton.BorderBrush = whiteBrush;
+                    child.Content = new FacultySubpage(this);
                     break;
             }
         }
