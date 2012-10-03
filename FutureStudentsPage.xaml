@@ -78,16 +78,55 @@
             <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0">accomodation</Button>
             <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0">scholarships</Button>
         </StackPanel>
-        <Grid Grid.Column="1" Grid.Row="3"  Name="grid1" VerticalAlignment="Stretch" Height="auto" Width="auto" HorizontalAlignment="Stretch">
+        <Grid Grid.Column="1" Grid.Row="3"  Name="undergradGrid" VerticalAlignment="Stretch" Height="auto" Width="auto" HorizontalAlignment="Stretch" Visibility="Hidden">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="594*" />
                 <ColumnDefinition Width="1086*" />
             </Grid.ColumnDefinitions>
-            <Image Height="Auto" HorizontalAlignment="Stretch" Name="image1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
-                
+            <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/ug.jpg" Name="ugimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >                
             </Image>
-                <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="textBlock1" VerticalAlignment="Stretch" Width="Auto" >
-                hgjhgjhgkjhgkjg
+                <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="ugtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="40">
+                <LineBreak/>
+                If you are interested in the study and application of software, electricity, electronics and electro-magnetism then we may have the course of study for you. You'll find everything you need here to make a choice about your future.
+                <LineBreak/>
+                <LineBreak/>
+                Your first of four years years will see you doing a general Engineering year where you can have a taste of electrical and software courses. The following year you will have the opportunity to specialise into an ECE disclipline.      
+            </TextBlock>
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="3"  Name="postgradGrid" VerticalAlignment="Stretch" Height="auto" Width="auto" HorizontalAlignment="Stretch" Visibility="Hidden">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="594*" />
+                <ColumnDefinition Width="1086*" />
+            </Grid.ColumnDefinitions>
+            <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/pg1.jpg" Name="pgimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
+            </Image>
+            <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="pgtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="40">
+                <LineBreak/>
+                Furthering your study with a postgraduate degree is one of the best ways of keeping up to date. Choose between a Graduate Diploma in Engineering, a Master of Engineering, Master of Engineering Studies or Doctor of Philosophy.
+                <LineBreak/>
+                <LineBreak/>
+                The duration of a Masters program is approximately a year and is taught in the format of a regular two semester year. 
+                <LineBreak/>
+                <LineBreak/>                
+                A PhD is a three to four year research project which can be started at any time of the year.
+            </TextBlock>
+        </Grid>
+
+         <Grid Grid.Column="1" Grid.Row="3"  Name="accomodationGrid" VerticalAlignment="Stretch" Height="auto" Width="auto" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="594*" />
+                <ColumnDefinition Width="1086*" />
+            </Grid.ColumnDefinitions>
+            <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/pg1.jpg" Name="accomodationimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
+            </Image>
+            <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="accomodationtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="40">
+                The University of Auckland provides quality student accommodation in Auckland City, conveniently located close to our Auckland campuses.
+
+Our residences offer a great lifestyle, with excellent study and living facilities, academic and pastoral support, and an active social programme. 
+                <LineBreak/>
+                <LineBreak/>                
+                Living in University accommodation is a great way to make friends with people from all over the world.
             </TextBlock>
         </Grid>
 
