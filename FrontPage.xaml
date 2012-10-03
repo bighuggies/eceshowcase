@@ -107,15 +107,171 @@
                             ImageSource="Resources/map.png" />
             </Button.Background>
         </s:SurfaceButton>
-        <FlowDocumentPageViewer x:Name="welcome_carousel" Grid.Column="4" Margin="4" Grid.Row="2">
-        	<FlowDocument>
+        <FlowDocumentPageViewer x:Name="welcome_carousel" Grid.Column="4" Margin="4" Grid.Row="2" FontSize="32" Style="{DynamicResource FlowDocumentPageViewerNoZoom}">
+        	<FlowDocumentPageViewer.Resources>
+        		<Style x:Key="FlowDocumentPageViewerNoZoom" TargetType="{x:Type FlowDocumentPageViewer}">
+        			<Setter Property="Background" Value="Transparent"/>
+        			<Setter Property="ContextMenu" Value="{DynamicResource {ComponentResourceKey ResourceId=PUIFlowViewers_ContextMenu, TypeInTargetAssembly={x:Type System_Windows_Documents:PresentationUIStyleResources}}}"/>
+        			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+        			<Setter Property="VerticalContentAlignment" Value="Center"/>
+        			<Setter Property="KeyboardNavigation.TabNavigation" Value="Local"/>
+        			<Setter Property="Template">
+        				<Setter.Value>
+        					<ControlTemplate TargetType="{x:Type FlowDocumentPageViewer}">
+        						<DockPanel Language="en-us" LastChildFill="True" Uid="DockPanel_2">
+        							<Grid Background="{TemplateBinding Background}" DockPanel.Dock="Bottom" HorizontalAlignment="Stretch" Uid="Grid_23">
+        								<Grid.ColumnDefinitions>
+        									<ColumnDefinition Width="*"/>
+        									<ColumnDefinition Width="Auto"/>
+        									<ColumnDefinition Width="*"/>
+        								</Grid.ColumnDefinitions>
+        								<Border x:Name="PART_FindToolBarHost" Grid.Column="0" HorizontalAlignment="Left" Uid="Border_60" Visibility="Collapsed" VerticalAlignment="Center"/>
+        								<StackPanel Grid.Column="1" HorizontalAlignment="Center" Orientation="Horizontal" Uid="StackPanel_1" VerticalAlignment="Center">
+        									<RepeatButton Command="NavigationCommands.PreviousPage" Focusable="False" IsEnabled="{TemplateBinding CanGoToPreviousPage}" ToolTip="Previous Page" Uid="RepeatButton_3">
+        										<RepeatButton.Style>
+        											<Style TargetType="{x:Type RepeatButton}">
+        												<Setter Property="Padding" Value="5"/>
+        												<Setter Property="Delay" Value="1000"/>
+        												<Setter Property="Interval" Value="250"/>
+        												<Style.BasedOn>
+        													<Style TargetType="{x:Type ButtonBase}">
+        														<Setter Property="Focusable" Value="False"/>
+        														<Setter Property="Opacity" Value="0.5"/>
+        														<Setter Property="Cursor" Value="Hand"/>
+        														<Setter Property="Background" Value="Transparent"/>
+        														<Setter Property="Padding" Value="3,1"/>
+        														<Setter Property="BorderBrush" Value="{x:Null}"/>
+        														<Setter Property="BorderThickness" Value="0"/>
+        														<Setter Property="MinWidth" Value="0"/>
+        														<Setter Property="MinHeight" Value="0"/>
+        														<Setter Property="Template">
+        															<Setter.Value>
+        																<ControlTemplate TargetType="{x:Type ButtonBase}">
+        																	<Border Background="{TemplateBinding Background}" Uid="Border_39">
+        																		<ContentPresenter x:Name="Content" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" RenderTransformOrigin="0.5,0.5" Uid="ContentPresenter_2"/>
+        																	</Border>
+        																	<ControlTemplate.Triggers>
+        																		<Trigger Property="IsMouseOver" Value="True">
+        																			<Setter Property="RenderTransform" TargetName="Content">
+        																				<Setter.Value>
+        																					<ScaleTransform ScaleY="1.1" ScaleX="1.1"/>
+        																				</Setter.Value>
+        																			</Setter>
+        																		</Trigger>
+        																		<Trigger Property="IsPressed" Value="True">
+        																			<Setter Property="RenderTransform" TargetName="Content">
+        																				<Setter.Value>
+        																					<ScaleTransform ScaleY="0.9" ScaleX="0.9"/>
+        																				</Setter.Value>
+        																			</Setter>
+        																		</Trigger>
+        																	</ControlTemplate.Triggers>
+        																</ControlTemplate>
+        															</Setter.Value>
+        														</Setter>
+        														<Style.Triggers>
+        															<Trigger Property="IsEnabled" Value="False">
+        																<Setter Property="Opacity" Value="0.3"/>
+        															</Trigger>
+        															<Trigger Property="IsMouseOver" Value="True">
+        																<Setter Property="Opacity" Value="1"/>
+        															</Trigger>
+        														</Style.Triggers>
+        													</Style>
+        												</Style.BasedOn>
+        											</Style>
+        										</RepeatButton.Style>
+        										<Viewbox Height="{TemplateBinding FontSize}" Uid="Viewbox_5">
+        											<Path Data="M5,0 L5,10 L0,5 z" Fill="{TemplateBinding Foreground}" Uid="Path_15"/>
+        										</Viewbox>
+        									</RepeatButton>
+        									<TextBlock HorizontalAlignment="Center" Uid="TextBlock_5" VerticalAlignment="Center"><Run Text=" "/><Run Text=" "/><InlineUIContainer>
+        											<TextBlock Text="{Binding MasterPageNumber, RelativeSource={RelativeSource TemplatedParent}}" Uid="TextBlock_6"/>
+        										</InlineUIContainer><Run Text=" "/><Run Text=" of "/><Run Text=" "/><InlineUIContainer>
+        											<TextBlock Text="{Binding PageCount, RelativeSource={RelativeSource TemplatedParent}}" Uid="TextBlock_7"/>
+        										</InlineUIContainer><Run Text=" "/><Run Text=" "/></TextBlock>
+        									<RepeatButton Command="NavigationCommands.NextPage" Focusable="False" IsEnabled="{TemplateBinding CanGoToNextPage}" ToolTip="Next Page" Uid="RepeatButton_4">
+        										<RepeatButton.Style>
+        											<Style TargetType="{x:Type RepeatButton}">
+        												<Setter Property="Padding" Value="5"/>
+        												<Setter Property="Delay" Value="1000"/>
+        												<Setter Property="Interval" Value="250"/>
+        												<Style.BasedOn>
+        													<Style TargetType="{x:Type ButtonBase}">
+        														<Setter Property="Focusable" Value="False"/>
+        														<Setter Property="Opacity" Value="0.5"/>
+        														<Setter Property="Cursor" Value="Hand"/>
+        														<Setter Property="Background" Value="Transparent"/>
+        														<Setter Property="Padding" Value="3,1"/>
+        														<Setter Property="BorderBrush" Value="{x:Null}"/>
+        														<Setter Property="BorderThickness" Value="0"/>
+        														<Setter Property="MinWidth" Value="0"/>
+        														<Setter Property="MinHeight" Value="0"/>
+        														<Setter Property="Template">
+        															<Setter.Value>
+        																<ControlTemplate TargetType="{x:Type ButtonBase}">
+        																	<Border Background="{TemplateBinding Background}" Uid="Border_39">
+        																		<ContentPresenter x:Name="Content" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" RenderTransformOrigin="0.5,0.5" Uid="ContentPresenter_2"/>
+        																	</Border>
+        																	<ControlTemplate.Triggers>
+        																		<Trigger Property="IsMouseOver" Value="True">
+        																			<Setter Property="RenderTransform" TargetName="Content">
+        																				<Setter.Value>
+        																					<ScaleTransform ScaleY="1.1" ScaleX="1.1"/>
+        																				</Setter.Value>
+        																			</Setter>
+        																		</Trigger>
+        																		<Trigger Property="IsPressed" Value="True">
+        																			<Setter Property="RenderTransform" TargetName="Content">
+        																				<Setter.Value>
+        																					<ScaleTransform ScaleY="0.9" ScaleX="0.9"/>
+        																				</Setter.Value>
+        																			</Setter>
+        																		</Trigger>
+        																	</ControlTemplate.Triggers>
+        																</ControlTemplate>
+        															</Setter.Value>
+        														</Setter>
+        														<Style.Triggers>
+        															<Trigger Property="IsEnabled" Value="False">
+        																<Setter Property="Opacity" Value="0.3"/>
+        															</Trigger>
+        															<Trigger Property="IsMouseOver" Value="True">
+        																<Setter Property="Opacity" Value="1"/>
+        															</Trigger>
+        														</Style.Triggers>
+        													</Style>
+        												</Style.BasedOn>
+        											</Style>
+        										</RepeatButton.Style>
+        										<Viewbox Height="{TemplateBinding FontSize}" Uid="Viewbox_6">
+        											<Path Data="M0,0 L0,10 L5,5 z" Fill="{TemplateBinding Foreground}" Uid="Path_16"/>
+        										</Viewbox>
+        									</RepeatButton>
+        								</StackPanel>
+        							</Grid>
+        							<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" Uid="Border_47" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+        								<AdornerDecorator ClipToBounds="True" Uid="AdornerDecorator_1">
+        									<DocumentPageView DocumentPaginator="{x:Null}" KeyboardNavigation.IsTabStop="False" DocumentViewerBase.IsMasterPage="True" PageNumber="0" KeyboardNavigation.TabIndex="1" KeyboardNavigation.TabNavigation="Local" Uid="DocumentPageView_1"/>
+        								</AdornerDecorator>
+        							</Border>
+        						</DockPanel>
+        					</ControlTemplate>
+        				</Setter.Value>
+        			</Setter>
+        		</Style>
+        	</FlowDocumentPageViewer.Resources>
+        	<FlowDocument ColumnWidth="1000"> <!-- This is 1000 so that it looks like one column -->
         		<Section>
-        			<Paragraph>
+        			<Paragraph FontSize="42" FontFamily="Segoe UI Light">
         				welcome   			
 					</Paragraph>
-					<Paragraph>
-						I am Zoran Salcic
-					</Paragraph>    		
+					<Paragraph FontSize="28" FontFamily="Segoe UI Light" TextAlignment="Left">
+						This is a vibrant place for studying and research, where students and academic staff from different cultural and ethnical backgrounds meet, work together and achieve world-class results. Academic and research staff conduct research and have gained international reputation in a number of specific areas of interest not only for the present but also for the future world.
+					</Paragraph>
+					<Paragraph FontSize="28" FontFamily="Segoe UI Light" TextAlignment="Right">
+						Zoran Salcic
+					</Paragraph> 		
 				</Section>
 				
 				<Section BreakPageBefore="True">
