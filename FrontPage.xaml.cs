@@ -32,7 +32,7 @@ namespace eceshowcase
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            window.ShowPage(new DetailPage(window));
+            window.ShowPage(new DetailPage(window, "SE"));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
