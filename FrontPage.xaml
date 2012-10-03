@@ -91,8 +91,8 @@
         <s:SurfaceButton x:Name="ee_btn" Content="electrical and electronic" Grid.Column="1" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FF2D57FF" Foreground="White" Click="ee_btn_Click" />
         <s:SurfaceButton x:Name="se_btn" Content="software" Grid.Column="2" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFDC1818" Foreground="White"/>
     	<s:SurfaceButton x:Name="cs_btn" Content="computer systems" Grid.Column="3" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FF00CA28" Foreground="White"/>
-    	<s:SurfaceButton x:Name="futurestudents_btn" Content="electrical and electronic" Grid.Column="1" Margin="4" Grid.Row="3" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFDADF24" Grid.ColumnSpan="2" Foreground="White"/>
-    	<s:SurfaceButton x:Name="other_btn" Content="other" Grid.Column="3" Margin="4" Grid.Row="3" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFBB24DF" Foreground="White"/>
+    	<s:SurfaceButton x:Name="futurestudents_btn" Content="future students" Grid.Column="1" Margin="4" Grid.Row="3" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFDADF24" Grid.ColumnSpan="2" Foreground="White"/>
+    	<s:SurfaceButton x:Name="other_btn" Content="news and social media" Grid.Column="3" Margin="4" Grid.Row="3" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFBB24DF" Foreground="White"/>
         <s:SurfaceButton x:Name="map_btn" Grid.Row="3"
                 Grid.Column="4"
                 Margin="4"
