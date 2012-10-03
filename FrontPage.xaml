@@ -4,6 +4,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+      xmlns:System_Windows_Documents="clr-namespace:System.Windows.Documents;assembly=PresentationUI"
       mc:Ignorable="d"
       x:Class="eceshowcase.FrontPage"
       Title="eceshowcase"
@@ -160,7 +161,7 @@
         </Button>
         <Button Grid.Row="2"
                 Grid.Column="3"
-                Margin="8,4,0,4"
+                Margin="4"
                 FontSize="42"
                 VerticalContentAlignment="Bottom"
                 HorizontalContentAlignment="Left"
@@ -247,7 +248,7 @@
                        FontSize="32"><Run Text="location info" /></TextBlock>
         </Button>
         <Button Grid.Row="3"
-        	Margin="0,4,4,4"
+        	Margin="4"
         	FontSize="42"
         	VerticalContentAlignment="Bottom"
         	HorizontalContentAlignment="Right"
@@ -280,14 +281,168 @@
         		Foreground="White"
         		FontSize="32"><Run Text="department information" /></TextBlock>
         </Button>
-        <FlowDocumentPageViewer x:Name="welcome_text" Grid.Column="4" Margin="4" Grid.Row="2" FontSize="29.333">
-        	<FlowDocument ColumnWidth="800">
-        		<Paragraph FontFamily="Segoe UI" FontSize="32">Welcome from Zoran Salcic</Paragraph>
-        		<Paragraph FontFamily="Segoe UI">Modern world infrastructure is largely based on the work of electrical, computer and software engineers; from generation and distribution of electricity to providing telecommunication and internet services, portable and embedded computers and numerous software applications. All modern systems used in everyday’s private or business life, such as mobile phones, vehicles, home and building automation or industrial control systems, will not exist if there are not electrical, computer and software engineers.</Paragraph>
-        		<Paragraph BreakPageBefore="True">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</Paragraph>
-				<Paragraph BreakPageBefore="True">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</Paragraph>
-				<Paragraph BreakPageBefore="True">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</Paragraph>
-			</FlowDocument>
-		</FlowDocumentPageViewer>
+    	<FlowDocumentPageViewer x:Name="welcome_text" Grid.Column="4" Margin="4" Grid.Row="2" Style="{DynamicResource FlowDocumentPageViewerNoZoom}" FontSize="32">
+    		<FlowDocumentPageViewer.Resources>
+    			<Style x:Key="FlowDocumentPageViewerNoZoom" TargetType="{x:Type FlowDocumentPageViewer}">
+    				<Setter Property="Background" Value="Transparent"/>
+    				<Setter Property="ContextMenu" Value="{DynamicResource {ComponentResourceKey ResourceId=PUIFlowViewers_ContextMenu, TypeInTargetAssembly={x:Type System_Windows_Documents:PresentationUIStyleResources}}}"/>
+    				<Setter Property="HorizontalContentAlignment" Value="Center"/>
+    				<Setter Property="VerticalContentAlignment" Value="Center"/>
+    				<Setter Property="KeyboardNavigation.TabNavigation" Value="Local"/>
+    				<Setter Property="Template">
+    					<Setter.Value>
+    						<ControlTemplate TargetType="{x:Type FlowDocumentPageViewer}">
+    							<DockPanel Language="en-us" LastChildFill="True" Uid="DockPanel_2">
+    								<Grid Background="{TemplateBinding Background}" DockPanel.Dock="Bottom" HorizontalAlignment="Stretch" Uid="Grid_23">
+    									<Grid.ColumnDefinitions>
+    										<ColumnDefinition Width="*"/>
+    										<ColumnDefinition Width="Auto"/>
+    										<ColumnDefinition Width="*"/>
+    									</Grid.ColumnDefinitions>
+    									<Border x:Name="PART_FindToolBarHost" Grid.Column="0" HorizontalAlignment="Left" Uid="Border_60" Visibility="Collapsed" VerticalAlignment="Center"/>
+    									<StackPanel Grid.Column="1" HorizontalAlignment="Center" Orientation="Horizontal" Uid="StackPanel_1" VerticalAlignment="Center">
+    										<RepeatButton Command="NavigationCommands.PreviousPage" Focusable="False" IsEnabled="{TemplateBinding CanGoToPreviousPage}" ToolTip="Previous Page" Uid="RepeatButton_3">
+    											<RepeatButton.Style>
+    												<Style TargetType="{x:Type RepeatButton}">
+    													<Setter Property="Padding" Value="5"/>
+    													<Setter Property="Delay" Value="1000"/>
+    													<Setter Property="Interval" Value="250"/>
+    													<Style.BasedOn>
+    														<Style TargetType="{x:Type ButtonBase}">
+    															<Setter Property="Focusable" Value="False"/>
+    															<Setter Property="Opacity" Value="0.5"/>
+    															<Setter Property="Cursor" Value="Hand"/>
+    															<Setter Property="Background" Value="Transparent"/>
+    															<Setter Property="Padding" Value="3,1"/>
+    															<Setter Property="BorderBrush" Value="{x:Null}"/>
+    															<Setter Property="BorderThickness" Value="0"/>
+    															<Setter Property="MinWidth" Value="0"/>
+    															<Setter Property="MinHeight" Value="0"/>
+    															<Setter Property="Template">
+    																<Setter.Value>
+    																	<ControlTemplate TargetType="{x:Type ButtonBase}">
+    																		<Border Background="{TemplateBinding Background}" Uid="Border_39">
+    																			<ContentPresenter x:Name="Content" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" RenderTransformOrigin="0.5,0.5" Uid="ContentPresenter_2"/>
+    																		</Border>
+    																		<ControlTemplate.Triggers>
+    																			<Trigger Property="IsMouseOver" Value="True">
+    																				<Setter Property="RenderTransform" TargetName="Content">
+    																					<Setter.Value>
+    																						<ScaleTransform ScaleY="1.1" ScaleX="1.1"/>
+    																					</Setter.Value>
+    																				</Setter>
+    																			</Trigger>
+    																			<Trigger Property="IsPressed" Value="True">
+    																				<Setter Property="RenderTransform" TargetName="Content">
+    																					<Setter.Value>
+    																						<ScaleTransform ScaleY="0.9" ScaleX="0.9"/>
+    																					</Setter.Value>
+    																				</Setter>
+    																			</Trigger>
+    																		</ControlTemplate.Triggers>
+    																	</ControlTemplate>
+    																</Setter.Value>
+    															</Setter>
+    															<Style.Triggers>
+    																<Trigger Property="IsEnabled" Value="False">
+    																	<Setter Property="Opacity" Value="0.3"/>
+    																</Trigger>
+    																<Trigger Property="IsMouseOver" Value="True">
+    																	<Setter Property="Opacity" Value="1"/>
+    																</Trigger>
+    															</Style.Triggers>
+    														</Style>
+    													</Style.BasedOn>
+    												</Style>
+    											</RepeatButton.Style>
+    											<Viewbox Height="{TemplateBinding FontSize}" Uid="Viewbox_5">
+    												<Path Data="M5,0 L5,10 L0,5 z" Fill="{TemplateBinding Foreground}" Uid="Path_15"/>
+    											</Viewbox>
+    										</RepeatButton>
+    										<TextBlock HorizontalAlignment="Center" Uid="TextBlock_5" VerticalAlignment="Center"><Run Text=" "/><Run Text=" "/><InlineUIContainer>
+    												<TextBlock Text="{Binding MasterPageNumber, RelativeSource={RelativeSource TemplatedParent}}" Uid="TextBlock_6"/>
+    											</InlineUIContainer><Run Text=" "/><Run Text=" of "/><Run Text=" "/><InlineUIContainer>
+    												<TextBlock Text="{Binding PageCount, RelativeSource={RelativeSource TemplatedParent}}" Uid="TextBlock_7"/>
+    											</InlineUIContainer><Run Text=" "/><Run Text=" "/></TextBlock>
+    										<RepeatButton Command="NavigationCommands.NextPage" Focusable="False" IsEnabled="{TemplateBinding CanGoToNextPage}" ToolTip="Next Page" Uid="RepeatButton_4">
+    											<RepeatButton.Style>
+    												<Style TargetType="{x:Type RepeatButton}">
+    													<Setter Property="Padding" Value="5"/>
+    													<Setter Property="Delay" Value="1000"/>
+    													<Setter Property="Interval" Value="250"/>
+    													<Style.BasedOn>
+    														<Style TargetType="{x:Type ButtonBase}">
+    															<Setter Property="Focusable" Value="False"/>
+    															<Setter Property="Opacity" Value="0.5"/>
+    															<Setter Property="Cursor" Value="Hand"/>
+    															<Setter Property="Background" Value="Transparent"/>
+    															<Setter Property="Padding" Value="3,1"/>
+    															<Setter Property="BorderBrush" Value="{x:Null}"/>
+    															<Setter Property="BorderThickness" Value="0"/>
+    															<Setter Property="MinWidth" Value="0"/>
+    															<Setter Property="MinHeight" Value="0"/>
+    															<Setter Property="Template">
+    																<Setter.Value>
+    																	<ControlTemplate TargetType="{x:Type ButtonBase}">
+    																		<Border Background="{TemplateBinding Background}" Uid="Border_39">
+    																			<ContentPresenter x:Name="Content" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" RenderTransformOrigin="0.5,0.5" Uid="ContentPresenter_2"/>
+    																		</Border>
+    																		<ControlTemplate.Triggers>
+    																			<Trigger Property="IsMouseOver" Value="True">
+    																				<Setter Property="RenderTransform" TargetName="Content">
+    																					<Setter.Value>
+    																						<ScaleTransform ScaleY="1.1" ScaleX="1.1"/>
+    																					</Setter.Value>
+    																				</Setter>
+    																			</Trigger>
+    																			<Trigger Property="IsPressed" Value="True">
+    																				<Setter Property="RenderTransform" TargetName="Content">
+    																					<Setter.Value>
+    																						<ScaleTransform ScaleY="0.9" ScaleX="0.9"/>
+    																					</Setter.Value>
+    																				</Setter>
+    																			</Trigger>
+    																		</ControlTemplate.Triggers>
+    																	</ControlTemplate>
+    																</Setter.Value>
+    															</Setter>
+    															<Style.Triggers>
+    																<Trigger Property="IsEnabled" Value="False">
+    																	<Setter Property="Opacity" Value="0.3"/>
+    																</Trigger>
+    																<Trigger Property="IsMouseOver" Value="True">
+    																	<Setter Property="Opacity" Value="1"/>
+    																</Trigger>
+    															</Style.Triggers>
+    														</Style>
+    													</Style.BasedOn>
+    												</Style>
+    											</RepeatButton.Style>
+    											<Viewbox Height="{TemplateBinding FontSize}" Uid="Viewbox_6">
+    												<Path Data="M0,0 L0,10 L5,5 z" Fill="{TemplateBinding Foreground}" Uid="Path_16"/>
+    											</Viewbox>
+    										</RepeatButton>
+    									</StackPanel>
+    								</Grid>
+    								<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" Uid="Border_47" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+    									<AdornerDecorator ClipToBounds="True" Uid="AdornerDecorator_1">
+    										<DocumentPageView DocumentPaginator="{x:Null}" KeyboardNavigation.IsTabStop="False" DocumentViewerBase.IsMasterPage="True" PageNumber="0" KeyboardNavigation.TabIndex="1" KeyboardNavigation.TabNavigation="Local" Uid="DocumentPageView_1"/>
+    									</AdornerDecorator>
+    								</Border>
+    							</DockPanel>
+    						</ControlTemplate>
+    					</Setter.Value>
+    				</Setter>
+    			</Style>
+    		</FlowDocumentPageViewer.Resources>
+    		<FlowDocument ColumnWidth="800">
+    			<Paragraph FontFamily="Segoe UI" FontSize="48"><Run Text="welcome"/></Paragraph>
+    			<Paragraph FontFamily="Segoe UI" FontSize="18"><Run Text="This is a vibrant place for studying and research, where students and academic staff from different cultural and ethnical backgrounds meet, work together and achieve world-class results. Academic and research staff conduct research and have gained international reputation in a number of specific areas of interest not only for the present but also for the future world."/></Paragraph>
+    			<Paragraph FontFamily="Segoe UI" FontSize="24" TextAlignment="Right"><Run Text="Zoran Salcic"/></Paragraph>
+    			<Paragraph BreakPageBefore="True"><Run Text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum."/></Paragraph>
+    			<Paragraph BreakPageBefore="True"><Run Text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum."/></Paragraph>
+    			<Paragraph BreakPageBefore="True"><Run Text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum."/></Paragraph>
+    		</FlowDocument>
+    	</FlowDocumentPageViewer>
     </Grid>
 </Page>
