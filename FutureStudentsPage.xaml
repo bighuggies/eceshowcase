@@ -75,7 +75,7 @@
         <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
             <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0">undergraduate</Button>
             <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0">postgraduate</Button>
-            <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0">accomodation</Button>
+            <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0">accommodation</Button>
             <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0">scholarships</Button>
         </StackPanel>
         <Grid Grid.Column="1" Grid.Row="3"  Name="undergradGrid" VerticalAlignment="Stretch" Height="auto" Width="auto" HorizontalAlignment="Stretch" Visibility="Hidden">
@@ -113,20 +113,40 @@
             </TextBlock>
         </Grid>
 
-         <Grid Grid.Column="1" Grid.Row="3"  Name="accomodationGrid" VerticalAlignment="Stretch" Height="auto" Width="auto" HorizontalAlignment="Stretch">
+         <Grid Grid.Column="1" Grid.Row="3"  Name="accomodationGrid" VerticalAlignment="Stretch" Height="auto" Width="auto" HorizontalAlignment="Stretch" Visibility="Hidden">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="594*" />
                 <ColumnDefinition Width="1086*" />
             </Grid.ColumnDefinitions>
-            <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/pg1.jpg" Name="accomodationimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
+            <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/horesidence.jpg" Name="accomodationimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
             </Image>
             <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="accomodationtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="40">
                 The University of Auckland provides quality student accommodation in Auckland City, conveniently located close to our Auckland campuses.
-
-Our residences offer a great lifestyle, with excellent study and living facilities, academic and pastoral support, and an active social programme. 
+                Our five halls of residences offer a great lifestyle, with excellent study and living facilities, academic and pastoral support, and an active social programme. 
                 <LineBreak/>
                 <LineBreak/>                
-                Living in University accommodation is a great way to make friends with people from all over the world.
+                Undergraduate living halls allow student flat style living while being close to the University.
+                <LineBreak/>
+                <LineBreak/>
+                
+            </TextBlock>
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="3"  Name="scholGrid" VerticalAlignment="Stretch" Height="auto" Width="auto" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="594*" />
+                <ColumnDefinition Width="1086*" />
+            </Grid.ColumnDefinitions>
+            <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/schol.jpg" Name="scholimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
+            </Image>
+            <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="scholtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="40">
+                There are many scholarships on offer for study at the University of Auckland.
+                <LineBreak/>
+                <LineBreak/>                
+                Scholarships are offered to ungraduate students, postgraduate students, and for summer research or internships.
+                <LineBreak/>
+                <LineBreak/>
+
             </TextBlock>
         </Grid>
 
