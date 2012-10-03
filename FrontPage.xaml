@@ -160,7 +160,7 @@
         </Button>
         <Button Grid.Row="2"
                 Grid.Column="3"
-                Margin="4"
+                Margin="8,4,0,4"
                 FontSize="42"
                 VerticalContentAlignment="Bottom"
                 HorizontalContentAlignment="Left"
@@ -227,29 +227,6 @@
                        Foreground="White"
                        FontSize="32"><Run Text="for future students" /></TextBlock>
         </Button>
-        <FlowDocumentScrollViewer Grid.Column="4"
-								  ScrollViewer.HorizontalScrollBarVisibility="Visible"
-                                  Margin="4"
-                                  Grid.Row="2"
-                                  Foreground="#FF4F2D7F"
-                                  VerticalScrollBarVisibility="Hidden">
-        	<FlowDocumentScrollViewer.Background>
-        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-        			<GradientStop Color="White"/>
-        			<GradientStop/>
-        			<GradientStop Color="Transparent" Offset="0.12"/>
-        			<GradientStop Color="Transparent" Offset="0.7"/>
-        		</LinearGradientBrush>
-        	</FlowDocumentScrollViewer.Background>
-        	<FlowDocument FontFamily="Segoe UI Light"
-        		FontSize="20pt"
-				PageWidth="1000">
-        		<Paragraph FontSize="40pt"
-        			Margin="0"><Run Text="welcome" /></Paragraph>
-        		<Paragraph Foreground="Black"><Run Text="This is a vibrant place for studying and research, where students and academic staff from different cultural and ethnical backgrounds meet, work together and achieve world-class results. Academic and research staff conduct research and have gained international reputation in a number of specific areas of interest not only for the present but also for the future world."/></Paragraph>
-        		<Paragraph TextAlignment="Right"><Run Text="Zoran Salcic"/></Paragraph>
-        	</FlowDocument>
-        </FlowDocumentScrollViewer>
         <Button Grid.Row="3"
                 Grid.RowSpan="2"
                 Grid.Column="4"
@@ -303,5 +280,14 @@
         		Foreground="White"
         		FontSize="32"><Run Text="department information" /></TextBlock>
         </Button>
+        <FlowDocumentPageViewer x:Name="welcome_text" Grid.Column="4" Margin="4" Grid.Row="2" FontSize="29.333">
+        	<FlowDocument ColumnWidth="800">
+        		<Paragraph FontFamily="Segoe UI" FontSize="32">Welcome from Zoran Salcic</Paragraph>
+        		<Paragraph FontFamily="Segoe UI">Modern world infrastructure is largely based on the work of electrical, computer and software engineers; from generation and distribution of electricity to providing telecommunication and internet services, portable and embedded computers and numerous software applications. All modern systems used in everyday’s private or business life, such as mobile phones, vehicles, home and building automation or industrial control systems, will not exist if there are not electrical, computer and software engineers.</Paragraph>
+        		<Paragraph BreakPageBefore="True">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</Paragraph>
+				<Paragraph BreakPageBefore="True">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</Paragraph>
+				<Paragraph BreakPageBefore="True">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</Paragraph>
+			</FlowDocument>
+		</FlowDocumentPageViewer>
     </Grid>
 </Page>
