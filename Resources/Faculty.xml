@@ -5,40 +5,35 @@
            position="Head of Department"
            phone="87802"
            email="z.salcic@auckland.ac.nz"
-           bldg="303"
-           room="244"
+           room="303.244"
            type="HoD">
     </staff>
     <staff name="Mark Andrews"
            position="Deputy HoD (Academic)"
            phone="85724"
            email="m.andrews@auckland.ac.nz"
-           bldg="303"
-           room="243"
+           room="303.243"
            type="Deputy HoD">
     </staff>
     <staff name="Sing Kiong Nguang"
            position="Deputy HoD (Research)"
            phone="89421"
            email="sk.nguang@auckland.ac.nz"
-           bldg="303"
-           room="242"
+           room="303.242"
            type="Deputy HoD">
     </staff>
     <staff name="Aruna Sundar-Lal"
            position="Department Manager"
            phone="88189"
            email="a.sundar-lal@auckland.ac.nz"
-           bldg="303"
-           room="245"
+           room="303.245"
            type="Manager">
     </staff>
     <staff name="Hanlie Van Zyl"
            position="Office Manager"
            phone="88247"
            email="h.vanzyl@auckland.ac.nz"
-           bldg="303"
-           room="240"
+           room="303.240"
            type="Manager">
     </staff>
   </program>
@@ -48,8 +43,7 @@
            position="Senior Lecturer / CSE Programme Director"
            phone="85583"
            email="p.roop@auckland.ac.nz"
-           bldg="303"
-           room="152"
+           room="303.152"
            type="Course Adviser">
     </staff>
   </program>
@@ -61,8 +55,7 @@
            position="Senior Lecturer / EEE Programme Director"
            phone="88966"
            email="s.berber@auckland.ac.nz"
-           bldg="303"
-           room="250"
+           room="303.250"
            type="Course Adviser">
     </staff>
   </program>
@@ -73,8 +66,7 @@
            position="Senior Lecturer / SE Programme Director"
            phone="85979"
            email="c.watson@auckland.ac.nz"
-           bldg="303"
-           room="149"
+           room="303.149"
            type="Course Adviser">
     </staff>
   </program>

@@ -84,6 +84,8 @@
         <Grid Grid.Row="1" Grid.Column="2" x:Name="StaffInfoGrid" Margin="16,0,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -92,6 +94,8 @@
 
             <TextBlock Grid.Row="0" Grid.Column="0" x:Name="DisplayStaffName" FontSize="42px" Foreground="White"/>
             <TextBlock Grid.Row="1" Grid.Column="0" x:Name="DisplayStaffPosition" FontSize="28px" Foreground="White"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" x:Name="ContactDetails" FontSize="28px" Foreground="White"/>
+            <TextBlock Grid.Row="3" Grid.Column="0" x:Name="DisplayStaffDetails" FontSize="20px" Foreground="White"/>
         </Grid>
 
 

@@ -80,7 +80,6 @@ namespace eceshowcase
                         string StaffType;
                         string StaffPosition;
                         string StaffRoom;
-                        string StaffBldg;
                         string StaffEmail;
                         string StaffPhone;
                         if (reader.Name == "staff") // everything stored as attributes :(
@@ -93,15 +92,13 @@ namespace eceshowcase
                             StaffPosition = reader.Value;
                             reader.MoveToAttribute("room");
                             StaffRoom = reader.Value;
-                            reader.MoveToAttribute("bldg");
-                            StaffBldg = reader.Value;
                             reader.MoveToAttribute("email");
                             StaffEmail = reader.Value;
                             reader.MoveToAttribute("phone");
                             StaffPhone = reader.Value;
 
                             // Everything in theory stored but needs permanent storage
-                            FacultyItems.Add(StaffName, new string[] { StaffType, StaffPosition, StaffRoom, StaffBldg, StaffEmail, StaffPhone });
+                            FacultyItems.Add(StaffName, new string[] { StaffType, StaffPosition, StaffRoom, StaffEmail, StaffPhone });
 
                         }
                     }
@@ -180,6 +177,10 @@ namespace eceshowcase
             // Text labels
             DisplayStaffName.Text = FacultyKey;
             DisplayStaffPosition.Text = FacultyItems[FacultyKey][1];
+            ContactDetails.Text = "\nContact Details";
+            DisplayStaffDetails.Text = "Room " + FacultyItems[FacultyKey][2] + "\nCity Campus\n38 Princes Street"
+                + "\nAuckland\n\nPhone: +64 9 373 7599 ext " + FacultyItems[FacultyKey][4] + "\nEmail: " +
+                FacultyItems[FacultyKey][3];
         }
     }
 }
