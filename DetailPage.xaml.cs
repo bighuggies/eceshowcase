@@ -33,6 +33,12 @@ namespace eceshowcase
                 case "SE":
                     PageTitle.Content = "software engineering";
                     break;
+                case "EEE":
+                    PageTitle.Content = "electrical and electronic engineering";
+                    break;
+                case "CSE":
+                    PageTitle.Content = "computer systems engineering";
+                    break;
             }
 
             SwitchNavTab("overview");

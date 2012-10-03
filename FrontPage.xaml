@@ -100,7 +100,7 @@
                 Style="{DynamicResource Tile}"
                 Foreground="{x:Null}"
                 Grid.RowSpan="2"
-                Click="Button_Click">
+                Click="EEEButton_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1"
                                      MappingMode="RelativeToBoundingBox"
@@ -136,7 +136,7 @@
                 Padding="16"
                 Style="{DynamicResource Tile}"
                 Foreground="{x:Null}"
-                Grid.RowSpan="2">
+                Grid.RowSpan="2" Click="SEButton_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1"
                                      StartPoint="0.5,0">
@@ -171,7 +171,7 @@
                 Padding="16"
                 Style="{DynamicResource Tile}"
                 Foreground="{x:Null}"
-                Grid.RowSpan="2">
+                Grid.RowSpan="2" Click="CSEButton_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1"
                                      StartPoint="0.5,0">
