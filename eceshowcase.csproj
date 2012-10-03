@@ -153,6 +153,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\schol.jpg" />
     <Resource Include="Resources\ug.jpg" />
     <Resource Include="Resources\pg1.jpg" />
     <Resource Include="Resources\back.png" />
