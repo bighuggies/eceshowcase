@@ -77,45 +77,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MapPage.xaml.cs">
-      <DependentUpon>MapPage.xaml</DependentUpon>
+    <Compile Include="NewsPage.xaml.cs">
+      <DependentUpon>NewsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="OverviewSubpage.xaml.cs">
-      <DependentUpon>OverviewSubpage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ShowcaseWindow.xaml.cs">
-      <DependentUpon>ShowcaseWindow.xaml</DependentUpon>
-    </Compile>
-    <Page Include="DetailPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="FrontPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DetailPage.xaml.cs">
-      <DependentUpon>DetailPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FrontPage.xaml.cs">
-      <DependentUpon>FrontPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="MapPage.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="NewsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="OverviewSubpage.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ShowcaseWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -141,22 +112,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Resources\bg.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\back.png" />
-    <Resource Include="Resources\back-white.png" />
-    <Content Include="Resources\icon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="eceshowcase.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\map.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
