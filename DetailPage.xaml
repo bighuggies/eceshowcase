@@ -69,13 +69,14 @@
                HorizontalAlignment="Left"
                VerticalAlignment="Top"
                d:LayoutOverrides="GridBox"
-               FontFamily="Segoe UI Light" />
+               FontFamily="Segoe UI Light"
+               Name="PageTitle" />
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
-            <Button FontSize="52px" Padding="25,0" Margin="0,0,25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0,0,0,3" BorderBrush="White">overview</Button>
-            <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0">courses</Button>
-            <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0">faculty</Button>
+        <StackPanel Name="NavButtons" Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+            <Button Name="OverviewButton" FontSize="52px" Padding="25,0" Margin="0,0,25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0,0,0,3" BorderBrush="Transparent" Click="OverviewButton_Click">overview</Button>
+            <Button Name="CoursesButton" FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0,0,0,3" BorderBrush="Transparent" Click="CoursesButton_Click">courses</Button>
+            <Button Name="FacultyButton" FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0,0,0,3" BorderBrush="Transparent" Click="FacultyButton_Click">faculty</Button>
         </StackPanel>
         <Frame Grid.Column="1" Grid.Row="3" Name="child" />
     </Grid>

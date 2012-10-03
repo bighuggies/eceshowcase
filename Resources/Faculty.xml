@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<programs>
+  <program name="Common">
+    <staff name="Zoran Salcic"
+           position="Head of Department"
+           phone="87802"
+           email="z.salcic@auckland.ac.nz"
+           room="303.244"
+           address="38 Princes Street"
+           type="HoD">
+    </staff>
+    <staff name="Mark Andrews"
+           position="Deputy HoD (Academic)"
+           phone="85724"
+           email="m.andrews@auckland.ac.nz"
+           room="303.243"
+           address="38 Princes Street"
+           type="Deputy HoD">
+    </staff>
+    <staff name="Sing Kiong Nguang"
+           position="Deputy HoD (Research)"
+           phone="89421"
+           email="sk.nguang@auckland.ac.nz"
+           room="303.242"
+           address="38 Princes Street"
+           type="Deputy HoD">
+    </staff>
+    <staff name="Aruna Sundar-Lal"
+           position="Department Manager"
+           phone="88189"
+           email="a.sundar-lal@auckland.ac.nz"
+           room="303.245"
+           address="38 Princes Street"
+           type="Manager">
+    </staff>
+    <staff name="Hanlie Van Zyl"
+           position="Office Manager"
+           phone="88247"
+           email="h.vanzyl@auckland.ac.nz"
+           room="303.240"
+           address="38 Princes Street"
+           type="Manager">
+    </staff>
+    <staff name="Rob Champion"
+           position="Technical Manager"
+           phone="87415"
+           email="r.champion@auckland.ac.nz"
+           room="303.174"
+           address="38 Princes Street"
+           type="Manager">
+    </staff>
+    <staff name="Fung Yang"
+           position="Technical Officer (Robotics)"
+           phone="87892"
+           email="fung.yang@auckland.ac.nz"
+           room="301.338A"
+           address="23 Symonds Street"
+           type="Technician">
+    </staff>
+    <staff name="Wai Yeung"
+           position="Senior Technician"
+           phone="88172"
+           email="w.yeung@auckland.ac.nz"
+           room="301.314A"
+           address="23 Symonds Street"
+           type="Technician">
+    </staff>
+    <staff name="Vic Church"
+           position="Technical Officer"
+           phone="84598"
+           email="v.church@auckland.ac.nz"
+           room="301.176"
+           address="23 Symonds Street"
+           type="Technician">
+    </staff>
+    <staff name="Howard Lu"
+           position="Technician"
+           phone="87011"
+           email="h.lu@auckland.ac.nz"
+           room="301.184"
+           address="23 Symonds Street"
+           type="Technician">
+    </staff>
+    <staff name="Kavitha Penneru"
+           position="Technical Assistant"
+           phone="87378"
+           email="k.penneru@auckland.ac.nz"
+           room="301.174"
+           address="23 Symonds Street"
+           type="Technician">
+    </staff>
+    <staff name="Leonid Ostrovsky"
+           position="Technician"
+           phone="88101"
+           email="l.ostrovsky@auckland.ac.nz"
+           room="301.214"
+           address="23 Symonds Street"
+           type="Technician">
+    </staff>
+    <staff name="Allan Williamson"
+           position="Professor"
+           phone="87922"
+           email="ag.williamson@auckland.ac.nz"
+           room="303.164"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="Duleepa Thrimawithana"
+           position="Senior Lecturer"
+           phone="89634"
+           email="d.thrimawithana@auckland.ac.nz"
+           room="303.159"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="Ewan Tempero"
+           position="Associate Professor"
+           phone="83765"
+           email="e.tempero@auckland.ac.nz"
+           room="303S.493"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="Grant Covic"
+           position="Associate Professor"
+           phone="88102"
+           email="ga.covic@auckland.ac.nz"
+           room="303.248"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="Bernard Guillemin"
+           position="Senior Lecturer"
+           phone="88190"
+           email="bj.guillemin@auckland.ac.nz"
+           room="303.243"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="Morteza Biglari-Abhari"
+           position="Senior Lecturer"
+           phone="84534"
+           email="m.abhari@auckland.ac.nz"
+           room="303.252"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="George Coghill"
+           position="Professional Teaching Fellow"
+           phone="89800"
+           email="g.coghill@auckland.ac.nz"
+           room="303.157"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="Dariusz Kacprzak"
+           position="Senior Lecturer"
+           phone="88198"
+           email="d.kacprzak@auckland.ac.nz"
+           room="303.247"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="Bruce MacDonald"
+           position="Associate Professor"
+           phone="88157"
+           email="b.macdonald@auckland.ac.nz"
+           room="303.249"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="Nitish Patel"
+           position="Senior Lecturer"
+           phone="88196"
+           email="nd.patel@auckland.ac.nz"
+           room="303.232"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="Gerard Rowe"
+           position="Senior Lecturer / Director of Teaching &amp; Learning"
+           phone="82009"
+           email="gb.rowe@auckland.ac.nz"
+           room="303.147"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="Oliver Sinnen"
+           position="Senior Lecturer"
+           phone="88285"
+           email="o.sinnen@auckland.ac.nz"
+           room="303.156"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="Akshya Swain"
+           position="Undergraduate Enrolment Coordinator"
+           phone="84752"
+           email="a.swain@auckland.ac.nz"
+           room="303.251"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+  </program>
+
+
+
+  <program name="CSE">
+    <staff name="Partha Roop"
+           position="Senior Lecturer / CSE Programme Director"
+           phone="85583"
+           email="p.roop@auckland.ac.nz"
+           room="303.152"
+           address="38 Princes Street"
+           type="Course Adviser">
+    </staff>
+    <staff name="Kevin Wang"
+           position="Professional Research Fellow"
+           phone="81185"
+           email="kevin.wang@auckland.ac.nz"
+           room="303.163"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+  </program>
+
+
+
+  <program name="EEE">
+    <staff name="Stevan Berber"
+           position="Senior Lecturer / EEE Programme Director"
+           phone="88966"
+           email="s.berber@auckland.ac.nz"
+           room="303.250"
+           address="38 Princes Street"
+           type="Course Adviser">
+    </staff>
+    <staff name="Sunita Bhide"
+           position="Electronics Technical Officer"
+           phone="89097"
+           email="s.bhide@auckland.ac.nz"
+           room="301.238A"
+           address="23 Symonds Street"
+           type="Technician">
+    </staff>
+    <staff name="Waleed Abdulla"
+           position="Senior Lecturer"
+           phone="88969"
+           email="w.abdulla@auckland.ac.nz"
+           room="303.236"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="Patrick Hu"
+           position="Associate Professor / Director of Graduate Studies"
+           phone="84535"
+           email="a.hu@auckland.ac.nz"
+           room="303.246"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="Udaya K. Madawala"
+           position="Associate Professor"
+           phone="86496"
+           email="u.madawala@auckland.ac.nz"
+           room="303.165"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="Nirmal Nair"
+           position="Senior Lecturer / Associate Director of Graduate Studies"
+           phone="89523"
+           email="n.nair@auckland.ac.nz"
+           room="303.166"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+  </program>
+
+
+  <program name="SE">
+    <staff name="Catherine Watson"
+           position="Senior Lecturer / SE Programme Director"
+           phone="85979"
+           email="c.watson@auckland.ac.nz"
+           room="303.149"
+           address="38 Princes Street"
+           type="Course Adviser">
+    </staff>
+    <staff name="Valeriy Vyatkin"
+           position="Associate Professor / External Relations Officer"
+           phone="89437"
+           email="v.vyatkin@auckland.ac.nz"
+           room="303.154"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="Nasser Giacaman"
+           position="Lecturer"
+           phone="88156"
+           email="n.giacaman@auckland.ac.nz"
+           room="303.160"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="Rashina Hoda"
+           position="Lecturer"
+           phone="81377"
+           email="r.hoda@auckland.ac.nz"
+           room="303.234"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+  </program>
+
+</programs>
