@@ -41,27 +41,19 @@ namespace eceshowcase
             xmlDoc.Load(rssReader);
 
             data = new List<newsItem>();
+            
 
             data.Add(new newsItem("Hello :D", "lolwyut", "adsfadFA"));
-            // go through the list of nodes and look for item nodes.
-            for (int i = 0; i < xmlDoc.ChildNodes.Count; i++)
+
+            XmlNodeList n = xmlDoc.SelectNodes("//channel/item");
+            for ( int i=0; i < n.Count; i++ )
             {
-                XmlNode n = xmlDoc.ChildNodes[i];
-                data.Add(new newsItem(n.Name, "lolwyut", "adsfadFA"));
-              if (n.Name == "item")
-                {
-                    string title = n["title"].InnerText;
-                    string content = n["description"].InnerText;
-                    string date = n["pubDate"].InnerText;
-
-                    
-
-                    data.Add(new newsItem(title, content, date));
-                }
+                data.Add(new newsItem(n[i]["title"].InnerText, n[i]["description"].InnerText, n[i]["pubDate"].InnerText));
             }
+
+            
         }
     }
-
 
     /// <summary>
     /// Interaction logic for DetailPage.xaml
