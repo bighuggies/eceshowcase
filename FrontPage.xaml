@@ -57,6 +57,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Storyboard x:Key="OnTouchMove1"/>
 
     </Page.Resources>
     <Grid>
@@ -79,7 +80,7 @@
         <!--<Grid.Background>
     		<ImageBrush Stretch="UniformToFill" ImageSource="Resources/bg.png" />
 		</Grid.Background>-->
-        <Label Content="electrical and computer engineering"
+        <Label x:Name="title" Content="electrical and computer engineering"
                FontSize="74.667"
                Foreground="#FF4F2D7F"
                Grid.ColumnSpan="4"
@@ -89,145 +90,11 @@
                d:LayoutOverrides="GridBox"
                Grid.Row="1"
                Grid.Column="1" />
-        <Button Grid.Row="2"
-                Grid.Column="1"
-                Margin="4"
-                FontSize="42"
-                VerticalContentAlignment="Bottom"
-                HorizontalContentAlignment="Left"
-                Padding="16"
-                Style="{DynamicResource Tile}"
-                Foreground="{x:Null}"
-                Click="Button_Click">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1"
-                                     MappingMode="RelativeToBoundingBox"
-                                     StartPoint="0.5,0">
-                    <LinearGradientBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5"
-                                            CenterX="0.5" />
-                            <SkewTransform CenterY="0.5"
-                                           CenterX="0.5" />
-                            <RotateTransform Angle="-90"
-                                             CenterY="0.5"
-                                             CenterX="0.5" />
-                            <TranslateTransform />
-                        </TransformGroup>
-                    </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="#FF008287"
-                                  Offset="0" />
-                    <GradientStop Color="#FF00A2B6"
-                                  Offset="1" />
-                </LinearGradientBrush>
-            </Button.Background>
-            <TextBlock TextWrapping="WrapWithOverflow"
-                       Foreground="White"
-                       FontSize="32"><Run Text="electrical engineering" /></TextBlock>
-        </Button>
-        <Button Grid.Row="2"
-                Grid.Column="2"
-                Margin="4"
-                FontSize="42"
-                VerticalContentAlignment="Bottom"
-                HorizontalContentAlignment="Left"
-                Padding="16"
-                Style="{DynamicResource Tile}"
-                Foreground="{x:Null}">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1"
-                                     StartPoint="0.5,0">
-                    <LinearGradientBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5"
-                                            CenterX="0.5" />
-                            <SkewTransform CenterY="0.5"
-                                           CenterX="0.5" />
-                            <RotateTransform Angle="-90"
-                                             CenterY="0.5"
-                                             CenterX="0.5" />
-                            <TranslateTransform />
-                        </TransformGroup>
-                    </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="#FFD34724"
-                                  Offset="0" />
-                    <GradientStop Color="#FFDE5930"
-                                  Offset="1" />
-                </LinearGradientBrush>
-            </Button.Background>
-            <TextBlock TextWrapping="WrapWithOverflow"
-                       Foreground="White"
-                       FontSize="32"><Run Text="software engineering" /></TextBlock>
-        </Button>
-        <Button Grid.Row="2"
-                Grid.Column="3"
-                Margin="4"
-                FontSize="42"
-                VerticalContentAlignment="Bottom"
-                HorizontalContentAlignment="Left"
-                Padding="16"
-                Style="{DynamicResource Tile}"
-                Foreground="{x:Null}">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1"
-                                     StartPoint="0.5,0">
-                    <LinearGradientBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5"
-                                            CenterX="0.5" />
-                            <SkewTransform CenterY="0.5"
-                                           CenterX="0.5" />
-                            <RotateTransform Angle="-90"
-                                             CenterY="0.5"
-                                             CenterX="0.5" />
-                            <TranslateTransform />
-                        </TransformGroup>
-                    </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="#FF018901"
-                                  Offset="0" />
-                    <GradientStop Color="#FF049905"
-                                  Offset="1" />
-                </LinearGradientBrush>
-            </Button.Background>
-            <TextBlock TextWrapping="WrapWithOverflow"
-                       Foreground="White"
-                       FontSize="32"><Run Text="computer systems engineering" /></TextBlock>
-        </Button>
-        <Button Grid.Row="3"
-                Grid.ColumnSpan="2"
-                Margin="4"
-                FontSize="42"
-                VerticalContentAlignment="Bottom"
-                HorizontalContentAlignment="Right"
-                Padding="16"
-                Style="{DynamicResource Tile}"
-                Foreground="{x:Null}"
-                Grid.Column="1" Grid.RowSpan="2">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1"
-                                     StartPoint="0.5,0">
-                    <LinearGradientBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5"
-                                            CenterX="0.5" />
-                            <SkewTransform CenterY="0.5"
-                                           CenterX="0.5" />
-                            <RotateTransform Angle="-90"
-                                             CenterY="0.5"
-                                             CenterX="0.5" />
-                            <TranslateTransform />
-                        </TransformGroup>
-                    </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="#FFB89E4E"
-                                  Offset="0" />
-                    <GradientStop Color="#FFEEBC16"
-                                  Offset="1" />
-                </LinearGradientBrush>
-            </Button.Background>
-            <TextBlock TextWrapping="WrapWithOverflow"
-                       Foreground="White"
-                       FontSize="32"><Run Text="for future students" /></TextBlock>
-        </Button>
+        <s:SurfaceButton x:Name="ee_btn" Content="electrical and electronic" Grid.Column="1" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FF2D57FF" Foreground="White"/>
+        <s:SurfaceButton x:Name="se_btn" Content="software" Grid.Column="2" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFDC1818" Foreground="White"/>
+    	<s:SurfaceButton x:Name="cs_btn" Content="computer systems" Grid.Column="3" Margin="4,4,4.001,4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FF00CA28" Foreground="White"/>
+    	<s:SurfaceButton x:Name="futurestudents_btn" Content="electrical and electronic" Grid.Column="1" Margin="4" Grid.Row="3" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFDADF24" Grid.ColumnSpan="2" Grid.RowSpan="2" Foreground="White"/>
+    	<s:SurfaceButton x:Name="other_btn" Content="other" Grid.Column="3" Margin="4" Grid.Row="3" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFBB24DF" Grid.RowSpan="2" Foreground="White"/>
         <Button Grid.Row="3"
                 Grid.RowSpan="2"
                 Grid.Column="4"
@@ -246,40 +113,6 @@
             <TextBlock TextWrapping="WrapWithOverflow"
                        Foreground="black"
                        FontSize="32"><Run Text="location info" /></TextBlock>
-        </Button>
-        <Button Grid.Row="3"
-        	Margin="4"
-        	FontSize="42"
-        	VerticalContentAlignment="Bottom"
-        	HorizontalContentAlignment="Right"
-        	Padding="16"
-        	Style="{DynamicResource Tile}"
-        	Foreground="{x:Null}"
-        	Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Right" Width="271.165">
-        	<Button.Background>
-        		<LinearGradientBrush EndPoint="0.5,1"
-        			StartPoint="0.5,0">
-        			<LinearGradientBrush.RelativeTransform>
-        				<TransformGroup>
-        					<ScaleTransform CenterY="0.5"
-        						CenterX="0.5" />
-        					<SkewTransform CenterY="0.5"
-        						CenterX="0.5" />
-        					<RotateTransform Angle="-90"
-        						CenterY="0.5"
-        						CenterX="0.5" />
-        					<TranslateTransform />
-        				</TransformGroup>
-        			</LinearGradientBrush.RelativeTransform>
-        			<GradientStop Color="#FF8830D4"
-        				Offset="0" />
-        			<GradientStop Color="#FF8916EE"
-        				Offset="1" />
-        		</LinearGradientBrush>
-        	</Button.Background>
-        	<TextBlock TextWrapping="WrapWithOverflow"
-        		Foreground="White"
-        		FontSize="32"><Run Text="department information" /></TextBlock>
         </Button>
     	<FlowDocumentPageViewer x:Name="welcome_text" Grid.Column="4" Margin="4" Grid.Row="2" Style="{DynamicResource FlowDocumentPageViewerNoZoom}" FontSize="32">
     		<FlowDocumentPageViewer.Resources>
