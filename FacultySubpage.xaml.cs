@@ -82,6 +82,7 @@ namespace eceshowcase
                         string StaffRoom;
                         string StaffEmail;
                         string StaffPhone;
+                        string StaffAddress;
                         if (reader.Name == "staff") // everything stored as attributes :(
                         {
                             reader.MoveToAttribute("name");
@@ -96,9 +97,11 @@ namespace eceshowcase
                             StaffEmail = reader.Value;
                             reader.MoveToAttribute("phone");
                             StaffPhone = reader.Value;
+                            reader.MoveToAttribute("address");
+                            StaffAddress = reader.Value;
 
                             // Everything in theory stored but needs permanent storage
-                            FacultyItems.Add(StaffName, new string[] { StaffType, StaffPosition, StaffRoom, StaffEmail, StaffPhone });
+                            FacultyItems.Add(StaffName, new string[] { StaffType, StaffPosition, StaffRoom, StaffEmail, StaffPhone, StaffAddress });
 
                         }
                     }
@@ -167,20 +170,17 @@ namespace eceshowcase
 
         private void FacultyButton_Click(object sender, RoutedEventArgs e)
         {
-            //var record = ((Button)e.OriginalSource).Tag;
             var ActiveButton = ((Button)e.OriginalSource);
 
-            //MessageBox.Show(record.ToString());
-            //DisplayText.Text = record.ToString();
             string FacultyKey = ActiveButton.Content.ToString();
 
             // Text labels
             DisplayStaffName.Text = FacultyKey;
             DisplayStaffPosition.Text = FacultyItems[FacultyKey][1];
             ContactDetails.Text = "\nContact Details";
-            DisplayStaffDetails.Text = "Room " + FacultyItems[FacultyKey][2] + "\nCity Campus\n38 Princes Street"
-                + "\nAuckland\n\nPhone: +64 9 373 7599 ext " + FacultyItems[FacultyKey][4] + "\nEmail: " +
-                FacultyItems[FacultyKey][3];
+            DisplayStaffDetails.Text = "Room " + FacultyItems[FacultyKey][2] + "\nCity Campus\n" +
+                FacultyItems[FacultyKey][5] + "\nAuckland\n\nPhone: +64 9 373 7599 ext " +
+                FacultyItems[FacultyKey][4] + "\nEmail: " + FacultyItems[FacultyKey][3];
         }
     }
 }
