@@ -88,11 +88,11 @@
                FontFamily="Segoe UI Light"
                Grid.Row="1"
                Grid.Column="1" />
-        <s:SurfaceButton x:Name="ee_btn" Content="electrical and electronic" Grid.Column="1" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FF2D57FF" Foreground="White"/>
+        <s:SurfaceButton x:Name="ee_btn" Content="electrical and electronic" Grid.Column="1" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FF2D57FF" Foreground="White" Click="ee_btn_Click" />
         <s:SurfaceButton x:Name="se_btn" Content="software" Grid.Column="2" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFDC1818" Foreground="White"/>
     	<s:SurfaceButton x:Name="cs_btn" Content="computer systems" Grid.Column="3" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FF00CA28" Foreground="White"/>
     	<s:SurfaceButton x:Name="futurestudents_btn" Content="electrical and electronic" Grid.Column="1" Margin="4" Grid.Row="3" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFDADF24" Grid.ColumnSpan="2" Foreground="White"/>
-    	<s:SurfaceButton x:Name="other_btn" Content="other" Grid.Column="3" Margin="12,8,-4,0" Grid.Row="3" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFBB24DF" Foreground="White"/>
+    	<s:SurfaceButton x:Name="other_btn" Content="other" Grid.Column="3" Margin="4" Grid.Row="3" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFBB24DF" Foreground="White"/>
         <s:SurfaceButton x:Name="map_btn" Grid.Row="3"
                 Grid.Column="4"
                 Margin="4"
@@ -101,13 +101,29 @@
                 HorizontalContentAlignment="Right"
                 Padding="16"
                 Style="{DynamicResource Tile}"
-                Foreground="{x:Null}"
-                Click="Button_Click_1">
+                Foreground="{x:Null}">
             <Button.Background>
                 <ImageBrush Stretch="UniformToFill"
                             ImageSource="Resources/map.png" />
             </Button.Background>
         </s:SurfaceButton>
-        <FlowDocumentPageViewer Grid.Column="4" Margin="4" Grid.Row="2"/>
+        <FlowDocumentPageViewer x:Name="welcome_carousel" Grid.Column="4" Margin="4" Grid.Row="2">
+        	<FlowDocument>
+        		<Section>
+        			<Paragraph>
+        				welcome   			
+					</Paragraph>
+					<Paragraph>
+						I am Zoran Salcic
+					</Paragraph>    		
+				</Section>
+				
+				<Section BreakPageBefore="True">
+					<Paragraph>
+						Hey there
+					</Paragraph>
+				</Section>
+			</FlowDocument>      
+		</FlowDocumentPageViewer>
     </Grid>
 </Page>

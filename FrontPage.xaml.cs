@@ -30,12 +30,12 @@ namespace eceshowcase
             window = w;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ee_btn_Click(object sender, RoutedEventArgs e)
         {
             window.ShowPage(new DetailPage(window));
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void map_btn_Click(object sender, RoutedEventArgs e)
         {
             window.ShowPage(new MapPage(window));
         }
