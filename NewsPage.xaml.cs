@@ -42,9 +42,6 @@ namespace eceshowcase
 
             data = new List<newsItem>();
             
-
-            data.Add(new newsItem("Hello :D", "lolwyut", "adsfadFA"));
-
             XmlNodeList n = xmlDoc.SelectNodes("//channel/item");
             for ( int i=0; i < n.Count; i++ )
             {
@@ -72,12 +69,28 @@ namespace eceshowcase
             //child.Content = new OverviewSubpage(this);
             rssFeed lolwut = new rssFeed();
 
-            Label t = new Label();
+            SolidColorBrush whiteBrush = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+
             foreach (newsItem item in lolwut.data)
             {
-                t.Content += item.title + "\n";
+                Label temp = new Label();
+                temp.Foreground = whiteBrush; 
+                temp.Content=item.title;
+                temp.FontSize = 26;
+                contentPanel.Children.Add(temp);
+
+                TextBlock contentLabel = new TextBlock();
+                contentLabel.FontSize = 20;
+                contentLabel.Text = item.content;
+                contentLabel.Foreground = whiteBrush;
+                contentLabel.Width = 800;
+                contentLabel.TextWrapping = TextWrapping.Wrap;
+                contentLabel.TextAlignment = TextAlignment.Left;
+                contentLabel.HorizontalAlignment = HorizontalAlignment.Left;
+                contentLabel.Margin = new Thickness(20, 0, 20, 0);
+                contentPanel.Children.Add(contentLabel);
             }
-            contentPanel.Children.Add(t);
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
