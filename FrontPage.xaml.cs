@@ -61,13 +61,27 @@ namespace eceshowcase
 
                 if (isLeft == 1 && isRight == 0)
                 {
-                    welcome_carousel.NextPage();
+                    if (!welcome_carousel.CanGoToNextPage)
+                    {
+                        welcome_carousel.FirstPage();
+                    }
+                    else
+                    {
+                        welcome_carousel.NextPage();
+                    }
                     currentTouchDevices.Clear();
                     return;
                 }
                 else if (isRight == 1 && isLeft == 0)
                 {
-                    welcome_carousel.PreviousPage();
+                    if (!welcome_carousel.CanGoToPreviousPage)
+                    {
+                        welcome_carousel.LastPage();
+                    }
+                    else
+                    {
+                        welcome_carousel.PreviousPage();
+                    }
                     currentTouchDevices.Clear();
                     return;
                 }
