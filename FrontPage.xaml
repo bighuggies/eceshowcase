@@ -107,7 +107,7 @@
                             ImageSource="Resources/map.png" />
             </Button.Background>
         </s:SurfaceButton>
-        <FlowDocumentPageViewer x:Name="welcome_carousel" Grid.Column="4" Margin="4" Grid.Row="2" FontSize="32" Style="{DynamicResource FlowDocumentPageViewerNoZoom}">
+        <FlowDocumentPageViewer x:Name="welcome_carousel" Grid.Column="4" Margin="4" Grid.Row="2" FontSize="32" Style="{DynamicResource FlowDocumentPageViewerNoZoom}" TouchMove="welcome_carousel_TouchMove" TouchDown="welcome_carousel_TouchDown" TouchUp="welcome_carousel_TouchUp">
         	<FlowDocumentPageViewer.Resources>
         		<Style x:Key="FlowDocumentPageViewerNoZoom" TargetType="{x:Type FlowDocumentPageViewer}">
         			<Setter Property="Background" Value="Transparent"/>
