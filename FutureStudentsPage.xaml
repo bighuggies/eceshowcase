@@ -1,0 +1,156 @@
+﻿<Page x:Class="eceshowcase.FutureStudentsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d"
+      Width="1920"
+      Height="1080"
+      Background="#FF008287"
+      FontFamily="Segoe UI Light"
+	  Title="FutureStudentsPage">
+    <Page.Resources>
+        <Style x:Key="Tile"
+               TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border BorderThickness="{TemplateBinding BorderThickness}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Background="{TemplateBinding Background}"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter x:Name="ButtonContentPresenter"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120px" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="120px" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120px" />
+            <RowDefinition Height="120px" />
+            <RowDefinition Height="80px" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="20px" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="1"
+                    Orientation="Horizontal">
+            <Button HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Foreground="White"
+                Margin="16"
+                FontSize="32"
+                FontFamily="Segoe UI"
+                Background="Transparent"
+                BorderBrush="White"
+                BorderThickness="0"
+                Click="Button_Click"
+                Style="{DynamicResource Tile}">
+                <Image Height="64"
+                    Stretch="Fill"
+                    Width="64"
+                    Margin="8px"
+                    Source="Resources/back-white.png" />
+            </Button>
+            <Label Content="future students"
+               FontSize="74.667"
+               Background="#000079FF"
+               Foreground="White"
+               Grid.ColumnSpan="4"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               d:LayoutOverrides="GridBox"
+               FontFamily="Segoe UI Light" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+            <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0" Click="Button_Click_1">undergraduate</Button>
+            <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0" Click="Button_Click_2">postgraduate</Button>
+            <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0" Click="Button_Click_3">accommodation</Button>
+            <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0" Click="Button_Click_4">scholarships</Button>
+        </StackPanel>
+        
+        <Grid Grid.Column="1" Grid.Row="3"  Name="undergradGrid" VerticalAlignment="Stretch" Height="auto" Width="auto" HorizontalAlignment="Stretch" Visibility="Hidden">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="594*" />
+                <ColumnDefinition Width="1086*" />
+            </Grid.ColumnDefinitions>
+            <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/ug.jpg" Name="ugimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >                
+            </Image>
+                <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="ugtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="40">
+                <LineBreak/>
+                If you are interested in the study and application of software, electricity, electronics and electro-magnetism then we may have the course of study for you. You'll find everything you need here to make a choice about your future.
+                <LineBreak/>
+                <LineBreak/>
+                Your first of four years years will see you doing a general Engineering year where you can have a taste of electrical and software courses. The following year you will have the opportunity to specialise into an ECE disclipline.      
+            </TextBlock>
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="3"  Name="postgradGrid" VerticalAlignment="Stretch" Height="auto" Width="auto" HorizontalAlignment="Stretch" Visibility="Hidden">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="594*" />
+                <ColumnDefinition Width="1086*" />
+            </Grid.ColumnDefinitions>
+            <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/pg1.jpg" Name="pgimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
+            </Image>
+            <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="pgtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="40">
+                <LineBreak/>
+                Furthering your study with a postgraduate degree is one of the best ways of keeping up to date. Choose between a Graduate Diploma in Engineering, a Master of Engineering, Master of Engineering Studies or Doctor of Philosophy.
+                <LineBreak/>
+                <LineBreak/>
+                The duration of a Masters program is approximately a year and is taught in the format of a regular two semester year. 
+                <LineBreak/>
+                <LineBreak/>                
+                A PhD is a three to four year research project which can be started at any time of the year.
+            </TextBlock>
+        </Grid>
+
+         <Grid Grid.Column="1" Grid.Row="3"  Name="accomodationGrid" VerticalAlignment="Stretch" Height="auto" Width="auto" HorizontalAlignment="Stretch" Visibility="Hidden">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="594*" />
+                <ColumnDefinition Width="1086*" />
+            </Grid.ColumnDefinitions>
+            <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/horesidence.jpg" Name="accomodationimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
+            </Image>
+            <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="accomodationtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="40">
+                The University of Auckland provides quality student accommodation in Auckland City, conveniently located close to our Auckland campuses.
+                Our five halls of residences offer a great lifestyle, with excellent study and living facilities, academic and pastoral support, and an active social programme. 
+                <LineBreak/>
+                <LineBreak/>                
+                Undergraduate living halls allow student flat style living while being close to the University.
+                <LineBreak/>
+                <LineBreak/>
+                
+            </TextBlock>
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="3"  Name="scholGrid" VerticalAlignment="Stretch" Height="auto" Width="auto" HorizontalAlignment="Stretch" Visibility="Hidden">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="594*" />
+                <ColumnDefinition Width="1086*" />
+            </Grid.ColumnDefinitions>
+            <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/schol.jpg" Name="scholimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
+            </Image>
+            <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="scholtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="40">
+                There are many scholarships on offer for study at the University of Auckland.
+                <LineBreak/>
+                <LineBreak/>                
+                Scholarships are offered to ungraduate students, postgraduate students, and for summer research or internships. They range in value from one-off payments of up to $5000 to scholarships that pay for your tuition fees, $2500 in living costs for up to three years to a full paid degree.
+                <LineBreak/>
+                <LineBreak/>
+                Some scholarships can be applied for before entering your first semester. See the University of Auckland website for more information.
+
+            </TextBlock>
+        </Grid>
+
+    </Grid>
+</Page>

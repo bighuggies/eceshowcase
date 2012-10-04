@@ -77,6 +77,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="FutureStudentsPage.xaml.cs">
+      <DependentUpon>FutureStudentsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
@@ -105,6 +108,10 @@
       <DependentUpon>FrontPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="FutureStudentsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MapPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -146,8 +153,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\schol.jpg" />
+    <Resource Include="Resources\ug.jpg" />
+    <Resource Include="Resources\pg1.jpg" />
     <Resource Include="Resources\back.png" />
     <Resource Include="Resources\back-white.png" />
+    <Resource Include="Resources\b4-ug.jpg" />
+    <Resource Include="Resources\b5-ug.jpg" />
+    <Resource Include="Resources\horesidence.jpg" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
