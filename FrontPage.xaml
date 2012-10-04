@@ -107,7 +107,7 @@
                             ImageSource="Resources/map.png" />
             </Button.Background>
         </s:SurfaceButton>
-        <FlowDocumentPageViewer x:Name="welcome_carousel" Grid.Column="4" Margin="4" Grid.Row="2" FontSize="32" Style="{DynamicResource FlowDocumentPageViewerNoZoom}" TouchMove="welcome_carousel_TouchMove" TouchDown="welcome_carousel_TouchDown" TouchUp="welcome_carousel_TouchUp">
+        <FlowDocumentPageViewer x:Name="welcome_carousel" Grid.Column="4" Margin="4" Grid.Row="2" FontSize="32" Style="{DynamicResource FlowDocumentPageViewerNoZoom}">
         	<FlowDocumentPageViewer.Resources>
         		<Style x:Key="FlowDocumentPageViewerNoZoom" TargetType="{x:Type FlowDocumentPageViewer}">
         			<Setter Property="Background" Value="Transparent"/>
@@ -252,7 +252,7 @@
         							</Grid>
         							<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" Uid="Border_47" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
         								<AdornerDecorator ClipToBounds="True" Uid="AdornerDecorator_1">
-        									<DocumentPageView DocumentPaginator="{x:Null}" KeyboardNavigation.IsTabStop="False" DocumentViewerBase.IsMasterPage="True" PageNumber="0" KeyboardNavigation.TabIndex="1" KeyboardNavigation.TabNavigation="Local" Uid="DocumentPageView_1"/>
+        									<DocumentPageView IsHitTestVisible="False" DocumentPaginator="{x:Null}" KeyboardNavigation.IsTabStop="False" DocumentViewerBase.IsMasterPage="True" PageNumber="0" KeyboardNavigation.TabIndex="1" KeyboardNavigation.TabNavigation="Local" Uid="DocumentPageView_1"/>
         								</AdornerDecorator>
         							</Border>
         						</DockPanel>
@@ -275,17 +275,26 @@
 				</Section>
 				
 				<Section BreakPageBefore="True">
-					<Paragraph>
-						Hey there
+					<Paragraph FontFamily="Segoe UI Light" FontSize="42">
+						department
+					</Paragraph>
+					<Paragraph FontFamily="Segoe UI Light" FontSize="28">
+						In 2009 the department supports 30 academic and 15 support staff.
+							There are three undergraduate programmes with 600 students. We have
+							10 specialist labs with state-of-the-art equipment.
+							Our postgraduate degrees recognised as amongst the best in the world.
+							There are 200+ students in our final year classes.
+							The department has strong teaching links with related departments e.g. Department of Computer Science.
 					</Paragraph>
 				</Section>
 				
 				<Section BreakPageBefore="True">
 					<Paragraph>
-						
+						history
 					</Paragraph>
 				</Section>
 			</FlowDocument>      
 		</FlowDocumentPageViewer>
+        <Rectangle x:Name="carousel_cover" Grid.Column="4" Fill="#00F4F4F5" Margin="4,4,4,51" Grid.Row="2" TouchDown="welcome_carousel_TouchDown" TouchMove="welcome_carousel_TouchMove" TouchUp="welcome_carousel_TouchUp" />
     </Grid>
 </Page>
