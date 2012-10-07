@@ -1,49 +1,49 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <programs>
   <program name="Common">
-    <course code="CHEMMAT 121"
+    <course code="CHEMMAT 121" 
             year="1"
             name="Materials Science"
             type="Prescribed"
             prereq=""
             info="">
     </course>
-    <course code="ELECTENG 101"
+    <course code="ELECTENG 101" 
             year="1"
             name="Electrical and Digital Systems"
             type="Prescribed"
             prereq=""
             info="">
     </course>
-    <course code="ENGGEN 115"
+    <course code="ENGGEN 115" 
             year="1"
             name="Introduction to Engineering Design"
             type="Prescribed"
             prereq=""
             info="">
     </course>
-    <course code="ENGGEN 121"
+    <course code="ENGGEN 121" 
             year="1"
             name="Engineering Mechanics"
             type="Prescribed"
             prereq=""
-            info="">
+            info="">     
     </course>
-    <course code="ENGGEN 131"
+    <course code="ENGGEN 131" 
             year="1"
             name="Engineering Computation and Software Development"
             type="Prescribed"
             prereq=""
             info="">
     </course>
-    <course code="ENGGEN 140"
+    <course code="ENGGEN 140" 
             year="1"
             name="Engineering Biology and Chemistry"
             type="Prescribed"
             prereq=""
             info="">
     </course>
-    <course code="ENGSCI 111"
+    <course code="ENGSCI 111" 
             year="1"
             name="Mathematical Modelling 1"
             type="Prescribed"
@@ -53,130 +53,604 @@
   </program>
 
   <program name="CSE">
+      <course code="COMPSYS 201" 
+              year="2"
+              name="Fundamentals of Computer Engineering"
+              type="Prescribed"
+              prereq=""
+              info="">
+      </course>
+      <course code="ELECTENG 202"
+              year="2"
+              name="Circuits and Systems"
+              type="Prescribed"
+              prereq=""
+              info="">
+      </course>
+      <course code="ELECTENG 210"
+              year="2"
+              name="Electronics 1"
+              type="Prescribed"
+              prereq=""
+              info="">
+      </course>
+      <course code="ENGSCI 211"
+              year="2"
+              name="Mathematical Modelling 2"
+              type="Prescribed"
+              prereq=""
+              info="">
+      </course>
+      <course code="COMPSYS 202"
+              year="2"
+              name="Object Oriented Design and Programming"
+              type="Prescribed"
+              prereq=""
+              info="">
+      </course>
+      <course code="ELECTENG 204"
+              year="2"
+              name="Engineering Electromagnetics"
+              type="Prescribed"
+              prereq=""
+              info="">
+      </course>
+      <course code="ELECTENG 209"
+              year="2"
+              name="Analogue and Digital Design"
+              type="Prescribed"
+              prereq=""
+              info="">
+      </course>
+      <course code="ENGGEN 204"
+              year="2"
+              name="Technical Communication for Engineers"
+              type="Prescribed"
+              prereq=""
+              info="">
+      </course>
+      <course code="COMPSYS 302"
+              year="3"
+              name="Design: Software Practice"
+              type="Prescribed"
+              prereq=""
+              info="">
+      </course>
+      <course code="COMPSYS 305"
+              year="3"
+              name="Digital Systems Design 1"
+              type="Prescribed"
+              prereq=""
+              info="">
+      </course>
+      <course code="ENGGEN 303"
+              year="3"
+              name="Management for Engineers"
+              type="Prescribed"
+              prereq=""
+              info="">
+      </course>
+      <course code="ENGSCI 313"
+              year="3"
+              name="Mathematical Modelling 3ECE"
+              type="Prescribed"
+              prereq=""
+              info="">
+      </course>
+      <course code="COMPSYS 301"
+              year="3"
+              name="Design: Hardware Software Systems"
+              type="Prescribed"
+              prereq=""
+              info="">
+      </course>
+      <course code="ELECTENG 303"
+              year="3"
+              name="Systems and Control"
+              type="Elective"
+              prereq=""
+              info="">
+      </course>
+      <course code="COMPSYS 303" 
+              year="3"
+              name="Microcomputers and Embedded Systems"
+              type="Elective"
+              prereq=""
+              info="">
+      </course>
+      <course code="COMPSYS 304"
+              year="3"
+              name="Computer Architecture 1"
+              type="Elective"
+              prereq=""
+              info="">
+      </course>
+
+    <course code="COMPSYS 700"
+              year="4"
+              name="Research Project"
+              type="Prescribed"
+              prereq=""
+              info="">
+    </course>
+    <course code="ENGGEN 403"
+              year="4"
+              name="Professional and Sustainability Issues"
+              type="Prescribed"
+              prereq=""
+              info="">
+    </course>
+    <course code="COMPSYS 701"
+              year="4"
+              name="Advanced Digital Systems Design"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="COMPSYS 703"
+              year="4"
+              name="Advanced Intelligent Systems"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="COMPSYS 704"
+              year="4"
+              name="Advanced Embedded Systems"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="COMPSYS 705"
+              year="4"
+              name="Formal Methods for Engineers"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="COMPSYS 706"
+              year="4"
+              name="Speech and Language Processing"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="COMPSYS 707"
+              year="4"
+              name="Advanced Microcomputer Architecture"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="COMPSYS 721"
+              year="4"
+              name="Special Topics 1"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="COMPSYS 722"
+              year="4"
+              name="Special Topics 2"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="COMPSYS 723"
+              year="4"
+              name="Embedded Systems Design"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="COMPSYS 724"
+              year="4"
+              name="Real-time Systems"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="COMPSYS 725"
+              year="4"
+              name="Computer Networks and Distributed Applications"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="COMPSYS 726"
+              year="4"
+              name="Robotics and Intelligent Systems"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 704"
+              year="4"
+              name="Advanced Control Systems"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 706"
+              year="4"
+              name="Digital Signal Processing"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 722"
+              year="4"
+              name="Control Systems"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 728"
+              year="4"
+              name="Sensor Networks"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 732"
+              year="4"
+              name="Communications Systems"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 733"
+              year="4"
+              name="Signal Processing"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    
+
+
+  </program>
+   
+  
+  <program name="EEE">
+   
     <course code="COMPSYS 201"
-            year="2"
-            name="Fundamentals of Computer Engineering"
-            type="Prescribed"
-            prereq=""
-            info="">
-    </course>
-    <course code="ELECTENG 202"
-            year="2"
-            name="Circuits and Systems"
-            type="Prescribed"
-            prereq=""
-            info="">
-    </course>
-    <course code="ELECTENG 210"
-            year="2"
-            name="Electronics 1"
-            type="Prescribed"
-            prereq=""
-            info="">
-    </course>
-    <course code="ENGSCI 211"
-            year="2"
-            name="Mathematical Modelling 2"
-            type="Prescribed"
-            prereq=""
-            info="">
+              year="2"
+              name="Fundamentals of Computer Engineering"
+              type="Prescribed"
+              prereq=""
+              info="">
     </course>
     <course code="COMPSYS 202"
-            year="2"
-            name="Object Oriented Design and Programming"
-            type="Prescribed"
-            prereq=""
-            info="">
+              year="2"
+              name="Object Oriented Design and Programming"
+              type="Prescribed"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 202"
+              year="2"
+              name="Circuits and Systems"
+              type="Prescribed"
+              prereq=""
+              info="">
     </course>
     <course code="ELECTENG 204"
-            year="2"
-            name="Engineering Electromagnetics"
-            type="Prescribed"
-            prereq=""
-            info="">
+              year="2"
+              name="Engineering Electromagnetics"
+              type="Prescribed"
+              prereq=""
+              info="">
     </course>
     <course code="ELECTENG 209"
-            year="2"
-            name="Analogue and Digital Design"
-            type="Prescribed"
-            prereq=""
-            info="">
+              year="2"
+              name="Analogue and Digital Design"
+              type="Prescribed"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 210"
+              year="2"
+              name="Electronics 1"
+              type="Prescribed"
+              prereq=""
+              info="">
+    </course>
+    <course code="ENGSCI 211"
+              year="2"
+              name="Mathematical Modelling 2"
+              type="Prescribed"
+              prereq=""
+              info="">
     </course>
     <course code="ENGGEN 204"
-            year="2"
-            name="Technical Communication for Engineers"
-            type="Prescribed"
-            prereq=""
-            info="">
+              year="2"
+              name="Technical Communication for Engineers"
+              type="Prescribed"
+              prereq=""
+              info="">
     </course>
-    <course code="COMPSYS 302"
-            year="3"
-            name="Design: Software Practice"
-            type="Prescribed"
-            prereq=""
-            info="">
-    </course>
-    <course code="COMPSYS 305"
-            year="3"
-            name="Digital Systems Design 1"
-            type="Prescribed"
-            prereq=""
-            info="">
-    </course>
-    <course code="ENGGEN 303"
-            year="3"
-            name="Management for Engineers"
-            type="Prescribed"
-            prereq=""
-            info="">
-    </course>
-    <course code="ENGSCI 313"
-            year="3"
-            name="Mathematical Modelling 3ECE"
-            type="Prescribed"
-            prereq=""
-            info="">
-    </course>
-    <course code="COMPSYS 301"
-            year="3"
-            name="Design: Hardware Software Systems"
-            type="Prescribed"
-            prereq=""
-            info="">
+    <course code="ELECTENG 310"
+              year="3"
+              name="Electrical Engineering Design 1"
+              type="Prescribed"
+              prereq=""
+              info="">
     </course>
     <course code="ELECTENG 303"
-            year="3"
-            name="Systems and Control"
-            type="Elective"
-            prereq=""
-            info="">
+              year="3"
+              name="Systems and Control"
+              type="Prescribed"
+              prereq=""
+              info="">
+    </course>
+    <course code="ENGGEN 303"
+              year="3"
+              name="Management for Engineers"
+              type="Prescribed"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 305"
+              year="3"
+              name="Electronics 2"
+              type="Prescribed"
+              prereq=""
+              info="">
+    </course>
+    <course code="ENGSCI 313"
+              year="3"
+              name="Mathematical Modelling 3ECE"
+              type="Prescribed"
+              prereq=""
+              info="">
+    </course>
+
+    <course code="ELECTENG 311"
+              year="3"
+              name="Electrical Engineering Design 2"
+              type="Prescribed"
+              prereq=""
+              info="">
+    </course>
+    <course code="COMPSYS 302"
+              year="3"
+              name="Design: Software Practice"
+              type="Elective"
+              prereq=""
+              info="">
     </course>
     <course code="COMPSYS 303"
-            year="3"
-            name="Microcomputers and Embedded Systems"
-            type="Elective"
-            prereq=""
-            info="">
+              year="3"
+              name="Microcomputers and Embedded Systems"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="COMPSYS 305"
+              year="3"
+              name="Digital Systems Design 1"
+              type="Elective"
+              prereq=""
+              info="">
     </course>
     <course code="COMPSYS 304"
-            year="3"
-            name="Computer Architecture 1"
-            type="Elective"
-            prereq=""
-            info="">
+              year="3"
+              name="Computer Architecture 1"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 307"
+              year="3"
+              name="Transmission Lines and Systems"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 309"
+              year="3"
+              name="Power Apparatus and Systems"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="SOFTENG 325"
+        year="3"
+        name="Software Architecture"
+        type="Elective"
+        prereq=""
+        info="">
     </course>
 
+    <course code="ENGGEN 403"
+              year="4"
+              name="Professional and Sustainability Issues"
+              type="Prescribed"
+              prereq=""
+              info="">
+    </course>
+    <course code="COMPSYS 723"
+              year="4"
+              name="Embedded Systems Design"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="COMPSYS 724"
+              year="4"
+              name="Real-time Systems"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="COMPSYS 725"
+              year="4"
+              name="Computer Networks and Distributed Applications"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="COMPSYS 726"
+              year="4"
+              name="Robotics and Intelligent Systems"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 724"
+              year="4"
+              name="Special Topics 2"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 726"
+              year="4"
+              name="Digital Communications"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 728"
+              year="4"
+              name="Sensor Networks"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 736"
+              year="4"
+              name="Analog and Digital Filter Synthesis"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 721"
+              year="4"
+              name="Radio Systems"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 722"
+              year="4"
+              name="Control Systems"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 731"
+              year="4"
+              name="Power Systems"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 732"
+              year="4"
+              name="Communication Systems"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 733"
+              year="4"
+              name="Signal Processing"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 734"
+              year="4"
+              name="Power Electronics"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
+    <course code="ELECTENG 735"
+              year="4"
+              name="Special Topics 1"
+              type="Elective"
+              prereq=""
+              info="">
+    </course>
 
   </program>
-
-
-
-  <program name="EEE">
-
-  </program>
-
-
+  
+  
   <program name="SE">
+    <course code="ENGSCI 213"
+        year="2"
+        name="Mathematical Modelling 2SE"
+        type="Prescribed"
+        prereq=""
+        info="">
+    </course>
+    <course code="SOFTENG 206"
+        year="2"
+        name="Software Engineering Design I"
+        type="Prescribed"
+        prereq=""
+        info="">
+    </course>
+    <course code="COMPSYS 201"
+        year="2"
+        name="Fundamentals of Computer Engineering"
+        type="Prescribed"
+        prereq=""
+        info="">
+    </course>
+    <course code="SOFTENG 211"
+        year="2"
+        name="Software Engineering Theory"
+        type="Prescribed"
+        prereq=""
+        info="">
+    </course>
+    <course code="SOFTENG 250"
+        year="2"
+        name="Introduction to Data Structures and Algorithms"
+        type="Prescribed"
+        prereq=""
+        info="">
+    </course>
+    <course code="SOFTENG 254"
+        year="2"
+        name="Quality Assurance"
+        type="Prescribed"
+        prereq=""
+        info="">
+    </course>
+    <course code="SOFTENG 251"
+        year="2"
+        name="Object Oriented Software Construction"
+        type="Prescribed"
+        prereq=""
+        info="">
+    </course>
+    <course code="ENGGEN 204"
+        year="2"
+        name="Technical Communication for Engineers"
+        type="Prescribed"
+        prereq=""
+        info="">
+    </course>
+    
+    <course code="ENGGEN 303"
+        year="3"
+        name="Management for Engineers"
+        type="Prescribed"
+        prereq=""
+        info="">
+    </course>
+    <course code="SOFTENG 306"
+        year="3"
+        name="Software Engineering Design II"
+        type="Prescribed"
+        prereq=""
+        info="">
+    </course>
     <course code="SOFTENG 325"
         year="3"
         name="Software Architecture"
@@ -184,6 +658,70 @@
         prereq=""
         info="">
     </course>
+    <course code="SOFTENG 350"
+       year="3"
+       name="Human Computer Interaction"
+       type="Prescribed"
+       prereq=""
+       info="">
+    </course>
+    <course code="SOFTENG 351"
+       year="3"
+       name="Fundamentals of Database Systems"
+       type="Prescribed"
+       prereq=""
+       info="">
+    </course>
+    <course code="SOFTENG 370"
+       year="3"
+       name="Operating Systems"
+       type="Prescribed"
+       prereq=""
+       info="">
+    </course>
+    <course code="COMPSCI 373"
+       year="3"
+       name="Computer Graphics and Image Processing"
+       type="Elective"
+       prereq=""
+       info="">
+    </course>
+    <course code="COMPSCI 367"
+       year="3"
+       name="Artificial Intelligence"
+       type="Elective"
+       prereq=""
+       info="">
+    </course>
+    <course code="COMPSCI 305"
+       year="3"
+       name="Digital Systems Design 1"
+       type="Elective"
+       prereq=""
+       info="">
+    </course>
+    <course code="COMPSCI 303"
+       year="3"
+       name="Microcomputers and Embedded Systems"
+       type="Elective"
+       prereq=""
+       info="">
+    </course>
+    <course code="SOFTENG 364"
+       year="3"
+       name="Computer Networks"
+       type="Elective"
+       prereq=""
+       info="">
+    </course>
+    <course code="COMPSYS 304"
+       year="3"
+       name="Computer Architecture 1"
+       type="Elective"
+       prereq=""
+       info="">
+    </course>
+    
   </program>
-
+  
 </programs>

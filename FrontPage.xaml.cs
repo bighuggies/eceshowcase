@@ -19,6 +19,8 @@ namespace eceshowcase
     /// </summary>
     public partial class FrontPage : Page
     {
+        private Dictionary<TouchDevice, Point> currentTouchDevices = new Dictionary<TouchDevice, Point>();
+
         private ShowcaseWindow window;
 
         /// <summary>
@@ -45,9 +47,74 @@ namespace eceshowcase
             window.ShowPage(new DetailPage(window, "CSE"));
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Map_Click(object sender, RoutedEventArgs e)
         {
             window.ShowPage(new MapPage(window));
+        }
+
+        private void News_Click(object sender, RoutedEventArgs e)
+        {
+            window.ShowPage(new NewsPage(window));
+        }
+
+        private void Future_Click(object sender, RoutedEventArgs e)
+        {
+            window.ShowPage(new FutureStudentsPage(window));
+        }
+
+        private void welcome_carousel_TouchMove(object sender, TouchEventArgs e)
+        {
+            if (currentTouchDevices.Count == 1)
+            {
+                int isLeft = 0;
+                int isRight = 0;
+                foreach (KeyValuePair<TouchDevice, Point> td in currentTouchDevices)
+                {
+                    if (td.Key != null && e.TouchDevice.GetTouchPoint(this).Position.X - td.Value.X > 100)
+                        isRight++;
+                    else if (td.Key != null && td.Value.X - e.TouchDevice.GetTouchPoint(this).Position.X > 100)
+                        isLeft++;
+                    else
+                        return;
+                }
+
+                if (isLeft == 1 && isRight == 0)
+                {
+                    if (!welcome_carousel.CanGoToNextPage)
+                    {
+                        welcome_carousel.FirstPage();
+                    }
+                    else
+                    {
+                        welcome_carousel.NextPage();
+                    }
+                    currentTouchDevices.Clear();
+                    return;
+                }
+                else if (isRight == 1 && isLeft == 0)
+                {
+                    if (!welcome_carousel.CanGoToPreviousPage)
+                    {
+                        welcome_carousel.LastPage();
+                    }
+                    else
+                    {
+                        welcome_carousel.PreviousPage();
+                    }
+                    currentTouchDevices.Clear();
+                    return;
+                }
+            }
+        }
+
+        private void welcome_carousel_TouchDown(object sender, TouchEventArgs e)
+        {
+            currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetTouchPoint(this).Position);
+        }
+
+        private void welcome_carousel_TouchUp(object sender, TouchEventArgs e)
+        {
+            currentTouchDevices.Remove(e.TouchDevice);
         }
     }
 }
