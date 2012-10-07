@@ -53,7 +53,7 @@ namespace eceshowcase
         // 
         private void LoadCourseData()
         {
-            string ProgramName = "SE"; // TO BE SET WHEN PAGE IS INITIALISED
+            string ProgramName = "CSE"; // TO BE SET WHEN PAGE IS INITIALISED
             bool ReadingCorrectProgram = false;
             XmlTextReader reader = new XmlTextReader ("D:\\Programming\\repos\\eceshowcase\\Resources\\courses.xml");
             while (reader.Read()) // each new line
