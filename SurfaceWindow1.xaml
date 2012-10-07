@@ -18,7 +18,7 @@
 			<ColumnDefinition Width="4*" />
 		</Grid.ColumnDefinitions>
 		
-		<Label x:Name="ProgramTitleLabel" Grid.Row="0" Grid.Column="0" Content="Program Name Placeholder"  VerticalAlignment="Top" d:LayoutOverrides="Width" FontSize="80"/>
+		<Label x:Name="ProgramTitleLabel" Grid.Row="0" Grid.Column="0" Content="Wang"  VerticalAlignment="Top" d:LayoutOverrides="Width" FontSize="80"/>
 		<Grid x:Name="YearListGrid" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" >
 			<Grid.RowDefinitions>
 			<RowDefinition Height="Auto" />
