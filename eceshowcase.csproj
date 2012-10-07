@@ -181,12 +181,14 @@
     <Resource Include="Resources\pg1.jpg" />
     <Resource Include="Resources\schol.jpg" />
     <Resource Include="Resources\ug.jpg" />
-    <Resource Include="Resources\Courses.xml">
+    <Content Include="Resources\Courses.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
     <Resource Include="Resources\back.png" />
     <Resource Include="Resources\back-white.png" />
-    <Resource Include="Resources\Faculty.xml" />
+    <Content Include="Resources\Faculty.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Resources\b4-ug.jpg" />
     <Resource Include="Resources\b5-ug.jpg" />
     <Resource Include="Resources\horesidence.jpg" />
