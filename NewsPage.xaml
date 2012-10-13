@@ -6,7 +6,7 @@
       mc:Ignorable="d"
       Width="1920"
       Height="1080"
-      Background="#FF008287"
+      Background="#FF4F2D7F"
       FontFamily="Segoe UI Light"
 	  Title="NewsPage" xmlns:my="http://schemas.microsoft.com/surface/2008">
     <Page.Resources>
