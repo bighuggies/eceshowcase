@@ -175,8 +175,8 @@ namespace eceshowcase
             // Text labels
             DisplayCourseCode.Text = CourseKey;
             DisplayCourseName.Text = CourseItems[CourseKey][0];
-            DisplayCourseInfo.Text = CourseItems[CourseKey][3] + "\n" + CourseItems[CourseKey][2] +
-                "\nPrerequisite: " + Prereq;
+            DisplayCourseInfo.Text = CourseItems[CourseKey][3] + "\n\n" + CourseItems[CourseKey][2] +
+                "\n\nPrerequisite: " + Prereq;
         }
     }
 }
