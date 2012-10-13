@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
+using Microsoft.Surface.Presentation.Controls;
 
 namespace eceshowcase
 {
@@ -98,7 +99,7 @@ namespace eceshowcase
                             CourseInfo = reader.Value;
 
                             // Everything in theory stored but needs permanent storage
-                            CourseItems.Add(CourseCode, new string[] { CourseName, YearValue, CourseInfo });
+                            CourseItems.Add(CourseCode, new string[] { CourseName, YearValue, CourseInfo, CourseType, CoursePrereq });
 
                         }
                     }
@@ -117,7 +118,7 @@ namespace eceshowcase
             //foreach (string course in firstyear)
             foreach (var pair in CourseItems)
             {
-                Button myButton = new Button();
+                SurfaceButton myButton = new SurfaceButton();
 
                 myButton.Content = pair.Key; //name
                 myButton.Click += CourseButton_Click;
@@ -160,15 +161,17 @@ namespace eceshowcase
         private void CourseButton_Click(object sender, RoutedEventArgs e)
         {
             //var record = ((Button)e.OriginalSource).Tag;
-            var ActiveButton = ((Button)e.OriginalSource);
+            var ActiveButton = ((SurfaceButton)e.OriginalSource);
 
             //MessageBox.Show(record.ToString());
             //DisplayText.Text = record.ToString();
             string CourseKey = ActiveButton.Content.ToString();
 
             // Text labels
-            DisplayCourseName.Text = CourseKey;
-            DisplayCourseInfo.Text = CourseItems[CourseKey][0];
+            DisplayCourseCode.Text = CourseKey;
+            DisplayCourseName.Text = CourseItems[CourseKey][0];
+            DisplayCourseInfo.Text = CourseItems[CourseKey][3] + "\n" + CourseItems[CourseKey][2] +
+                "\nPrerequisite: " + CourseItems[CourseKey][4];
         }
     }
 }

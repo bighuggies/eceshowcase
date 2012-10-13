@@ -9,6 +9,7 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized">
+
     <Window.Resources>
         <Style TargetType="{x:Type Frame}">
             <Setter Property="LayoutTransform">

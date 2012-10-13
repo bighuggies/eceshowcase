@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <programs>
   <program name="Common">
     <course code="CHEMMAT 121"
@@ -585,233 +585,233 @@
         name="Mathematical Modelling 2SE"
         type="Prescribed"
         prereq=""
-        info="">
+        info="Probability theory, random variables and distributions, statistics, linear algebra, discrete mathematics possibly including graph theory, trees and networks, optimisation.">
     </course>
     <course code="SOFTENG 206"
         year="2"
         name="Software Engineering Design I"
         type="Prescribed"
-        prereq=""
-        info="">
+        prereq="SOFTENG 250, 251"
+        info="Project work. Skills and tools in systematic development of software, including testing, version control, build systems, working with others.">
     </course>
     <course code="COMPSYS 201"
         year="2"
         name="Fundamentals of Computer Engineering"
         type="Prescribed"
-        prereq=""
-        info="">
+        prereq="ELECTENG 101"
+        info="The hardware/software interface: processors, registers, memory, basic I/O. Representation of data, number systems and computer arithmetic; assembly language programming and debugging; support for high-level languages; exceptions and multithreading; combinational and sequential circuits (traditional design and standard circuits); instruction sets; communication principles.">
     </course>
     <course code="SOFTENG 211"
         year="2"
         name="Software Engineering Theory"
         type="Prescribed"
-        prereq=""
-        info="">
+        prereq="ENGGEN 131 or COMPSCI 101"
+        info="Sets, languages, operations on languages. Deterministic and nondeterministic automata. Designing automata. Determinisation. Regular expressions. Induction and Recursion. Program correctness. Counting. Elements of graph algorithms.">
     </course>
     <course code="SOFTENG 250"
         year="2"
         name="Introduction to Data Structures and Algorithms"
         type="Prescribed"
-        prereq=""
-        info="">
+        prereq="ENGGEN 131 or COMPSCI 101"
+        info="Introduction to the analytical and empirical behaviour of basic algorithms and data structures.">
     </course>
     <course code="SOFTENG 254"
         year="2"
         name="Quality Assurance"
         type="Prescribed"
-        prereq=""
-        info="">
+        prereq="SOFTENG 250, 251"
+        info="Software veri?cation and validation. Static and dynamic QA activities as part of the software lifecycle. Unit, integration, system, performance and usability testing. Use of automation and tools to support testing activities. Metrics to quantify strength of testing and complexity of programs.">
     </course>
     <course code="SOFTENG 251"
         year="2"
         name="Object Oriented Software Construction"
         type="Prescribed"
-        prereq=""
-        info="">
+        prereq="ENGGEN 131 or COMPSCI 101"
+        info="An introduction to Object Oriented software development. Programming with classes; objects and polymorphism. Evolutionary and test-driven development. Analysis and design. Modelling with UML. Design patterns. Design for reuse, for testing and for ease of change.">
     </course>
     <course code="ENGGEN 204"
         year="2"
         name="Technical Communication for Engineers"
         type="Prescribed"
-        prereq=""
-        info="">
+        prereq="ENGGEN 199"
+        info="The communication of complex engineering material will be emphasised in the following ways: the use of appropriate engineering graphical software at an advanced level; the use of appropriate multi-media; visual and spoken presentation, in styles appropriate to seminars, conferences and presentations to technological industries; the construction of industrial displays; and the preparation of engineering reports.">
     </course>
 
     <course code="ENGGEN 303"
         year="3"
         name="Management for Engineers"
         type="Prescribed"
-        prereq=""
-        info="">
+        prereq="ENGGEN 104 or ENGGEN 199"
+        info="An introduction to modern theory and practice of management, including project, quality and ?nancial management appropriate to the engineering profession.">
     </course>
     <course code="SOFTENG 306"
         year="3"
         name="Software Engineering Design II"
         type="Prescribed"
-        prereq=""
-        info="">
+        prereq="SOFTENG 206, 254, 350, 351"
+        info="Working in project teams to develop software to meet changing requirements for a large application. Project Planning. Requirements gathering. Estimating, costing and tracking. Acceptance and unit testing. Evolutionary design and development. Collaborative development tools.">
     </course>
     <course code="SOFTENG 325"
         year="3"
         name="Software Architecture"
         type="Prescribed"
-        prereq=""
-        info="">
+        prereq="15 points from SOFTENG 350, COMPSYS 302"
+        info="Taxonomy of software architecture patterns, including client/server and multi-tier. Understanding quality attributes. Methodologies for design of software architectures. Technologies for architecture level development, including middleware.">
     </course>
     <course code="SOFTENG 350"
        year="3"
        name="Human Computer Interaction"
        type="Prescribed"
-       prereq=""
-       info="">
+       prereq="SOFTENG 206"
+       info="Human behaviour and expectations. User interface design. User centred design. Usability evaluation techniques for web and standard interfaces. Constructing web and graphical user interfaces.">
     </course>
     <course code="SOFTENG 351"
        year="3"
        name="Fundamentals of Database Systems"
        type="Prescribed"
-       prereq=""
-       info="">
+       prereq="SOFTENG 211 or COMPSCI 225"
+       info="Relational model, Relational Algebra, Relational Calculus, SQL, SQL and Programming Languages, Entity Relationship Model, Normalisation, Query Processing and Query Optimisation, ACID Transactions, Transaction Isolation Levels, Database Recovery, Database Security, Databases and XML.">
     </course>
     <course code="SOFTENG 370"
        year="3"
        name="Operating Systems"
        type="Prescribed"
-       prereq=""
-       info="">
+       prereq="COMPSYS 201 or SOFTENG 252, 250"
+       info="History of operating systems. Multi-user systems. Scheduling. Concurrent processes, threads and synchronisation. Memory allocation and virtual memory. Managing files, disks and other peripherals. Security, protection and archiving. Engineering distributed systems; location, migration and replication transparency. Real-time programming and embedded systems.">
     </course>
     <course code="COMPSCI 373"
        year="3"
        name="Computer Graphics and Image Processing"
        type="Elective"
-       prereq=""
-       info="">
+       prereq="COMPSCI 210, 230"
+       info="Basic geometric processes including transformations; viewing and projection; back projection and ray tracing. Graphics modeling concepts: primitives, surfaces, and scene graphs, lighting and shading, texture mapping, and curve and surface design. Graphics and image processing fundamentals: image definition and representation, perception and colour models, grey level and colour enhancement, neighbourhood operations and filtering. Use of the OpenGL graphics pipeline.">
     </course>
     <course code="COMPSCI 367"
        year="3"
        name="Artificial Intelligence"
        type="Elective"
-       prereq=""
-       info="">
+       prereq="COMPSCI 220, 225"
+       info="The cornerstones of AI: representation, utilisation, and acquisition of knowledge. Taking a real world problem and representing it in a computer so that the computer can do inference. Utilising this knowledge and acquiring new knowledge is done by search which is the main technique behind planning and machine learning.">
     </course>
-    <course code="COMPSCI 305"
+    <course code="COMPSYS 305"
        year="3"
        name="Digital Systems Design 1"
        type="Elective"
-       prereq=""
-       info="">
+       prereq="COMPSYS201"
+       info="Digital Systems implementation technologies; abstraction levels; hardware description languages; structural, architectural and behavioural modelling; register-transfer level design; datapath and control units; ?xed and microprogrammed control units; ASM charts; synthesis from ASM charts, digital computation; veri?cation; design ?ow. Design of a simple processor. FPGAs as prototyping technology.">
     </course>
-    <course code="COMPSCI 303"
+    <course code="COMPSYS 303"
        year="3"
        name="Microcomputers and Embedded Systems"
        type="Elective"
-       prereq=""
-       info="">
+       prereq="COMPSYS 202 or SOFTENG 251, and COMPSYS 201"
+       info="Embedded applications. Microprocessors, microcontrollers, architecture, organisation, programming memories, I/O interfacing. Sensors, actuators, analog interfaces. Hardware/Software partitioning and interfacing. Concurrency. Implementing data transformations and reactivity. Case studies.">
     </course>
     <course code="SOFTENG 364"
        year="3"
        name="Computer Networks"
        type="Elective"
-       prereq=""
-       info="">
+       prereq="15 points from COMPSYS 201, SOFTENG 252 and 15 points from SOFTENG 206, 211, 250, 251, 254, 325"
+       info="Principles of data communications; representation, transmission. Physical layer, signals in time and frequency domain. Modulation and coding. Data layer and protocols. Layered architecture model of computer networks, OSI &amp; TCP/IP, Flow control, error control. Local area networks and IEEE standards, Ethernet and Wireless LAN. Circuit, message and packet switching. The Internet protocol (IPv4 and IPV6), routing algorithms, design of subnets. TCP and UDP. Network security. Introduction to ATM.">
     </course>
     <course code="COMPSYS 304"
        year="3"
        name="Computer Architecture 1"
        type="Elective"
-       prereq=""
-       info="">
+       prereq="COMPSYS 201, ELECTENG 205"
+       info="Modern processor architectures. Principles of modern processor design; pipelining; memory hierarchies; I/O and network interfacing; compiler and OS support; embedded processors; performance; multiprocessing.">
     </course>
 
     <course code="SOFTENG 750"
        year="4"
        name="Software Development Methodologies"
        type="Prescribed"
-       prereq=""
-       info="">
+       prereq="SOFTENG 306"
+       info="Software lifecycle; software process models; examples of software processes; software process improvement; project management; tool support for software development; issues in software engineering.">
     </course>
     <course code="ENGGEN 403"
        year="4"
        name="Professional and Sustainability Issues"
        type="Prescribed"
        prereq=""
-       info="">
+       info="Issues of particular relevance to the engineering profession including those relating to the law, ethics, culture and sustainability.">
     </course>
     <course code="COMPSYS 707"
        year="4"
        name="Advanced Microcomputer Architecture"
        type="Elective"
-       prereq=""
-       info="">
+       prereq="15 points from COMPSYS 304, ELECTENG 304"
+       info="Hardware and software approaches for instruction-level parallel processing, multiprocessors and multithreading, embedded multiprocessing and memory systems, architectures for embedded multiple processors and networks on chip, dynamic reconfigurable architectures.">
     </course>
     <course code="COMPSYS 705"
        year="4"
        name="Formal Methods for Engineers"
        type="Elective"
-       prereq=""
-       info="">
+       prereq="COMPSYS 302 and COMPSYS 305 or ELECTENG 304"
+       info="Validation versus Verification, Formal models, Formal Specification: Process Algebraic, Logic Based, Temporal Logic, Methods of Verification: Bisimulation, Model Checking, Theorem Proving. State Space explosion problem and solutions: BDDs, Symbolic Model Checking, Modular Verification. Verification of HDL designs, Tools: STeP, VIS, NuSMV.">
     </course>
     <course code="COMPSYS 712"
        year="4"
        name="Studies in Computer Systems Engineering 3"
        type="Elective"
        prereq=""
-       info="">
+       info="Advanced courses on topics to be determined each year by the Head of Department.">
     </course>
     <course code="COMPSYS 723"
        year="4"
        name="Embedded Systems Design"
        type="Elective"
-       prereq=""
-       info="">
+       prereq="15 points from COMPSYS 303, ELECTENG 304"
+       info="Principles of embedded systems modelling. Models of computation. Languages for embedded systems design. Hardware/Software partitioning and co-design. Hardware/Software partitioning and co-design. Technologies. Energy-aware systems. Rapid prototyping. Distributed embedded systems. Case studies.">
     </course>
     <course code="COMPSYS 726"
        year="4"
        name="Robotics and Intelligent Systems"
        type="Elective"
-       prereq=""
-       info="">
+       prereq="15 points from COMPSYS 302, MECHENG 313, SOFTENG 306"
+       info="Introduction to robotics and intelligent systems, including: robot manipulators and mobile robots, navigation techniques, planning and programming of robot actions, sensors and actuators, artificial intelligence, artificial neural nets, fuzzy systems, genetic algorithms.">
     </course>
     <course code="SOFTENG 710"
        year="4"
        name="Studies in Software Engineering 1"
        type="Elective"
-       prereq=""
-       info="">
+       prereq="Permission of the Head of Department"
+       info="Advanced courses on topics to be determined each year by the Head of Department.">
     </course>
     <course code="SOFTENG 711"
        year="4"
        name="Studies in Software Engineering 2"
        type="Elective"
-       prereq=""
-       info="">
+       prereq="Permission of the Head of Department"
+       info="Advanced courses on topics to be determined each year by the Head of Department.">
     </course>
     <course code="SOFTENG 752"
        year="4"
        name="Formal Specifications and Design"
        type="Elective"
-       prereq=""
-       info="">
+       prereq="SOFTENG 306"
+       info="Formal specification, design, and (automatic) analysis of software systems. Use of Z, Alloy, OCL, and CSP notations. Comparison of approaches, emphasising their practical application.">
     </course>
     <course code="SOFTENG 702"
        year="4"
        name="Advanced Human Computer Interaction"
        type="Elective"
        prereq=""
-       info="">
+       info="Current topics in Human-Computer Interaction research, such as: new user-interface technologies, empirical usability studies, pen-based user interaction, form-based user interaction models, advanced layout specification, systematics of human-computer interaction and computer-mediated collaborative work.">
     </course>
     <course code="SOFTENG 751"
        year="4"
        name="High Performance Computing"
        type="Elective"
-       prereq=""
-       info="">
+       prereq="SOFTENG 306 or COMPSYS 302 or MECHENG 313 or 30 points at Stage III in Computer Science"
+       info="Project-based hands-on high performance computing and programming. Memory architecture and networks of parallel computing systems. Multicores, hardware acceleration devices such as graphics cards and FPGAs. Shared memory and data parallel programming. Object Oriented and low level parallel programming. Parallelisation process: subtask decomposition, dependence analysis and scheduling.">
     </course>
     <course code="ENGSCI 760"
        year="4"
        name="Algorithms for Optimisation"
        type="Elective"
-       prereq=""
-       info="">
+       prereq="ENGSCI 450, 451, 460"
+       info="Meta-heuristics and local search techniques such as Genetic Algorithms, Simulated Annealing, Tabu Search and Ant Colony Optimisation for practical optimisation. Introduction to optimisation under uncertainty, including discrete event simulation, decision analysis, Markov chains and Markov decision processes and dynamic programming.">
     </course>
 
   </program>

@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
+using Microsoft.Surface.Presentation.Controls;
 
 namespace eceshowcase
 {
@@ -120,7 +121,7 @@ namespace eceshowcase
             //foreach (string course in firstyear)
             foreach (var pair in FacultyItems)
             {
-                Button myButton = new Button();
+                SurfaceButton myButton = new SurfaceButton();
 
                 myButton.Content = pair.Key; //name
                 myButton.Click += FacultyButton_Click;
@@ -170,9 +171,10 @@ namespace eceshowcase
 
         private void FacultyButton_Click(object sender, RoutedEventArgs e)
         {
-            var ActiveButton = ((Button)e.OriginalSource);
+            var ActiveButton = ((SurfaceButton)e.OriginalSource);
 
             string FacultyKey = ActiveButton.Content.ToString();
+            string FacultyImage = "Resources/" + FacultyItems[FacultyKey][4] + ".jpg";
 
             // Text labels
             DisplayStaffName.Text = FacultyKey;
@@ -181,6 +183,7 @@ namespace eceshowcase
             DisplayStaffDetails.Text = "Room " + FacultyItems[FacultyKey][2] + "\nCity Campus\n" +
                 FacultyItems[FacultyKey][5] + "\nAuckland\n\nPhone: +64 9 373 7599 ext " +
                 FacultyItems[FacultyKey][4] + "\nEmail: " + FacultyItems[FacultyKey][3];
+            DisplayStaffPhoto.Source = new ImageSourceConverter().ConvertFromString(FacultyImage) as ImageSource;
         }
     }
 }

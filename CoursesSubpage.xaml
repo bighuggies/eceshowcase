@@ -74,14 +74,16 @@
         <Grid Grid.Row="1" Grid.Column="2" x:Name="CourseInfoGrid" Margin="16,0,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"  />
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Row="0" Grid.Column="0" x:Name="DisplayCourseName" FontSize="42px" Foreground="White"/>
-            <TextBlock Grid.Row="1" Grid.Column="0" x:Name="DisplayCourseInfo" FontSize="28px" Foreground="White"/>
+            <TextBlock Grid.Row="0" Grid.Column="0" x:Name="DisplayCourseCode" FontSize="42px" Foreground="White"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" x:Name="DisplayCourseName" FontSize="28px" Foreground="White"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" x:Name="DisplayCourseInfo" FontSize="20px" Foreground="White"/>
         </Grid>
 
 
