@@ -166,12 +166,17 @@ namespace eceshowcase
             //MessageBox.Show(record.ToString());
             //DisplayText.Text = record.ToString();
             string CourseKey = ActiveButton.Content.ToString();
+            string Prereq = CourseItems[CourseKey][4];
+
+            if (Prereq == "") {
+                Prereq = "None";
+            }
 
             // Text labels
             DisplayCourseCode.Text = CourseKey;
             DisplayCourseName.Text = CourseItems[CourseKey][0];
             DisplayCourseInfo.Text = CourseItems[CourseKey][3] + "\n" + CourseItems[CourseKey][2] +
-                "\nPrerequisite: " + CourseItems[CourseKey][4];
+                "\nPrerequisite: " + Prereq;
         }
     }
 }
