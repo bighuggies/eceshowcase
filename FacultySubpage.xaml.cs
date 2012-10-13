@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
 using Microsoft.Surface.Presentation.Controls;
+using System.Windows.Media.Animation;
 
 namespace eceshowcase
 {

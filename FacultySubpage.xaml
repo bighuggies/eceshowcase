@@ -28,6 +28,30 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <Storyboard x:Key="GrowIn">
+            <DoubleAnimation Storyboard.TargetProperty="(RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)"
+                             From="0"
+                             To="1"
+                             Duration="0:0:.75"
+                             DecelerationRatio=".9" />
+            <DoubleAnimation Storyboard.TargetProperty="(RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)"
+                             From="0"
+                             To="1"
+                             Duration="0:0:.75"
+                             DecelerationRatio=".9" />
+        </Storyboard>
+
+        <Storyboard x:Key="GrowOut">
+            <DoubleAnimation Storyboard.TargetProperty="(RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)"
+                             To="0"
+                             Duration="0:0:.75"
+                             AccelerationRatio=".9" />
+            <DoubleAnimation Storyboard.TargetProperty="(RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)"
+                             To="0"
+                             Duration="0:0:.75"
+                             AccelerationRatio=".9" />
+        </Storyboard>
     </Page.Resources>
 
     <Grid x:Name="mainGrid" >
