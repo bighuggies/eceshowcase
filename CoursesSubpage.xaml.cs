@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
 using Microsoft.Surface.Presentation.Controls;
+using System.Windows.Media.Animation;
 
 namespace eceshowcase
 {
@@ -22,6 +23,8 @@ namespace eceshowcase
     public partial class CoursesSubpage : Page
     {
         DetailPage detailPage;
+        private string CourseKey;
+        private string PreviousKey = null;
 
         Dictionary<string, string[]> CourseItems;
 
@@ -160,15 +163,31 @@ namespace eceshowcase
 
         private void CourseButton_Click(object sender, RoutedEventArgs e)
         {
-            //var record = ((Button)e.OriginalSource).Tag;
             var ActiveButton = ((SurfaceButton)e.OriginalSource);
 
-            //MessageBox.Show(record.ToString());
-            //DisplayText.Text = record.ToString();
-            string CourseKey = ActiveButton.Content.ToString();
+            CourseKey = ActiveButton.Content.ToString();
+
+            if (CourseKey != PreviousKey && PreviousKey != null)
+            {
+                PreviousKey = CourseKey;
+                Storyboard hideInfo = (Storyboard)Resources["FadeOut"];
+                hideInfo.Completed += hideInfo_Completed;
+                hideInfo.Begin(CourseInfoGrid);
+            }
+
+            if (PreviousKey == null)
+            {
+                PreviousKey = CourseKey;
+                hideInfo_Completed(new object(), new EventArgs());
+            }
+        }
+
+        private void hideInfo_Completed(object sender, EventArgs e)
+        {
             string Prereq = CourseItems[CourseKey][4];
 
-            if (Prereq == "") {
+            if (Prereq == "")
+            {
                 Prereq = "None";
             }
 
@@ -177,6 +196,9 @@ namespace eceshowcase
             DisplayCourseName.Text = CourseItems[CourseKey][0];
             DisplayCourseInfo.Text = CourseItems[CourseKey][3] + "\n\n" + CourseItems[CourseKey][2] +
                 "\n\nPrerequisite: " + Prereq;
+
+            Storyboard showInfo = (Storyboard)Resources["FadeIn"];
+            showInfo.Begin(CourseInfoGrid);
         }
     }
 }
