@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
 using Microsoft.Surface.Presentation.Controls;
+using System.Windows.Media.Animation;
 
 namespace eceshowcase
 {
@@ -22,6 +23,8 @@ namespace eceshowcase
     public partial class OverviewSubpage : Page
     {
         DetailPage detailPage;
+        private String title;
+        private String previousTitle;
 
         Dictionary<String, String> infoList;
         Dictionary<String, List<BitmapImage> > pictureList;
@@ -171,13 +174,25 @@ namespace eceshowcase
                     addImage("12.png", 300, 100);
                     break;
             }
+            
+            // Uncomment this when the XML file is complete to initialize with General information as default
+            
+            Paragraph p = new Paragraph(new Run("General"));
+            p.FontSize = 36;
+            Paragraph content = new Paragraph(new Run(infoList["General"]));
+            content.FontSize = 24;
+
+            overviewContent.Blocks.Add(p);
+            overviewContent.Blocks.Add(content);
+             
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             String title = ((SurfaceButton)e.OriginalSource).Content.ToString();
-            
-            Paragraph p = new Paragraph(new Run(title) );
+
+            Paragraph p = new Paragraph(new Run(title));
+
             p.FontSize = 36;
             Paragraph content = new Paragraph(new Run(infoList[title]));
             content.FontSize = 24;
@@ -196,6 +211,13 @@ namespace eceshowcase
                 rect.Fill = new ImageBrush(img);
                 pictureViewer.Children.Add(rect);
             }
+        }
+
+        private void hideInfo_Completed(object sender, EventArgs e)
+        {
+            Storyboard showInfo = (Storyboard)Resources["FadeIn"];
+
+            
         }
     }
 }

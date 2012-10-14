@@ -12,6 +12,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
+using System.Windows.Media.Animation;
+
 
 namespace eceshowcase
 {
@@ -61,17 +63,24 @@ namespace eceshowcase
             InitializeComponent();
             window = w;
 
-            RSSFeed lolwut = new RSSFeed();
+            RSSFeed feed = new RSSFeed();
 
             SolidColorBrush whiteBrush = new SolidColorBrush(Color.FromRgb(255, 255, 255));
 
-            foreach (NewsItem item in lolwut.newsList)
+            foreach (NewsItem item in feed.newsList)
             {
                 Label title = new Label();
                 title.Foreground = whiteBrush;
                 title.Content = item.title;
                 title.FontSize = 26;
                 contentPanel.Children.Add(title);
+
+
+                Label date = new Label();
+                date.Foreground = whiteBrush;
+                date.Content = item.date;
+                date.FontSize = 26;
+                contentPanel.Children.Add(date);
 
                 TextBlock content = new TextBlock();
                 content.FontSize = 20;
@@ -84,6 +93,9 @@ namespace eceshowcase
                 content.Margin = new Thickness(20, 0, 20, 0);
                 contentPanel.Children.Add(content);
             }
+
+            window.hidePage = (window.Resources["SlideAndFadeLeftOut"] as Storyboard).Clone();
+            window.showPage = (window.Resources["SlideAndFadeLeftIn"] as Storyboard).Clone();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

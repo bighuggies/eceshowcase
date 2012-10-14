@@ -1,28 +1,31 @@
 ﻿<Page x:Class="eceshowcase.MapPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:s="http://schemas.microsoft.com/surface/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+      xmlns:System_Windows_Documents="clr-namespace:System.Windows.Documents;assembly=PresentationUI"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:bing="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
       mc:Ignorable="d"
-      Title="MapPage"
-      Height="1080"
       Width="1920"
-      FontFamily="Segoe UI Light">
+      Height="1080"
+      Background="#FF4F2D7F"
+      FontFamily="Segoe UI Light"
+	  Title="DetailPage">
     <Page.Resources>
-        <bing:ApplicationIdCredentialsProvider x:Key="Credentials"
-                                               ApplicationId="AgLyknzJBYKAb9nHA75q_EYfQRqHsNW79H87o9itaJvE_BYCpHcVfkttCVJuk6nr" />
         <Style x:Key="Tile"
                TargetType="{x:Type Button}">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border BorderThickness="0"
+                        <Border BorderThickness="{TemplateBinding BorderThickness}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
                                 Background="{TemplateBinding Background}"
                                 Padding="{TemplateBinding Padding}">
                             <ContentPresenter x:Name="ButtonContentPresenter"
                                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" />
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
@@ -30,45 +33,255 @@
         </Style>
     </Page.Resources>
     <Grid>
-        <bing:Map Mode="Road"
-                  HorizontalAlignment="Stretch"
-                  VerticalAlignment="Stretch"
-                  AnimationLevel="Full"
-                  Center="-36.852512,174.767838"
-                  ZoomLevel="17"
-                  CredentialsProvider="{StaticResource Credentials}">
-            <bing:Pushpin Location="-36.852512,174.767838" />
-        </bing:Map>
-        <Button HorizontalAlignment="Left"
-                VerticalAlignment="Top"
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60px" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="60px" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120px" />
+            <RowDefinition Height="120px" />
+            <RowDefinition Height="15px" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="120px" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="1"
+                    Orientation="Horizontal">
+            <Button HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Foreground="White"
                 Margin="16"
                 FontSize="32"
                 FontFamily="Segoe UI"
                 Background="Transparent"
-                BorderBrush="Transparent"
+                BorderBrush="White"
                 BorderThickness="0"
-                Padding="0"
                 Click="Button_Click"
                 Style="{DynamicResource Tile}">
-            <StackPanel Orientation="Horizontal">
-                <Image Height="48"
-                       Stretch="Fill"
-                       Width="48"
-                       Margin="8px"
-                       Source="Resources/back.png" />
-                <TextBlock VerticalAlignment="Center"
-                           Margin="8px">back</TextBlock>
-            </StackPanel>
-        </Button>
-        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Bottom" Padding="64,16" Background="#CCFFFFFF" FontSize="20pt">
-            Building 303<LineBreak/>
-            Level 2, Science Centre<LineBreak/>
-            38 Princes Street<LineBreak/>
-            Auckland<LineBreak/>
-            <LineBreak/>
-            Phone: +64 9 373 7599 ext 88158<LineBreak/>
-            Fax: +64 9 373 7461<LineBreak/>
-            Email: ece-info@auckland.ac.nz
-        </TextBlock>
+                <Image Height="64"
+                    Stretch="Fill"
+                    Width="64"
+                    Margin="8px"
+                    Source="Resources/back-white.png" />
+            </Button>
+            <Label Content="map and location"
+               FontSize="74.667"
+               Background="#000079FF"
+               Foreground="White"
+               Grid.ColumnSpan="4"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               d:LayoutOverrides="GridBox"
+               FontFamily="Segoe UI Light"
+               Name="PageTitle" />
+        </StackPanel>
+
+        <Grid Grid.Column="1" Grid.Row="3" Name="child">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="15px" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <bing:Map Mode="Road"
+                  Name="bingMap"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch"
+                  AnimationLevel="Full"
+                  Center="-36.852512,174.767838"
+                  ZoomLevel="18"
+                  CredentialsProvider="AgLyknzJBYKAb9nHA75q_EYfQRqHsNW79H87o9itaJvE_BYCpHcVfkttCVJuk6nr"
+                  Grid.Column="0">
+                <bing:Pushpin Location="-36.852512,174.767838" />
+                <bing:MapPolyline Stroke="Green"
+                                  StrokeThickness="5">
+                    <bing:MapPolyline.Locations>
+                        <bing:LocationCollection>
+                            <bing:Location Latitude="-36.85302345768201" Longitude="174.7691952456085" />
+                            <bing:Location Latitude="-36.852939754234" Longitude="174.76911209712904" />
+                            <bing:Location Latitude="-36.852710105841865" Longitude="174.76875804553907" />
+                            <bing:Location Latitude="-36.8528624894314" Longitude="174.76860515962522" />
+                            <bing:Location Latitude="-36.85275732332461" Longitude="174.76848714242857" />
+                        </bing:LocationCollection>
+                    </bing:MapPolyline.Locations>
+                </bing:MapPolyline>
+            </bing:Map>
+
+            <FlowDocumentPageViewer Grid.Column="2" Name="welcome_carousel" Foreground="White" FontSize="32" Style="{DynamicResource FlowDocumentPageViewerNoZoom}">
+                <FlowDocumentPageViewer.Resources>
+                    <Style x:Key="FlowDocumentPageViewerNoZoom" TargetType="{x:Type FlowDocumentPageViewer}">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="ContextMenu" Value="{DynamicResource {ComponentResourceKey ResourceId=PUIFlowViewers_ContextMenu, TypeInTargetAssembly={x:Type System_Windows_Documents:PresentationUIStyleResources}}}"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        <Setter Property="VerticalContentAlignment" Value="Center"/>
+                        <Setter Property="KeyboardNavigation.TabNavigation" Value="Local"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type FlowDocumentPageViewer}">
+                                    <DockPanel Language="en-us" LastChildFill="True" Uid="DockPanel_2">
+                                        <Grid Background="{TemplateBinding Background}" DockPanel.Dock="Bottom" HorizontalAlignment="Stretch" Uid="Grid_23">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Border x:Name="PART_FindToolBarHost" Grid.Column="0" HorizontalAlignment="Left" Uid="Border_60" Visibility="Collapsed" VerticalAlignment="Center"/>
+                                            <StackPanel Grid.Column="1" HorizontalAlignment="Center" Orientation="Horizontal" Uid="StackPanel_1" VerticalAlignment="Center">
+                                                <RepeatButton Command="NavigationCommands.PreviousPage" Focusable="False" IsEnabled="{TemplateBinding CanGoToPreviousPage}" ToolTip="Previous Page" Uid="RepeatButton_3">
+                                                    <RepeatButton.Style>
+                                                        <Style TargetType="{x:Type RepeatButton}">
+                                                            <Setter Property="Padding" Value="5"/>
+                                                            <Setter Property="Delay" Value="1000"/>
+                                                            <Setter Property="Interval" Value="250"/>
+                                                            <Style.BasedOn>
+                                                                <Style TargetType="{x:Type ButtonBase}">
+                                                                    <Setter Property="Focusable" Value="False"/>
+                                                                    <Setter Property="Opacity" Value="0.5"/>
+                                                                    <Setter Property="Cursor" Value="Hand"/>
+                                                                    <Setter Property="Background" Value="Transparent"/>
+                                                                    <Setter Property="Padding" Value="3,1"/>
+                                                                    <Setter Property="BorderBrush" Value="{x:Null}"/>
+                                                                    <Setter Property="BorderThickness" Value="0"/>
+                                                                    <Setter Property="MinWidth" Value="0"/>
+                                                                    <Setter Property="MinHeight" Value="0"/>
+                                                                    <Setter Property="Template">
+                                                                        <Setter.Value>
+                                                                            <ControlTemplate TargetType="{x:Type ButtonBase}">
+                                                                                <Border Background="{TemplateBinding Background}" Uid="Border_39">
+                                                                                    <ContentPresenter x:Name="Content" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" RenderTransformOrigin="0.5,0.5" Uid="ContentPresenter_2"/>
+                                                                                </Border>
+                                                                                <ControlTemplate.Triggers>
+                                                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                                                        <Setter Property="RenderTransform" TargetName="Content">
+                                                                                            <Setter.Value>
+                                                                                                <ScaleTransform ScaleY="1.1" ScaleX="1.1"/>
+                                                                                            </Setter.Value>
+                                                                                        </Setter>
+                                                                                    </Trigger>
+                                                                                    <Trigger Property="IsPressed" Value="True">
+                                                                                        <Setter Property="RenderTransform" TargetName="Content">
+                                                                                            <Setter.Value>
+                                                                                                <ScaleTransform ScaleY="0.9" ScaleX="0.9"/>
+                                                                                            </Setter.Value>
+                                                                                        </Setter>
+                                                                                    </Trigger>
+                                                                                </ControlTemplate.Triggers>
+                                                                            </ControlTemplate>
+                                                                        </Setter.Value>
+                                                                    </Setter>
+                                                                    <Style.Triggers>
+                                                                        <Trigger Property="IsEnabled" Value="False">
+                                                                            <Setter Property="Opacity" Value="0.3"/>
+                                                                        </Trigger>
+                                                                        <Trigger Property="IsMouseOver" Value="True">
+                                                                            <Setter Property="Opacity" Value="1"/>
+                                                                        </Trigger>
+                                                                    </Style.Triggers>
+                                                                </Style>
+                                                            </Style.BasedOn>
+                                                        </Style>
+                                                    </RepeatButton.Style>
+                                                    <Viewbox Height="{TemplateBinding FontSize}" Uid="Viewbox_5">
+                                                        <Path Data="M5,0 L5,10 L0,5 z" Fill="{TemplateBinding Foreground}" Uid="Path_15"/>
+                                                    </Viewbox>
+                                                </RepeatButton>
+                                                <TextBlock HorizontalAlignment="Center" Uid="TextBlock_5" VerticalAlignment="Center"><Run Text=" "/><Run Text=" "/><InlineUIContainer>
+        											<TextBlock Text="{Binding MasterPageNumber, RelativeSource={RelativeSource TemplatedParent}}" Uid="TextBlock_6"/>
+        										</InlineUIContainer><Run Text=" "/><Run Text=" of "/><Run Text=" "/><InlineUIContainer>
+        											<TextBlock Text="{Binding PageCount, RelativeSource={RelativeSource TemplatedParent}}" Uid="TextBlock_7"/>
+        										</InlineUIContainer><Run Text=" "/><Run Text=" "/></TextBlock>
+                                                <RepeatButton Command="NavigationCommands.NextPage" Focusable="False" IsEnabled="{TemplateBinding CanGoToNextPage}" ToolTip="Next Page" Uid="RepeatButton_4">
+                                                    <RepeatButton.Style>
+                                                        <Style TargetType="{x:Type RepeatButton}">
+                                                            <Setter Property="Padding" Value="5"/>
+                                                            <Setter Property="Delay" Value="1000"/>
+                                                            <Setter Property="Interval" Value="250"/>
+                                                            <Style.BasedOn>
+                                                                <Style TargetType="{x:Type ButtonBase}">
+                                                                    <Setter Property="Focusable" Value="False"/>
+                                                                    <Setter Property="Opacity" Value="0.5"/>
+                                                                    <Setter Property="Cursor" Value="Hand"/>
+                                                                    <Setter Property="Background" Value="Transparent"/>
+                                                                    <Setter Property="Padding" Value="3,1"/>
+                                                                    <Setter Property="BorderBrush" Value="{x:Null}"/>
+                                                                    <Setter Property="BorderThickness" Value="0"/>
+                                                                    <Setter Property="MinWidth" Value="0"/>
+                                                                    <Setter Property="MinHeight" Value="0"/>
+                                                                    <Setter Property="Template">
+                                                                        <Setter.Value>
+                                                                            <ControlTemplate TargetType="{x:Type ButtonBase}">
+                                                                                <Border Background="{TemplateBinding Background}" Uid="Border_39">
+                                                                                    <ContentPresenter x:Name="Content" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" RenderTransformOrigin="0.5,0.5" Uid="ContentPresenter_2"/>
+                                                                                </Border>
+                                                                                <ControlTemplate.Triggers>
+                                                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                                                        <Setter Property="RenderTransform" TargetName="Content">
+                                                                                            <Setter.Value>
+                                                                                                <ScaleTransform ScaleY="1.1" ScaleX="1.1"/>
+                                                                                            </Setter.Value>
+                                                                                        </Setter>
+                                                                                    </Trigger>
+                                                                                    <Trigger Property="IsPressed" Value="True">
+                                                                                        <Setter Property="RenderTransform" TargetName="Content">
+                                                                                            <Setter.Value>
+                                                                                                <ScaleTransform ScaleY="0.9" ScaleX="0.9"/>
+                                                                                            </Setter.Value>
+                                                                                        </Setter>
+                                                                                    </Trigger>
+                                                                                </ControlTemplate.Triggers>
+                                                                            </ControlTemplate>
+                                                                        </Setter.Value>
+                                                                    </Setter>
+                                                                    <Style.Triggers>
+                                                                        <Trigger Property="IsEnabled" Value="False">
+                                                                            <Setter Property="Opacity" Value="0.3"/>
+                                                                        </Trigger>
+                                                                        <Trigger Property="IsMouseOver" Value="True">
+                                                                            <Setter Property="Opacity" Value="1"/>
+                                                                        </Trigger>
+                                                                    </Style.Triggers>
+                                                                </Style>
+                                                            </Style.BasedOn>
+                                                        </Style>
+                                                    </RepeatButton.Style>
+                                                    <Viewbox Height="{TemplateBinding FontSize}" Uid="Viewbox_6">
+                                                        <Path Data="M0,0 L0,10 L5,5 z" Fill="{TemplateBinding Foreground}" Uid="Path_16"/>
+                                                    </Viewbox>
+                                                </RepeatButton>
+                                            </StackPanel>
+                                        </Grid>
+                                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" Uid="Border_47" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                            <AdornerDecorator ClipToBounds="True" Uid="AdornerDecorator_1">
+                                                <DocumentPageView IsHitTestVisible="False" DocumentPaginator="{x:Null}" KeyboardNavigation.IsTabStop="False" DocumentViewerBase.IsMasterPage="True" PageNumber="0" KeyboardNavigation.TabIndex="1" KeyboardNavigation.TabNavigation="Local" Uid="DocumentPageView_1"/>
+                                            </AdornerDecorator>
+                                        </Border>
+                                    </DockPanel>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </FlowDocumentPageViewer.Resources>
+                <FlowDocument FontSize="29" Foreground="White" FontFamily="Segoe UI Light" PagePadding="4">
+                        <Section BreakPageBefore="True">
+                            <Paragraph FontSize="42">directions from symonds street to ece reception (green line)</Paragraph>
+                            <Paragraph>When leaving the Engineering main entry, cross the road at the crossing and go left.</Paragraph>
+                            <Paragraph>On the right, there will be stairs and a ramp. Go up the stairs and once at the top there should be a bike enclosure.</Paragraph>
+                            <Paragraph>Take the first left then the first right. Ahead should be the Science Center.</Paragraph>
+                            <Paragraph>Enter the Science Center and walk up the stairs on the left until level two.</Paragraph>
+                        </Section>
+
+                    <Section BreakPageBefore="True">
+                            <Paragraph FontSize="42">directions from princes street to ece reception (blue line)</Paragraph>
+                            <Paragraph>Upon leaving the Clocktower from the main Princes Street exit, turn left and continue walking down Princes Street.</Paragraph>
+                            <Paragraph>Continue past Albert Street and at the Science Centre sign turn left.</Paragraph>
+                            <Paragraph>Continue left and walk until the signpost and turn right.</Paragraph>
+                            <Paragraph>Go up the small ramp or stairs and turn right.</Paragraph>
+                            <Paragraph>Enter the Science Center and walk up the stairs on the left until level two.</Paragraph>
+                        </Section>
+                    </FlowDocument>
+            </FlowDocumentPageViewer>
+            <Rectangle x:Name="carousel_cover" Grid.Column="2" Margin="4,4,4,51" TouchDown="welcome_carousel_TouchDown" TouchMove="welcome_carousel_TouchMove" TouchUp="welcome_carousel_TouchUp" />
+        </Grid>
     </Grid>
 </Page>

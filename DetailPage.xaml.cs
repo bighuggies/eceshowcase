@@ -22,6 +22,7 @@ namespace eceshowcase
     {
         private ShowcaseWindow window;
         private Page nextPage;
+        private Page currentPage;
         private Storyboard showPanel = null;
         public string Identifier { get; private set; }
 
@@ -44,6 +45,9 @@ namespace eceshowcase
                     break;
             }
 
+            window.hidePage = (window.Resources["SlideAndFadeLeftOut"] as Storyboard).Clone();
+            window.showPage = (window.Resources["SlideAndFadeLeftIn"] as Storyboard).Clone();
+
             OverviewButton.BorderBrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
             child.Content = new OverviewSubpage(this);
         }
@@ -63,15 +67,18 @@ namespace eceshowcase
             switch (panelName)
             {
                 case "overview":
+                    nextPage = new OverviewSubpage(this);
+                    currentPage = nextPage;
                     hidePanel = (Storyboard)Resources["SlideAndFadeRightOut"];
                     showPanel = (Storyboard)Resources["SlideAndFadeRightIn"];
                     hidePanel.Completed += hidePanel_Completed;
                     hidePanel.Begin(child);
                     OverviewButton.BorderBrush = whiteBrush;
-                    nextPage = new OverviewSubpage(this);
                     break;
 
                 case "courses":
+                    nextPage = new CoursesSubpage(this);
+                    currentPage = nextPage;
                     if (child.Content is OverviewSubpage)
                     {
                         hidePanel = (Storyboard)Resources["SlideAndFadeLeftOut"];
@@ -85,16 +92,16 @@ namespace eceshowcase
                     hidePanel.Completed += hidePanel_Completed;
                     hidePanel.Begin(child);
                     CoursesButton.BorderBrush = whiteBrush;
-                    nextPage = new CoursesSubpage(this);
                     break;
 
                 case "faculty":
+                    nextPage = new FacultySubpage(this);
+                    currentPage = nextPage;
                     hidePanel = (Storyboard)Resources["SlideAndFadeLeftOut"];
                     showPanel = (Storyboard)Resources["SlideAndFadeLeftIn"];
                     hidePanel.Completed += hidePanel_Completed;
                     hidePanel.Begin(child);
                     FacultyButton.BorderBrush = whiteBrush;
-                    nextPage = new FacultySubpage(this);
                     break;
             }
         }
@@ -112,7 +119,7 @@ namespace eceshowcase
 
         private void OverviewButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!(child.Content is OverviewSubpage))
+            if (!(currentPage is OverviewSubpage))
             {
                 SwitchNavTab("overview");
             }
@@ -120,7 +127,7 @@ namespace eceshowcase
 
         private void CoursesButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!(child.Content is CoursesSubpage))
+            if (!(currentPage is CoursesSubpage))
             {
                 SwitchNavTab("courses");
             }
@@ -128,7 +135,7 @@ namespace eceshowcase
 
         private void FacultyButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!(child.Content is FacultySubpage))
+            if (!(currentPage is FacultySubpage))
             {
                 SwitchNavTab("faculty");
             }

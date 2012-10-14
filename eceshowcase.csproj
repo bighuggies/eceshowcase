@@ -214,6 +214,12 @@
     <Content Include="Resources\bg.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\facebook.png" />
+    <Resource Include="Resources\facebookqrcode.png" />
+    <Resource Include="Resources\gplus.png" />
+    <Resource Include="Resources\gplusqrcode.png" />
+    <Resource Include="Resources\twitter.png" />
+    <Resource Include="Resources\twitterqrcode.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\logo.png">
