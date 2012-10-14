@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace eceshowcase
 {
@@ -20,6 +21,9 @@ namespace eceshowcase
     public partial class DetailPage : Page
     {
         private ShowcaseWindow window;
+        private Page nextPage;
+        private Page currentPage;
+        private Storyboard showPanel = null;
         public string Identifier { get; private set; }
 
         public DetailPage(ShowcaseWindow w, String id)
@@ -41,7 +45,11 @@ namespace eceshowcase
                     break;
             }
 
-            SwitchNavTab("overview");
+            window.hidePage = (window.Resources["SlideAndFadeLeftOut"] as Storyboard).Clone();
+            window.showPage = (window.Resources["SlideAndFadeLeftIn"] as Storyboard).Clone();
+
+            OverviewButton.BorderBrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
+            child.Content = new OverviewSubpage(this);
         }
 
         public void SwitchNavTab(String panelName)
@@ -52,27 +60,56 @@ namespace eceshowcase
                 b.BorderBrush = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0));
             }
 
-            Brush whiteBrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
+            Storyboard hidePanel = null;
 
-            child.Content = null;
+            Brush whiteBrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
 
             switch (panelName)
             {
                 case "overview":
+                    nextPage = new OverviewSubpage(this);
+                    currentPage = nextPage;
+                    hidePanel = (Storyboard)Resources["SlideAndFadeRightOut"];
+                    showPanel = (Storyboard)Resources["SlideAndFadeRightIn"];
+                    hidePanel.Completed += hidePanel_Completed;
+                    hidePanel.Begin(child);
                     OverviewButton.BorderBrush = whiteBrush;
-                    child.Content = new OverviewSubpage(this);
                     break;
 
                 case "courses":
+                    nextPage = new CoursesSubpage(this);
+                    currentPage = nextPage;
+                    if (child.Content is OverviewSubpage)
+                    {
+                        hidePanel = (Storyboard)Resources["SlideAndFadeLeftOut"];
+                        showPanel = (Storyboard)Resources["SlideAndFadeLeftIn"];
+                    }
+                    else
+                    {
+                        hidePanel = (Storyboard)Resources["SlideAndFadeRightOut"];
+                        showPanel = (Storyboard)Resources["SlideAndFadeRightIn"];
+                    }
+                    hidePanel.Completed += hidePanel_Completed;
+                    hidePanel.Begin(child);
                     CoursesButton.BorderBrush = whiteBrush;
-                    child.Content = new CoursesSubpage(this);
                     break;
 
                 case "faculty":
+                    nextPage = new FacultySubpage(this);
+                    currentPage = nextPage;
+                    hidePanel = (Storyboard)Resources["SlideAndFadeLeftOut"];
+                    showPanel = (Storyboard)Resources["SlideAndFadeLeftIn"];
+                    hidePanel.Completed += hidePanel_Completed;
+                    hidePanel.Begin(child);
                     FacultyButton.BorderBrush = whiteBrush;
-                    child.Content = new FacultySubpage(this);
                     break;
             }
+        }
+
+        private void hidePanel_Completed(object sender, EventArgs e)
+        {
+            child.Content = nextPage;
+            showPanel.Begin(child);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -82,17 +119,26 @@ namespace eceshowcase
 
         private void OverviewButton_Click(object sender, RoutedEventArgs e)
         {
-            SwitchNavTab("overview");
+            if (!(currentPage is OverviewSubpage))
+            {
+                SwitchNavTab("overview");
+            }
         }
 
         private void CoursesButton_Click(object sender, RoutedEventArgs e)
         {
-            SwitchNavTab("courses");
+            if (!(currentPage is CoursesSubpage))
+            {
+                SwitchNavTab("courses");
+            }
         }
 
         private void FacultyButton_Click(object sender, RoutedEventArgs e)
         {
-            SwitchNavTab("faculty");
+            if (!(currentPage is FacultySubpage))
+            {
+                SwitchNavTab("faculty");
+            }
         }
     }
 }
