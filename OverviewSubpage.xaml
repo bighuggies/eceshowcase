@@ -44,20 +44,25 @@
               Grid.Column="1"
               Grid.Row="1">
             <Grid Name="generalView">
-                <FlowDocumentScrollViewer Margin="4"
-                                          Foreground="White"
-                                          VerticalScrollBarVisibility="Hidden">
-                    <FlowDocument FontFamily="Segoe UI Light"
+                
+                    <WrapPanel Name="pictureViewer" >
+                        <my:SurfaceScrollViewer HorizontalScrollBarVisibility="Disabled"
+                                            VerticalScrollBarVisibility="Hidden">
+                        <FlowDocument FontFamily="Segoe UI Light"
                                   FontSize="28px"
                                   Background="Transparent"
                                   PagePadding="32,0,0,0"
                                   TextAlignment="Left"
                                   Name="overviewContent">
-                        <List Name="contentList">
-                            
-                        </List>
-                    </FlowDocument>
-                </FlowDocumentScrollViewer>
+                            <List Name="contentList">
+
+                            </List>
+                        </FlowDocument>
+
+
+                    </my:SurfaceScrollViewer>
+                </WrapPanel>
+                
             </Grid>
     </Grid>
     </Grid>

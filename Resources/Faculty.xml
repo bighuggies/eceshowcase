@@ -222,10 +222,10 @@
            address="38 Princes Street"
            type="Lecturer">
     </staff>
-    <topic name="General" content="Spoons for everyone!
+    <topic name="General" images="" content="Spoons for everyone!
            
            Also the game"></topic>
-    <topic name="Topics" content="The main topics provided in Computer Systems Engineering include: Knowledge in computer systems, practical skills in hardware and software design, problem solving skills essential for design and building systems, project work, verbal and written communication, and exposure to a variety of existing and leading edge electronic and electronic engineering including computer and software."></topic>
+    <topic name="Topics" images="" content="The main topics provided in Computer Systems Engineering include: Knowledge in computer systems, practical skills in hardware and software design, problem solving skills essential for design and building systems, project work, verbal and written communication, and exposure to a variety of existing and leading edge electronic and electronic engineering including computer and software."></topic>
   </program>
 
 
@@ -279,8 +279,8 @@
            address="38 Princes Street"
            type="Lecturer">
     </staff>
-    <topic name="General" content="Blah Blah Blah spoon"></topic>
-    <topic content="The main topics provided in Electrical Engineering include: Power systems, power electronics, communications, radio systems, digital signal processing, computer systems, electrical materials and electronic devices, circuit theory, software design, mathematical models, engineering electromagnetics, and computer systems." name="Topics"></topic>
+    <topic name="General" content="Blah Blah Blah spoon" images="1.png;2.png"></topic>
+    <topic images="" content="The main topics provided in Electrical Engineering include: Power systems, power electronics, communications, radio systems, digital signal processing, computer systems, electrical materials and electronic devices, circuit theory, software design, mathematical models, engineering electromagnetics, and computer systems." name="Topics"></topic>
   </program>
 
 
@@ -317,8 +317,8 @@
            address="38 Princes Street"
            type="Lecturer">
     </staff>
-    <topic name="General" content="Niko should have a top hat"></topic>
-    <topic name="Topics" content="The main topics provided in Software Engineering include: Software processes, project management techniques, quality asssurance techniques and software tools and various programming languages. "></topic>
+    <topic name="General" images="" content="Niko should have a top hat"></topic>
+    <topic name="Topics" images="" content="The main topics provided in Software Engineering include: Software processes, project management techniques, quality asssurance techniques and software tools and various programming languages. "></topic>
   </program>
 
 </programs>

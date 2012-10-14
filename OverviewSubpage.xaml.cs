@@ -24,10 +24,12 @@ namespace eceshowcase
         DetailPage detailPage;
 
         Dictionary<String, String> infoList;
+        Dictionary<String, List<BitmapImage> > pictureList;
 
         private void loadData()
         {
             infoList = new Dictionary<String, String>();
+            pictureList = new Dictionary<String, List<BitmapImage> >();
 
             string programName = detailPage.Identifier;
             bool inCorrectProgram = false;
@@ -67,9 +69,33 @@ namespace eceshowcase
                         name = reader.Value;
                         reader.MoveToAttribute("content");
                         content = reader.Value;
+
+                        List<BitmapImage> imgList = new List<BitmapImage>();
+
+                        String imgString;
+                        reader.MoveToAttribute("images");
+                        imgString = reader.Value;
+
+                        if (imgString.Length > 0)
+                        {
+
+                            foreach (String s in imgString.Split(';'))
+                            {
+                                BitmapImage img = new BitmapImage(new System.Uri("Resources/" + s, UriKind.Relative));
+
+                                imgList.Add(img);
+                            }
+
+                        }
+
+                        
+
+                        
                         System.Console.WriteLine(content);
 
+
                         infoList.Add(name, content);
+                        pictureList.Add(name, imgList);
 
                         AddButton(name);
                     }
@@ -159,6 +185,17 @@ namespace eceshowcase
             overviewContent.Blocks.Clear();
             overviewContent.Blocks.Add(p);
             overviewContent.Blocks.Add(content);
+
+            foreach (BitmapImage img in pictureList[title])
+            {
+                Rectangle rect = new Rectangle();
+                rect.Height = 200;
+                rect.Width = 200;
+                rect.Margin = new Thickness(2);
+
+                rect.Fill = new ImageBrush(img);
+                pictureViewer.Children.Add(rect);
+            }
         }
     }
 }
