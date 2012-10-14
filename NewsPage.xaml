@@ -31,19 +31,22 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="60px" />
+            <ColumnDefinition Width="3*" />
             <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="60px" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="120px" />
             <RowDefinition Height="120px" />
-            <RowDefinition Height="0" />
-            <RowDefinition Height="820*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
             <RowDefinition Height="120px" />
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="1"
                     Grid.Column="1"
-                    Orientation="Horizontal">
+                    Orientation="Horizontal" Grid.ColumnSpan="4" d:LayoutOverrides="GridBox">
             <Button HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 Foreground="White"
@@ -72,8 +75,14 @@
                FontFamily="Segoe UI Light" />
         </StackPanel>
 
-        <my:SurfaceScrollViewer Name="surfaceScrollViewer1" HorizontalContentAlignment="Center" Grid.Column="1" Grid.Row="3">
-            <StackPanel Grid.Column="1" Grid.Row="3" Name="contentPanel"></StackPanel>
+        <my:SurfaceScrollViewer Name="surfaceScrollViewer1" HorizontalContentAlignment="Center" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3">
+            <StackPanel Grid.Column="1" Grid.Row="2" Name="contentPanel"></StackPanel>
         </my:SurfaceScrollViewer>
+        <Image Grid.Column="2" Margin="4" Grid.Row="2" Source="Resources/facebook.png"/>
+        <Image Grid.Column="3" Margin="4" Grid.Row="2" Source="Resources/facebookqrcode.png"/>
+        <Image Grid.Column="2" Margin="4" Grid.Row="3" Source="Resources/twitter.png"/>
+        <Image Grid.Column="3" Margin="4" Grid.Row="3" Source="Resources/twitterqrcode.png"/>
+        <Image Grid.Column="2" Margin="4" Grid.Row="4" Source="Resources/gplus.png"/>
+        <Image Grid.Column="3" Margin="4" Grid.Row="4" Source="Resources/gplusqrcode.png"/>
     </Grid>
 </Page>
