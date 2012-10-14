@@ -311,6 +311,8 @@
            address="38 Princes Street"
            type="Lecturer">
     </staff>
+    <topic name="General" content="Niko should have a top hat">
+    </topic>
   </program>
 
 </programs>
