@@ -63,19 +63,19 @@
     </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="60px" />
             <ColumnDefinition Width="6*" />
             <ColumnDefinition Width="6*" />
             <ColumnDefinition Width="6*" />
             <ColumnDefinition Width="18*" />
-            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="60px" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height=".25*" />
-            <RowDefinition Height=".5*" />
+            <RowDefinition Height="120px" />
+            <RowDefinition Height="120px" />
             <RowDefinition Height="3*" />
             <RowDefinition Height="1*" />
-            <RowDefinition Height=".25*" />
+            <RowDefinition Height="120px" />
         </Grid.RowDefinitions>
         <!--<Grid.Background>
     		<ImageBrush Stretch="UniformToFill" ImageSource="Resources/bg.png" />
@@ -87,7 +87,7 @@
                    FontSize="74"
                    Foreground="White"              
                    HorizontalAlignment="Left"
-                   VerticalAlignment="Center"
+                   VerticalAlignment="Top"
                    FontFamily="Segoe UI Light" />
         </DockPanel>
         <s:SurfaceButton x:Name="ee_btn" Content="electrical and electronic" Grid.Column="1" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FF2D57FF" Foreground="White" Click="Electrical_Click" />
