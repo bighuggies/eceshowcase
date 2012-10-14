@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.Xml;
 using Microsoft.Surface.Presentation.Controls;
 using System.Windows.Media.Animation;
+using MessagingToolkit.Barcode;
 
 namespace eceshowcase
 {
@@ -26,6 +27,8 @@ namespace eceshowcase
         private string FacultyKey;
         private string PreviousKey = null;
 
+        BarcodeEncoder qrEncoder;
+
         Dictionary<string, string[]> FacultyItems;
 
         public FacultySubpage(DetailPage dp)
@@ -36,6 +39,24 @@ namespace eceshowcase
             detailPage = dp;
             LoadFacultyData();
             GenerateButtons();
+
+            // Create the QR code builder.
+            qrEncoder = new BarcodeEncoder();
+
+            
+        }
+
+        private void setQRCode(String data)
+        {
+            qrEncoder.ClearAllOptions();
+
+            qrEncoder.Margin = 2;
+            qrEncoder.Width = 256;
+            qrEncoder.Height = 256;
+
+            WriteableBitmap img = qrEncoder.Encode(BarcodeFormat.QRCode, data);
+
+            DisplayQRCode.Fill = new ImageBrush(img);
         }
 
         private void LoadFacultyData()
@@ -205,6 +226,8 @@ namespace eceshowcase
                 FacultyItems[FacultyKey][5] + "\nAuckland\n\nPhone: +64 9 373 7599 ext " +
                 FacultyItems[FacultyKey][4] + "\nEmail: " + FacultyItems[FacultyKey][3];
             DisplayStaffPhoto.Source = new ImageSourceConverter().ConvertFromString(FacultyImage) as ImageSource;
+
+            setQRCode(FacultyKey + ": +6493737599 ext " + FacultyItems[FacultyKey][4]);
 
             Storyboard showInfo = (Storyboard)Resources["FadeIn"];
             showInfo.Begin(StaffInfoGrid);
