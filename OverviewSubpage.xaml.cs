@@ -179,8 +179,11 @@ namespace eceshowcase
             
             Paragraph p = new Paragraph(new Run("General"));
             p.FontSize = 36;
+            p.Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+
             Paragraph content = new Paragraph(new Run(infoList["General"]));
             content.FontSize = 24;
+            content.Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
 
             overviewContent.Blocks.Add(p);
             overviewContent.Blocks.Add(content);
@@ -192,10 +195,12 @@ namespace eceshowcase
             String title = ((SurfaceButton)e.OriginalSource).Content.ToString();
 
             Paragraph p = new Paragraph(new Run(title));
-
             p.FontSize = 36;
+            p.Foreground = new SolidColorBrush( Color.FromRgb(255, 255, 255) );
+
             Paragraph content = new Paragraph(new Run(infoList[title]));
             content.FontSize = 24;
+            content.Foreground = new SolidColorBrush( Color.FromRgb(255, 255, 255) );
 
             overviewContent.Blocks.Clear();
             overviewContent.Blocks.Add(p);

@@ -50,9 +50,12 @@ namespace eceshowcase
         {
             qrEncoder.ClearAllOptions();
 
-            qrEncoder.Margin = 2;
+            qrEncoder.Margin = 0;
             qrEncoder.Width = 256;
             qrEncoder.Height = 256;
+
+            qrEncoder.BackColor = Color.FromRgb(79, 45, 127);
+            qrEncoder.ForeColor = Color.FromRgb(0, 0, 0);
 
             WriteableBitmap img = qrEncoder.Encode(BarcodeFormat.QRCode, data);
 
@@ -227,7 +230,7 @@ namespace eceshowcase
                 FacultyItems[FacultyKey][4] + "\nEmail: " + FacultyItems[FacultyKey][3];
             DisplayStaffPhoto.Source = new ImageSourceConverter().ConvertFromString(FacultyImage) as ImageSource;
 
-            setQRCode(FacultyKey + ": +6493737599 ext " + FacultyItems[FacultyKey][4]);
+            setQRCode(FacultyKey + ": +6493737599 ext " + FacultyItems[FacultyKey][4] + "\n" + FacultyItems[FacultyKey][3]);
 
             Storyboard showInfo = (Storyboard)Resources["FadeIn"];
             showInfo.Begin(StaffInfoGrid);
