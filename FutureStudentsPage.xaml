@@ -6,7 +6,7 @@
       mc:Ignorable="d"
       Width="1920"
       Height="1080"
-      Background="#FF008287"
+      Background="#FF4F2D7F"
       FontFamily="Segoe UI Light"
 	  Title="FutureStudentsPage">
     <Page.Resources>
@@ -30,16 +30,16 @@
     </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120px" />
+            <ColumnDefinition Width="60px" />
             <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="120px" />
+            <ColumnDefinition Width="60px" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="120px" />
             <RowDefinition Height="120px" />
             <RowDefinition Height="80px" />
             <RowDefinition Height="1*" />
-            <RowDefinition Height="20px" />
+            <RowDefinition Height="120px" />
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="1"
                     Grid.Column="1"
@@ -73,7 +73,7 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
-            <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0" Click="Button_Click_1">undergraduate</Button>
+            <Button FontSize="52px" Padding="25,0" Margin="0,0,25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0" Click="Button_Click_1">undergraduate</Button>
             <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0" Click="Button_Click_2">postgraduate</Button>
             <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0" Click="Button_Click_3">accommodation</Button>
             <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0" Click="Button_Click_4">scholarships</Button>

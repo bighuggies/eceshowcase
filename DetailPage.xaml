@@ -6,7 +6,7 @@
       mc:Ignorable="d"
       Width="1920"
       Height="1080"
-      Background="#FF008287"
+      Background="#FF4F2D7F"
       FontFamily="Segoe UI Light"
 	  Title="DetailPage">
     <Page.Resources>
@@ -30,9 +30,9 @@
     </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120px" />
+            <ColumnDefinition Width="60px" />
             <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="120px" />
+            <ColumnDefinition Width="60px" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="120px" />

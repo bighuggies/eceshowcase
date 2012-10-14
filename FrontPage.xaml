@@ -10,7 +10,8 @@
       Title="eceshowcase"
       Width="1920"
       Height="1080"
-      FontFamily="Segoe UI Light" Background="White">
+      FontFamily="Segoe UI Light"
+      Background="#ff4f2d7f">
     <Page.Resources>
         <!-- ButtonBase -->
         <Style x:Key="ButtonFocusVisual">
@@ -62,36 +63,37 @@
     </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="60px" />
             <ColumnDefinition Width="6*" />
             <ColumnDefinition Width="6*" />
             <ColumnDefinition Width="6*" />
             <ColumnDefinition Width="18*" />
-            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="60px" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height=".25*" />
-            <RowDefinition Height=".5*" />
+            <RowDefinition Height="120px" />
+            <RowDefinition Height="120px" />
             <RowDefinition Height="3*" />
             <RowDefinition Height="1*" />
-            <RowDefinition Height=".25*" />
+            <RowDefinition Height="120px" />
         </Grid.RowDefinitions>
         <!--<Grid.Background>
     		<ImageBrush Stretch="UniformToFill" ImageSource="Resources/bg.png" />
 		</Grid.Background>-->
-        <Label x:Name="title" Content="electrical and computer engineering"
-               FontSize="74"
-               Foreground="#FF4F2D7F"
-               Grid.ColumnSpan="4"
-               HorizontalAlignment="Left"
-               VerticalAlignment="Center"
-               FontFamily="Segoe UI Light"
-               Grid.Row="1"
-               Grid.Column="1" />
+        <DockPanel Grid.Row="1"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="4">
+            <Label x:Name="title" Content="electrical and computer engineering"
+                   FontSize="74"
+                   Foreground="White"              
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   FontFamily="Segoe UI Light" />
+        </DockPanel>
         <s:SurfaceButton x:Name="ee_btn" Content="electrical and electronic" Grid.Column="1" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FF2D57FF" Foreground="White" Click="Electrical_Click" />
         <s:SurfaceButton x:Name="se_btn" Content="software" Grid.Column="2" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFDC1818" Foreground="White" Click="Software_Click"/>
         <s:SurfaceButton x:Name="cs_btn" Content="computer systems" Grid.Column="3" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FF00CA28" Foreground="White" Click="Computer_Click"/>
-        <s:SurfaceButton x:Name="futurestudents_btn" Content="future students" Grid.Column="1" Margin="4" Grid.Row="3" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFDADF24" Grid.ColumnSpan="2" Foreground="White" Click="Future_Click"/>
+        <s:SurfaceButton x:Name="futurestudents_btn" Content="future students" Grid.Column="1" Margin="4" Grid.Row="3" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFFF8D00" Grid.ColumnSpan="2" Foreground="White" Click="Future_Click"/>
         <s:SurfaceButton x:Name="other_btn" Content="news and social media" Grid.Column="3" Margin="4" Grid.Row="3" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFBB24DF" Foreground="White" Click="News_Click" />
         <s:SurfaceButton x:Name="map_btn" Grid.Row="3"
                 Grid.Column="4"
@@ -108,7 +110,7 @@
                             ImageSource="Resources/map.png" />
             </Button.Background>
         </s:SurfaceButton>
-        <FlowDocumentPageViewer x:Name="welcome_carousel" Grid.Column="4" Margin="4" Grid.Row="2" FontSize="32" Style="{DynamicResource FlowDocumentPageViewerNoZoom}" DataContext="{Binding}">
+        <FlowDocumentPageViewer x:Name="welcome_carousel" Grid.Column="4" Margin="4" Grid.Row="2" FontSize="32" Style="{DynamicResource FlowDocumentPageViewerNoZoom}" Foreground="White">
             <FlowDocumentPageViewer.Resources>
                 <Style x:Key="FlowDocumentPageViewerNoZoom" TargetType="{x:Type FlowDocumentPageViewer}">
                     <Setter Property="Background" Value="Transparent"/>
@@ -317,6 +319,10 @@ In 2000 the Department of Electrical and Computer Engineering formalised a link 
                 </Section>
             </FlowDocument>
         </FlowDocumentPageViewer>
-        <Rectangle x:Name="carousel_cover" Grid.Column="4" Fill="#00F4F4F5" Margin="4,4,4,51" Grid.Row="2" TouchDown="welcome_carousel_TouchDown" TouchMove="welcome_carousel_TouchMove" TouchUp="welcome_carousel_TouchUp" />
+        <Rectangle x:Name="carousel_cover" Grid.Column="4" Margin="4,4,4,51" Grid.Row="2" TouchDown="welcome_carousel_TouchDown" TouchMove="welcome_carousel_TouchMove" TouchUp="welcome_carousel_TouchUp">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Resources/bg.png" Stretch="Uniform" TileMode="None" />
+            </Rectangle.Fill>
+        </Rectangle>
     </Grid>
 </Page>
