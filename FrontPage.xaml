@@ -293,9 +293,29 @@
                 </Section>
 
                 <Section BreakPageBefore="True">
-                    <Paragraph>
+                    <Paragraph FontFamily="segoe UI Light" FontSize="42">
                         history
                     </Paragraph>
+                    <Paragraph FontFamily="Segoe UI Light" FontSize="28">
+                        When established in 1953, founding professor A.G. Bogle and two other academics, taught just a handful of students.
+In 2000 the Department of Electrical and Computer Engineering formalised a link with the Computer Science Department, recognising the importance of software as an engineering discipline. In the future, we aim to extend our industrial liaison and multi-disciplinary research projects to include medicine and biology.
+                    </Paragraph>
+                </Section>
+                <Section BreakPageBefore="True">
+                    <Paragraph FontFamily="segoe UI Light" FontSize="42">
+                        2013 Academic Year
+                    </Paragraph>
+                        <Paragraph FontFamily="Segoe UI Light" FontSize="28">Summer School</Paragraph>
+                        <Paragraph FontFamily="Segoe UI Light" FontSize="28">Start: Friday 04/01/13</Paragraph>
+                        <Paragraph FontFamily="Segoe UI Light" FontSize="28">End: Wednesday 20/02/13</Paragraph>
+
+                        <Paragraph FontFamily="Segoe UI Light" FontSize="28">Semester One</Paragraph>
+                        <Paragraph FontFamily="Segoe UI Light" FontSize="28">Start: Monday 04/03/13</Paragraph>
+                        <Paragraph FontFamily="Segoe UI Light" FontSize="28">End: Monday 01/07/13</Paragraph>
+
+                        <Paragraph FontFamily="Segoe UI Light" FontSize="28">Semester Two</Paragraph>
+                        <Paragraph FontFamily="Segoe UI Light" FontSize="28">Start: Monday 22/07/13</Paragraph>
+                        <Paragraph FontFamily="Segoe UI Light" FontSize="28">End: Monday 18/11/13 </Paragraph>
                 </Section>
             </FlowDocument>
         </FlowDocumentPageViewer>

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace eceshowcase
 {
@@ -20,20 +21,103 @@ namespace eceshowcase
     public partial class FutureStudentsPage : Page
     {
         private ShowcaseWindow window;
-        Brush transBrush = new SolidColorBrush(Color.FromArgb(0, 255, 255, 255));
-        Brush whiteBrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
+        private Grid nextPage;
+        private Grid currentPage;
+        private Storyboard showPanel = null;
 
         public FutureStudentsPage(ShowcaseWindow w)
         {
             InitializeComponent();
             window = w;
             //child.Content = new OverviewSubpage(this);
-            undergradGrid.Visibility = Visibility.Visible;
-            undergradButton.BorderBrush = whiteBrush;
+            undergrad.Visibility = Visibility.Visible;
+            UndergraduateButton.BorderBrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
+            currentPage = undergrad;
 
-            postgradGrid.Visibility = Visibility.Hidden;
-            accommodationGrid.Visibility = Visibility.Hidden;
-            scholGrid.Visibility = Visibility.Hidden;
+            window.hidePage = (window.Resources["SlideAndFadeLeftOut"] as Storyboard).Clone();
+            window.showPage = (window.Resources["SlideAndFadeLeftIn"] as Storyboard).Clone();
+        }
+
+        public void SwitchNavTab(String panelName)
+        {
+            foreach (UIElement elem in NavButtons.Children)
+            {
+                Button b = elem as Button;
+                b.BorderBrush = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0));
+            }
+
+            Storyboard hidePanel = null;
+
+            Brush whiteBrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
+
+            switch (panelName)
+            {
+                case "undergrad":
+                    nextPage = undergrad;
+                    currentPage = nextPage;
+                    hidePanel = (Storyboard)Resources["SlideAndFadeRightOut"];
+                    showPanel = (Storyboard)Resources["SlideAndFadeRightIn"];
+                    hidePanel.Completed += hidePanel_Completed;
+                    hidePanel.Begin(child);
+                    UndergraduateButton.BorderBrush = whiteBrush;
+                    break;
+
+                case "postgrad":
+                    nextPage = postgrad;
+                    currentPage = nextPage;
+                    if (currentPage == undergrad)
+                    {
+                        hidePanel = (Storyboard)Resources["SlideAndFadeLeftOut"];
+                        showPanel = (Storyboard)Resources["SlideAndFadeLeftIn"];
+                    }
+                    else
+                    {
+                        hidePanel = (Storyboard)Resources["SlideAndFadeRightOut"];
+                        showPanel = (Storyboard)Resources["SlideAndFadeRightIn"];
+                    }
+                    hidePanel.Completed += hidePanel_Completed;
+                    hidePanel.Begin(child);
+                    PostgraduateButton.BorderBrush = whiteBrush;
+                    break;
+
+                case "accommodation":
+                    nextPage = accommodation;
+                    currentPage = nextPage;
+                    if (currentPage == schol)
+                    {
+                        hidePanel = (Storyboard)Resources["SlideAndFadeRightOut"];
+                        showPanel = (Storyboard)Resources["SlideAndFadeRightIn"];
+                    }
+                    else
+                    {
+                        hidePanel = (Storyboard)Resources["SlideAndFadeLeftOut"];
+                        showPanel = (Storyboard)Resources["SlideAndFadeLeftIn"];
+                    }
+                    hidePanel.Completed += hidePanel_Completed;
+                    hidePanel.Begin(child);
+                    AccommodationButton.BorderBrush = whiteBrush;
+                    break;
+
+                case "scholarship":
+                    nextPage = schol;
+                    currentPage = nextPage;
+                    hidePanel = (Storyboard)Resources["SlideAndFadeLeftOut"];
+                    showPanel = (Storyboard)Resources["SlideAndFadeLeftIn"];
+                    hidePanel.Completed += hidePanel_Completed;
+                    hidePanel.Begin(child);
+                    ScholarshipButton.BorderBrush = whiteBrush;
+                    break;
+            }
+        }
+
+        private void hidePanel_Completed(object sender, EventArgs e)
+        {
+            foreach (Grid grid in child.Children)
+            {
+                grid.Visibility = Visibility.Hidden;
+            }
+            nextPage.Visibility = Visibility.Visible;
+            showPanel.Begin(child);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -41,45 +125,36 @@ namespace eceshowcase
             window.ShowPage(new FrontPage(window));
         }
 
-        private void HideYoWife()
+        private void UnderButton_Click(object sender, RoutedEventArgs e)
         {
-            undergradGrid.Visibility = Visibility.Hidden;
-            postgradGrid.Visibility = Visibility.Hidden;
-            accommodationGrid.Visibility = Visibility.Hidden;
-            scholGrid.Visibility = Visibility.Hidden;
-
-            undergradButton.BorderBrush = transBrush;
-            postgradButton.BorderBrush = transBrush;
-            accommodationButton.BorderBrush = transBrush;
-            scholButton.BorderBrush = transBrush;
+            if (currentPage != undergrad)
+            {
+                SwitchNavTab("undergrad");
+            }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void PostButton_Click(object sender, RoutedEventArgs e)
         {
-            HideYoWife();
-            undergradGrid.Visibility = Visibility.Visible;
-            undergradButton.BorderBrush = whiteBrush;
+            if (currentPage != postgrad)
+            {
+                SwitchNavTab("postgrad");
+            }
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void AccommButton_Click(object sender, RoutedEventArgs e)
         {
-            HideYoWife();
-            postgradGrid.Visibility = Visibility.Visible;
-            postgradButton.BorderBrush = whiteBrush;
+            if (currentPage != accommodation)
+            {
+                SwitchNavTab("accommodation");
+            }
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void ScholButton_Click(object sender, RoutedEventArgs e)
         {
-            HideYoWife();
-            accommodationGrid.Visibility = Visibility.Visible;
-            accommodationButton.BorderBrush = whiteBrush;
-        }
-
-        private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
-            HideYoWife();
-            scholGrid.Visibility = Visibility.Visible;
-            scholButton.BorderBrush = whiteBrush;
+            if (currentPage != schol)
+            {
+                SwitchNavTab("scholarship");
+            }
         }
     }
 }
