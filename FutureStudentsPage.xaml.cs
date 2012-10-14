@@ -53,15 +53,18 @@ namespace eceshowcase
             switch (panelName)
             {
                 case "undergrad":
+                    nextPage = undergrad;
+                    currentPage = nextPage;
                     hidePanel = (Storyboard)Resources["SlideAndFadeRightOut"];
                     showPanel = (Storyboard)Resources["SlideAndFadeRightIn"];
                     hidePanel.Completed += hidePanel_Completed;
                     hidePanel.Begin(child);
                     UndergraduateButton.BorderBrush = whiteBrush;
-                    nextPage = undergrad;
                     break;
 
                 case "postgrad":
+                    nextPage = postgrad;
+                    currentPage = nextPage;
                     if (currentPage == undergrad)
                     {
                         hidePanel = (Storyboard)Resources["SlideAndFadeLeftOut"];
@@ -75,10 +78,11 @@ namespace eceshowcase
                     hidePanel.Completed += hidePanel_Completed;
                     hidePanel.Begin(child);
                     PostgraduateButton.BorderBrush = whiteBrush;
-                    nextPage = postgrad;
                     break;
 
                 case "accommodation":
+                    nextPage = accommodation;
+                    currentPage = nextPage;
                     if (currentPage == schol)
                     {
                         hidePanel = (Storyboard)Resources["SlideAndFadeRightOut"];
@@ -92,16 +96,16 @@ namespace eceshowcase
                     hidePanel.Completed += hidePanel_Completed;
                     hidePanel.Begin(child);
                     AccommodationButton.BorderBrush = whiteBrush;
-                    nextPage = accommodation;
                     break;
 
                 case "scholarship":
+                    nextPage = schol;
+                    currentPage = nextPage;
                     hidePanel = (Storyboard)Resources["SlideAndFadeLeftOut"];
                     showPanel = (Storyboard)Resources["SlideAndFadeLeftIn"];
                     hidePanel.Completed += hidePanel_Completed;
                     hidePanel.Begin(child);
                     ScholarshipButton.BorderBrush = whiteBrush;
-                    nextPage = schol;
                     break;
             }
         }
@@ -113,7 +117,6 @@ namespace eceshowcase
                 grid.Visibility = Visibility.Hidden;
             }
             nextPage.Visibility = Visibility.Visible;
-            currentPage = nextPage;
             showPanel.Begin(child);
         }
 

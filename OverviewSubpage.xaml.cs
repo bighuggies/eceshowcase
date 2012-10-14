@@ -128,6 +128,7 @@ namespace eceshowcase
 
             if (title != previousTitle)
             {
+                previousTitle = title;
                 Storyboard hideInfo = (Storyboard)Resources["FadeOut"];
                 hideInfo.Completed += hideInfo_Completed;
                 hideInfo.Begin(generalView);
@@ -148,8 +149,6 @@ namespace eceshowcase
             overviewContent.Blocks.Add(content);
 
             showInfo.Begin(generalView);
-
-            previousTitle = title;
         }
     }
 }
