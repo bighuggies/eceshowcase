@@ -82,17 +82,17 @@
                 <TextBlock FontSize="42" Grid.Row="2" Margin="0,0,0,8">deputy heads of department</TextBlock>
                 <WrapPanel x:Name="DeputyPanel" ItemHeight="150" ItemWidth="200" Grid.Row="3" />
 
-                <TextBlock FontSize="42" Grid.Row="4" Margin="0,0,0,8">managers</TextBlock>
-                <WrapPanel x:Name="ManagerPanel" ItemHeight="150" ItemWidth="200" Grid.Row="5" />
+                <TextBlock FontSize="42" Grid.Row="4" Margin="0,0,0,8">course advisers</TextBlock>
+                <WrapPanel x:Name="AdviserPanel" ItemHeight="150" ItemWidth="200" Grid.Row="5" />
 
-                <TextBlock FontSize="42" Grid.Row="6" Margin="0,0,0,8">course advisers</TextBlock>
-                <WrapPanel x:Name="AdviserPanel" ItemHeight="150" ItemWidth="200" Grid.Row="7" />
+                <TextBlock FontSize="42" Grid.Row="6" Margin="0,0,0,8">lecturers</TextBlock>
+                <WrapPanel x:Name="LecturerPanel" ItemHeight="150" ItemWidth="200" Grid.Row="7" />
 
-                <TextBlock FontSize="42" Grid.Row="8" Margin="0,0,0,8">lecturers</TextBlock>
-                <WrapPanel x:Name="LecturerPanel" ItemHeight="150" ItemWidth="200" Grid.Row="9" />
+                <TextBlock FontSize="42" Grid.Row="8" Margin="0,0,0,8">technicians</TextBlock>
+                <WrapPanel x:Name="TechnicianPanel" ItemHeight="150" ItemWidth="200" Grid.Row="9" />
 
-                <TextBlock FontSize="42" Grid.Row="10" Margin="0,0,0,8">technicians</TextBlock>
-                <WrapPanel x:Name="TechnicianPanel" ItemHeight="150" ItemWidth="200" Grid.Row="11" />
+                <TextBlock FontSize="42" Grid.Row="10" Margin="0,0,0,8">managers</TextBlock>
+                <WrapPanel x:Name="ManagerPanel" ItemHeight="150" ItemWidth="200" Grid.Row="11" />
 
                 <!-- A rectangle to pad the bottom of the courses view. This means that the courses at the bottom of the list can be scrolled to the middle of the screen where they are easier to press.-->
                 <Rectangle Fill="Transparent" Height="256" Grid.Row="12"/>

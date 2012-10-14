@@ -57,35 +57,11 @@
            address="23 Symonds Street"
            type="Technician">
     </staff>
-    <staff name="Wai Yeung"
-           position="Senior Technician"
-           phone="88172"
-           email="w.yeung@auckland.ac.nz"
-           room="301.314A"
-           address="23 Symonds Street"
-           type="Technician">
-    </staff>
-    <staff name="Vic Church"
-           position="Technical Officer"
-           phone="84598"
-           email="v.church@auckland.ac.nz"
-           room="301.176"
-           address="23 Symonds Street"
-           type="Technician">
-    </staff>
     <staff name="Howard Lu"
            position="Technician"
            phone="87011"
            email="h.lu@auckland.ac.nz"
            room="301.184"
-           address="23 Symonds Street"
-           type="Technician">
-    </staff>
-    <staff name="Kavitha Penneru"
-           position="Technical Assistant"
-           phone="87378"
-           email="k.penneru@auckland.ac.nz"
-           room="301.174"
            address="23 Symonds Street"
            type="Technician">
     </staff>
@@ -102,22 +78,6 @@
            phone="87922"
            email="ag.williamson@auckland.ac.nz"
            room="303.164"
-           address="38 Princes Street"
-           type="Lecturer">
-    </staff>
-    <staff name="Duleepa Thrimawithana"
-           position="Senior Lecturer"
-           phone="89634"
-           email="d.thrimawithana@auckland.ac.nz"
-           room="303.159"
-           address="38 Princes Street"
-           type="Lecturer">
-    </staff>
-    <staff name="Ewan Tempero"
-           position="Associate Professor"
-           phone="83765"
-           email="e.tempero@auckland.ac.nz"
-           room="303S.493"
            address="38 Princes Street"
            type="Lecturer">
     </staff>
@@ -200,6 +160,46 @@
            room="303.251"
            address="38 Princes Street"
            type="Lecturer">
+    </staff>
+    <staff name="Duleepa Thrimawithana"
+           position="Senior Lecturer"
+           phone="89634"
+           email="d.thrimawithana@auckland.ac.nz"
+           room="303.159"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="Ewan Tempero"
+           position="Associate Professor"
+           phone="83765"
+           email="e.tempero@auckland.ac.nz"
+           room="303S.493"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
+    <staff name="Wai Yeung"
+           position="Senior Technician"
+           phone="88172"
+           email="w.yeung@auckland.ac.nz"
+           room="301.314A"
+           address="23 Symonds Street"
+           type="Technician">
+    </staff>
+    <staff name="Vic Church"
+           position="Technical Officer"
+           phone="84598"
+           email="v.church@auckland.ac.nz"
+           room="301.176"
+           address="23 Symonds Street"
+           type="Technician">
+    </staff>
+    <staff name="Kavitha Penneru"
+           position="Technical Assistant"
+           phone="87378"
+           email="k.penneru@auckland.ac.nz"
+           room="301.174"
+           address="23 Symonds Street"
+           type="Technician">
     </staff>
   </program>
 
@@ -287,6 +287,14 @@
            address="38 Princes Street"
            type="Course Adviser">
     </staff>
+    <staff name="Rashina Hoda"
+           position="Lecturer"
+           phone="81377"
+           email="r.hoda@auckland.ac.nz"
+           room="303.234"
+           address="38 Princes Street"
+           type="Lecturer">
+    </staff>
     <staff name="Valeriy Vyatkin"
            position="Associate Professor / External Relations Officer"
            phone="89437"
@@ -300,14 +308,6 @@
            phone="88156"
            email="n.giacaman@auckland.ac.nz"
            room="303.160"
-           address="38 Princes Street"
-           type="Lecturer">
-    </staff>
-    <staff name="Rashina Hoda"
-           position="Lecturer"
-           phone="81377"
-           email="r.hoda@auckland.ac.nz"
-           room="303.234"
            address="38 Princes Street"
            type="Lecturer">
     </staff>
