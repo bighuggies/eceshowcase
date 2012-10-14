@@ -20,7 +20,7 @@ namespace eceshowcase
             pages = new Stack<Page>();
             InitializeComponent();
 
-            ShowPage(new FrontPage(this));
+            display.Content = new FrontPage(this);
         }
 
         public void ShowPage(Page page)

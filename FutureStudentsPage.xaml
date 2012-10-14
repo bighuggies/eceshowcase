@@ -76,9 +76,9 @@
     </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120px" />
+            <ColumnDefinition Width="60px" />
             <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="120px" />
+            <ColumnDefinition Width="60px" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="120px" />
