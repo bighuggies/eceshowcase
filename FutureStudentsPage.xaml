@@ -27,6 +27,52 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <!-- Slide and Fade Left -->
+        <Storyboard x:Key="SlideAndFadeLeftIn">
+            <ThicknessAnimation Duration="0:0:.75"
+                                Storyboard.TargetProperty="Margin"
+                                From="500,0,-500,0"
+                                To="0"
+                                DecelerationRatio=".9" />
+            <DoubleAnimation Duration="0:0:.25"
+                             Storyboard.TargetProperty="Opacity"
+                             From="0"
+                             To="1" />
+        </Storyboard>
+
+        <Storyboard x:Key="SlideAndFadeLeftOut" >
+            <ThicknessAnimation Duration="0:0:.5"
+                                Storyboard.TargetProperty="Margin"
+                                To="-500,0,500,0"
+                                AccelerationRatio=".9" />
+            <DoubleAnimation Duration="0:0:.5"
+                             Storyboard.TargetProperty="Opacity"
+                             To="0" />
+        </Storyboard>
+
+        <!-- Slide and Fade Right -->
+        <Storyboard x:Key="SlideAndFadeRightIn">
+            <ThicknessAnimation Duration="0:0:.75"
+                                Storyboard.TargetProperty="Margin"
+                                From="-500,0,500,0"
+                                To="0"
+                                DecelerationRatio=".9" />
+            <DoubleAnimation Duration="0:0:.25"
+                             Storyboard.TargetProperty="Opacity"
+                             From="0"
+                             To="1" />
+        </Storyboard>
+
+        <Storyboard x:Key="SlideAndFadeRightOut">
+            <ThicknessAnimation Duration="0:0:.5"
+                                Storyboard.TargetProperty="Margin"
+                                To="500,0,-500,0"
+                                AccelerationRatio=".9" />
+            <DoubleAnimation Duration="0:0:.5"
+                             Storyboard.TargetProperty="Opacity"
+                             To="0" />
+        </Storyboard>
     </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -69,40 +115,41 @@
                HorizontalAlignment="Left"
                VerticalAlignment="Top"
                d:LayoutOverrides="GridBox"
-               FontFamily="Segoe UI Light" />
+               FontFamily="Segoe UI Light"
+               Name="PageTitle" />
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
-            <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0" Click="Button_Click_1">undergraduate</Button>
-            <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0" Click="Button_Click_2">postgraduate</Button>
-            <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0" Click="Button_Click_3">accommodation</Button>
-            <Button FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0" Click="Button_Click_4">scholarships</Button>
+        <StackPanel Name="NavButtons" Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+            <Button Name="UndergraduateButton" FontSize="52px" Padding="25,0" Margin="0,0,25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0,0,0,3" BorderBrush="Transparent" Click="UnderButton_Click">undergraduate</Button>
+            <Button Name="PostgraduateButton" FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0,0,0,3" BorderBrush="Transparent" Click="PostButton_Click">postgraduate</Button>
+            <Button Name="AccommodationButton" FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0,0,0,3" BorderBrush="Transparent" Click="AccommButton_Click">accommodation</Button>
+            <Button Name="ScholarshipButton" FontSize="52px" Padding="25,0" Margin="25,0" Background="Transparent" Foreground="White" Style="{DynamicResource Tile}" BorderThickness="0,0,0,3" BorderBrush="Transparent" Click="ScholButton_Click">scholarships</Button>
         </StackPanel>
-
-        <Grid Grid.Column="1" Grid.Row="3"  Name="undergradGrid" VerticalAlignment="Stretch" Height="auto" Width="auto" HorizontalAlignment="Stretch" Visibility="Hidden">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="594*" />
-                <ColumnDefinition Width="1086*" />
-            </Grid.ColumnDefinitions>
-            <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/ug.jpg" Name="ugimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
-            </Image>
-            <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="ugtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="40">
+        <Grid Grid.Column="1" Grid.Row="3" Name="child">
+            <Grid Name="undergrad" Visibility="Hidden">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="594*" />
+                    <ColumnDefinition Width="1086*" />
+                </Grid.ColumnDefinitions>
+                <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/ug.jpg" Name="ugimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
+                </Image>
+                <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="ugtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="40">
                 <LineBreak/>
                 If you are interested in the study and application of software, electricity, electronics and electro-magnetism then we may have the course of study for you. You'll find everything you need here to make a choice about your future.
                 <LineBreak/>
                 <LineBreak/>
                 Your first of four years years will see you doing a general Engineering year where you can have a taste of electrical and software courses. The following year you will have the opportunity to specialise into an ECE disclipline.
-            </TextBlock>
-        </Grid>
-
-        <Grid Grid.Column="1" Grid.Row="3"  Name="postgradGrid" VerticalAlignment="Stretch" Height="auto" Width="auto" HorizontalAlignment="Stretch" Visibility="Hidden">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="594*" />
-                <ColumnDefinition Width="1086*" />
-            </Grid.ColumnDefinitions>
-            <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/pg1.jpg" Name="pgimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
-            </Image>
-            <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="pgtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="40">
+                </TextBlock>
+            </Grid>
+            
+            <Grid Name="postgrad" Visibility="Hidden">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="594*" />
+                    <ColumnDefinition Width="1086*" />
+                </Grid.ColumnDefinitions>
+                <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/pg1.jpg" Name="pgimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
+                </Image>
+                <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="pgtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="40">
                 <LineBreak/>
                 Furthering your study with a postgraduate degree is one of the best ways of keeping up to date. Choose between a Graduate Diploma in Engineering, a Master of Engineering, Master of Engineering Studies or Doctor of Philosophy.
                 <LineBreak/>
@@ -111,17 +158,17 @@
                 <LineBreak/>
                 <LineBreak/>                
                 A PhD is a three to four year research project which can be started at any time of the year.
-            </TextBlock>
-        </Grid>
-
-        <Grid Grid.Column="1" Grid.Row="3"  Name="accomodationGrid" VerticalAlignment="Stretch" Height="auto" Width="auto" HorizontalAlignment="Stretch" Visibility="Hidden">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="594*" />
-                <ColumnDefinition Width="1086*" />
-            </Grid.ColumnDefinitions>
-            <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/horesidence.jpg" Name="accomodationimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
-            </Image>
-            <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="accomodationtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="40">
+                </TextBlock>
+            </Grid>
+            
+            <Grid Name="accommodation" Visibility="Hidden">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="594*" />
+                    <ColumnDefinition Width="1086*" />
+                </Grid.ColumnDefinitions>
+                <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/horesidence.jpg" Name="accomodationimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
+                </Image>
+                <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="accomodationtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="40">
                 The University of Auckland provides quality student accommodation in Auckland City, conveniently located close to our Auckland campuses.
                 Our five halls of residences offer a great lifestyle, with excellent study and living facilities, academic and pastoral support, and an active social programme. 
                 <LineBreak/>
@@ -130,17 +177,17 @@
                 <LineBreak/>
                 <LineBreak/>
 
-            </TextBlock>
-        </Grid>
-
-        <Grid Grid.Column="1" Grid.Row="3"  Name="scholGrid" VerticalAlignment="Stretch" Height="auto" Width="auto" HorizontalAlignment="Stretch" Visibility="Hidden">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="594*" />
-                <ColumnDefinition Width="1086*" />
-            </Grid.ColumnDefinitions>
-            <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/schol.jpg" Name="scholimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
-            </Image>
-            <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="scholtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="40">
+                </TextBlock>
+            </Grid>
+            
+            <Grid Name="schol" Visibility="Hidden">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="594*" />
+                    <ColumnDefinition Width="1086*" />
+                </Grid.ColumnDefinitions>
+                <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/schol.jpg" Name="scholimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
+                </Image>
+                <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="scholtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="40">
                 There are many scholarships on offer for study at the University of Auckland.
                 <LineBreak/>
                 <LineBreak/>                
@@ -149,8 +196,8 @@
                 <LineBreak/>
                 Some scholarships can be applied for before entering your first semester. See the University of Auckland website for more information.
 
-            </TextBlock>
+                </TextBlock>
+            </Grid>
         </Grid>
-
     </Grid>
 </Page>
