@@ -15,13 +15,13 @@ using System.Xml;
 
 namespace eceshowcase
 {
-    public class newsItem
+    public class NewsItem
     {
         public string title { get; set; }
         public string content { get; set; }
         public string date { get; set; }
 
-        public newsItem(string _title, string _content, string _date)
+        public NewsItem(string _title, string _content, string _date)
         {
             title = _title;
             content = _content;
@@ -29,26 +29,23 @@ namespace eceshowcase
         }
     }
 
-    public class rssFeed
+    public class RSSFeed
     {
-        //public IEnumerable<Channel> channels;
-        public List<newsItem> data { get; set; }
+        public List<NewsItem> newsList { get; set; }
 
-        public rssFeed()
+        public RSSFeed()
         {
             XmlTextReader rssReader = new XmlTextReader("http://www.engineering.auckland.ac.nz/uoa/home/template/news_feed.rss");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(rssReader);
 
-            data = new List<newsItem>();
+            newsList = new List<NewsItem>();
 
             XmlNodeList n = xmlDoc.SelectNodes("//channel/item");
-            for (int i = 0; i < n.Count; i++)
+            foreach (XmlNode node in n)
             {
-                data.Add(new newsItem(n[i]["title"].InnerText, n[i]["description"].InnerText, n[i]["pubDate"].InnerText));
+                newsList.Add(new NewsItem(node["title"].InnerText, node["description"].InnerText, node["pubDate"].InnerText));
             }
-
-
         }
     }
 
@@ -64,30 +61,29 @@ namespace eceshowcase
             InitializeComponent();
             window = w;
 
-            rssFeed lolwut = new rssFeed();
+            RSSFeed lolwut = new RSSFeed();
 
             SolidColorBrush whiteBrush = new SolidColorBrush(Color.FromRgb(255, 255, 255));
 
-            foreach (newsItem item in lolwut.data)
+            foreach (NewsItem item in lolwut.newsList)
             {
-                Label temp = new Label();
-                temp.Foreground = whiteBrush;
-                temp.Content = item.title;
-                temp.FontSize = 26;
-                contentPanel.Children.Add(temp);
+                Label title = new Label();
+                title.Foreground = whiteBrush;
+                title.Content = item.title;
+                title.FontSize = 26;
+                contentPanel.Children.Add(title);
 
-                TextBlock contentLabel = new TextBlock();
-                contentLabel.FontSize = 20;
-                contentLabel.Text = item.content;
-                contentLabel.Foreground = whiteBrush;
-                contentLabel.Width = 800;
-                contentLabel.TextWrapping = TextWrapping.Wrap;
-                contentLabel.TextAlignment = TextAlignment.Left;
-                contentLabel.HorizontalAlignment = HorizontalAlignment.Left;
-                contentLabel.Margin = new Thickness(20, 0, 20, 0);
-                contentPanel.Children.Add(contentLabel);
+                TextBlock content = new TextBlock();
+                content.FontSize = 20;
+                content.Text = item.content;
+                content.Foreground = whiteBrush;
+                content.Width = 800;
+                content.TextWrapping = TextWrapping.Wrap;
+                content.TextAlignment = TextAlignment.Left;
+                content.HorizontalAlignment = HorizontalAlignment.Left;
+                content.Margin = new Thickness(20, 0, 20, 0);
+                contentPanel.Children.Add(content);
             }
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
