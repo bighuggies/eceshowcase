@@ -69,6 +69,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -92,6 +93,9 @@
 
                 <TextBlock FontSize="42" Grid.Row="10" Margin="0,0,0,8">technicians</TextBlock>
                 <WrapPanel x:Name="TechnicianPanel" ItemHeight="150" ItemWidth="200" Grid.Row="11" />
+
+                <!-- A rectangle to pad the bottom of the courses view. This means that the courses at the bottom of the list can be scrolled to the middle of the screen where they are easier to press.-->
+                <Rectangle Fill="Transparent" Height="256" Grid.Row="12"/>
             </Grid>
         </my:SurfaceScrollViewer>
 

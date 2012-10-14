@@ -128,7 +128,7 @@ namespace eceshowcase
                 myButton.Tag = pair.Value[1];
                 myButton.Style = (Style)Resources["Tile"];
 
-                myButton.Background = new SolidColorBrush(Color.FromArgb(0xff, 0x00, 0xa2, 0xb6));
+                myButton.Background = new SolidColorBrush(Color.FromArgb(0xff, 0x9a, 0x77, 0xcf));
                 myButton.Foreground = new SolidColorBrush(Color.FromArgb(0xff, 0xff, 0xff, 0xff));
                 myButton.BorderThickness = new Thickness(0);
                 myButton.FontSize = 24;

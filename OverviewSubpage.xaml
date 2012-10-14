@@ -36,6 +36,7 @@
             <RowDefinition Height="300px" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
+        <WrapPanel x:Name="ButtonPanel" ItemHeight="150" ItemWidth="200" Grid.Row="1" />
         <my:SurfaceScrollViewer PanningMode="HorizontalOnly" Grid.ColumnSpan="2" HorizontalScrollBarVisibility="Hidden">
             <StackPanel Orientation="Horizontal">
                 <Rectangle Width="125" Height="95" Fill="Cyan" />
@@ -60,20 +61,6 @@
                 <Rectangle Width="145" Height="120" Fill="Green" />
             </StackPanel>
         </my:SurfaceScrollViewer>
-        <Grid Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
-            <Button Grid.Row="0" Grid.Column="0" Style="{DynamicResource Tile}" Margin="4" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" FontSize="32" Padding="16" Background="#FF00A2B6" Foreground="White" Click="Button_Click">general</Button>
-            <Button Grid.Row="0" Grid.Column="1" Style="{DynamicResource Tile}" Margin="4" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" FontSize="32" Padding="16" Background="#FF00A2B6" Foreground="White" Click="Button_Click_1">topics</Button>
-            <Button Grid.Row="1" Grid.Column="0" Style="{DynamicResource Tile}" Margin="4" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" FontSize="32" Padding="16" Background="#FF00A2B6" Foreground="White" Click="Button_Click_2">stories</Button>
-            <Button Grid.Row="1" Grid.Column="1" Style="{DynamicResource Tile}" Margin="4" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" FontSize="32" Padding="16" Background="#FF00A2B6" Foreground="White" Click="Button_Click_3">companies</Button>
-        </Grid>
         <Grid Name="views"
               Grid.Column="1"
               Grid.Row="1">
@@ -85,11 +72,11 @@
                                   FontSize="28px"
                                   Background="Transparent"
                                   PagePadding="32,0,0,0"
-                                  TextAlignment="Left">
-                        <Paragraph FontSize="42px" Margin="0">general</Paragraph>
-                        <Paragraph>
-                            This programme is co-taught with the Department of computer Science. This means you receive a strong engineering perspective, as well as a range of skills and knowledge in leading edge computing applications, computing technology and computer systems.
-                        </Paragraph>
+                                  TextAlignment="Left"
+                                  Name="overviewContent">
+                        <List Name="contentList">
+                            
+                        </List>
                     </FlowDocument>
                 </FlowDocumentScrollViewer>
             </Grid>
