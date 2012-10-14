@@ -20,6 +20,8 @@ namespace eceshowcase
     public partial class FutureStudentsPage : Page
     {
         private ShowcaseWindow window;
+        Brush transBrush = new SolidColorBrush(Color.FromArgb(0, 255, 255, 255));
+        Brush whiteBrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
 
         public FutureStudentsPage(ShowcaseWindow w)
         {
@@ -27,8 +29,10 @@ namespace eceshowcase
             window = w;
             //child.Content = new OverviewSubpage(this);
             undergradGrid.Visibility = Visibility.Visible;
+            undergradButton.BorderBrush = whiteBrush;
+
             postgradGrid.Visibility = Visibility.Hidden;
-            accomodationGrid.Visibility = Visibility.Hidden;
+            accommodationGrid.Visibility = Visibility.Hidden;
             scholGrid.Visibility = Visibility.Hidden;
         }
 
@@ -37,36 +41,45 @@ namespace eceshowcase
             window.ShowPage(new FrontPage(window));
         }
 
+        private void HideYoWife()
+        {
+            undergradGrid.Visibility = Visibility.Hidden;
+            postgradGrid.Visibility = Visibility.Hidden;
+            accommodationGrid.Visibility = Visibility.Hidden;
+            scholGrid.Visibility = Visibility.Hidden;
+
+            undergradButton.BorderBrush = transBrush;
+            postgradButton.BorderBrush = transBrush;
+            accommodationButton.BorderBrush = transBrush;
+            scholButton.BorderBrush = transBrush;
+        }
+
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            HideYoWife();
             undergradGrid.Visibility = Visibility.Visible;
-            postgradGrid.Visibility = Visibility.Hidden;
-            accomodationGrid.Visibility = Visibility.Hidden;
-            scholGrid.Visibility = Visibility.Hidden;
+            undergradButton.BorderBrush = whiteBrush;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            undergradGrid.Visibility = Visibility.Hidden;
+            HideYoWife();
             postgradGrid.Visibility = Visibility.Visible;
-            accomodationGrid.Visibility = Visibility.Hidden;
-            scholGrid.Visibility = Visibility.Hidden;
+            postgradButton.BorderBrush = whiteBrush;
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            undergradGrid.Visibility = Visibility.Hidden;
-            postgradGrid.Visibility = Visibility.Hidden;
-            accomodationGrid.Visibility = Visibility.Visible;
-            scholGrid.Visibility = Visibility.Hidden;
+            HideYoWife();
+            accommodationGrid.Visibility = Visibility.Visible;
+            accommodationButton.BorderBrush = whiteBrush;
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            undergradGrid.Visibility = Visibility.Hidden;
-            postgradGrid.Visibility = Visibility.Hidden;
-            accomodationGrid.Visibility = Visibility.Hidden;
+            HideYoWife();
             scholGrid.Visibility = Visibility.Visible;
+            scholButton.BorderBrush = whiteBrush;
         }
     }
 }

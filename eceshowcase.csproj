@@ -173,6 +173,8 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <Resource Include="Facebook-Logo.jpg" />
+    <Resource Include="facebookqrcode.png" />
     <Resource Include="Resources\au_ece.gif" />
     <Content Include="Resources\bg.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

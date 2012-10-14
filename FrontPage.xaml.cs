@@ -109,7 +109,8 @@ namespace eceshowcase
 
         private void welcome_carousel_TouchDown(object sender, TouchEventArgs e)
         {
-            currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetTouchPoint(this).Position);
+            if (currentTouchDevices.ContainsKey(e.TouchDevice))
+                currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetTouchPoint(this).Position);
         }
 
         private void welcome_carousel_TouchUp(object sender, TouchEventArgs e)
