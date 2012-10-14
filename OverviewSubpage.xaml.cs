@@ -77,6 +77,20 @@ namespace eceshowcase
             }
         }
 
+
+        private void addImage(String fileName, int height, int width)
+        {
+            Rectangle imageHolder = new Rectangle();
+            imageHolder.Height = height;
+            imageHolder.Width = width;
+
+            BitmapImage image = new BitmapImage(new System.Uri("Resources/" + fileName, UriKind.Relative));
+
+            imageHolder.Fill = new ImageBrush(image);
+
+            Carousel.Children.Add(imageHolder);
+        }
+
         public void AddButton(String name)
         {
             // Create a new button for the left part of the screen.
@@ -106,6 +120,31 @@ namespace eceshowcase
             InitializeComponent();
             detailPage = dp;
             loadData();
+
+            // Code to prepare the carousel.
+            switch (dp.Identifier)
+            {
+                case "SE":
+                    addImage("1.png", 250, 600);
+                    addImage("2.png", 250, 600);
+                    addImage("3.png", 250, 600);
+                    break;
+
+                case "EEE":
+                    addImage("4.png", 250, 600);
+                    addImage("5.png", 300, 300);
+                    addImage("6.png", 250, 450);
+                    addImage("7.png", 400, 600);
+                    break;
+
+                case "CSE":
+                    addImage("8.png", 250, 600);
+                    addImage("10.png", 350, 500);
+                    addImage("10.png", 250, 400);
+                    addImage("11.png", 280, 800);
+                    addImage("12.png", 300, 100);
+                    break;
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

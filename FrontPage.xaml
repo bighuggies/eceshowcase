@@ -305,17 +305,28 @@ In 2000 the Department of Electrical and Computer Engineering formalised a link 
                     <Paragraph FontFamily="segoe UI Light" FontSize="42">
                         2013 Academic Year
                     </Paragraph>
-                        <Paragraph FontFamily="Segoe UI Light" FontSize="28">Summer School</Paragraph>
-                        <Paragraph FontFamily="Segoe UI Light" FontSize="28">Start: Friday 04/01/13</Paragraph>
-                        <Paragraph FontFamily="Segoe UI Light" FontSize="28">End: Wednesday 20/02/13</Paragraph>
+                    
+                    <Paragraph FontFamily="Segoe UI Light" FontSize="20">
+                        Summer School<LineBreak/>
+                        Start: Friday 04/01/13<LineBreak/>
+                        End: Wednesday 20/02/13
+                    </Paragraph>
 
-                        <Paragraph FontFamily="Segoe UI Light" FontSize="28">Semester One</Paragraph>
-                        <Paragraph FontFamily="Segoe UI Light" FontSize="28">Start: Monday 04/03/13</Paragraph>
-                        <Paragraph FontFamily="Segoe UI Light" FontSize="28">End: Monday 01/07/13</Paragraph>
+                    <Paragraph FontFamily="Segoe UI Light" FontSize="20">
+                        Semester One
+                        <LineBreak/>
+                        Start: Monday 04/03/13
+                        <LineBreak/>
+                        End: Monday 01/07/13
+                    </Paragraph>
 
-                        <Paragraph FontFamily="Segoe UI Light" FontSize="28">Semester Two</Paragraph>
-                        <Paragraph FontFamily="Segoe UI Light" FontSize="28">Start: Monday 22/07/13</Paragraph>
-                        <Paragraph FontFamily="Segoe UI Light" FontSize="28">End: Monday 18/11/13 </Paragraph>
+                    <Paragraph FontFamily="Segoe UI Light" FontSize="20">
+                        Semester Two
+                        <LineBreak/>
+                        Start: Monday 22/07/13
+                        <LineBreak/>
+                        End: Monday 18/11/13 
+                    </Paragraph>
                 </Section>
             </FlowDocument>
         </FlowDocumentPageViewer>
