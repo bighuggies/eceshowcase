@@ -28,6 +28,20 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <!-- Fade -->
+        <Storyboard x:Key="FadeIn">
+            <DoubleAnimation Duration="0:0:.25"
+                             Storyboard.TargetProperty="Opacity"
+                             From="0"
+                             To="1" />
+        </Storyboard>
+
+        <Storyboard x:Key="FadeOut">
+            <DoubleAnimation Duration="0:0:.5"
+                             Storyboard.TargetProperty="Opacity"
+                             To="0" />
+        </Storyboard>
     </Page.Resources>
 
     <Grid x:Name="mainGrid" >
@@ -101,7 +115,7 @@
             <TextBlock Grid.Row="1" Grid.Column="0" x:Name="DisplayStaffPosition" FontSize="28px" Foreground="White"/>
             <TextBlock Grid.Row="2" Grid.Column="0" x:Name="ContactDetails" FontSize="28px" Foreground="White"/>
             <TextBlock Grid.Row="3" Grid.Column="0" x:Name="DisplayStaffDetails" FontSize="20px" Foreground="White"/>
-            <Image Grid.Row="2" Grid.RowSpan="2" Height="Auto"  HorizontalAlignment="Left" Name="DisplayStaffPhoto" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto"/>
+            <Image Grid.Row="2" Grid.RowSpan="2" Height="250"  HorizontalAlignment="Right" Name="DisplayStaffPhoto" Stretch="Fill" VerticalAlignment="Bottom" Width="200" Margin="0,0,100,0"/>
         </Grid>
 
 

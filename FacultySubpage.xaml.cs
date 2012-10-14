@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
 using Microsoft.Surface.Presentation.Controls;
+using System.Windows.Media.Animation;
 
 namespace eceshowcase
 {
@@ -22,6 +23,8 @@ namespace eceshowcase
     public partial class FacultySubpage : Page
     {
         DetailPage detailPage;
+        private string FacultyKey;
+        private string PreviousKey = null;
 
         Dictionary<string, string[]> FacultyItems;
 
@@ -173,7 +176,25 @@ namespace eceshowcase
         {
             var ActiveButton = ((SurfaceButton)e.OriginalSource);
 
-            string FacultyKey = ActiveButton.Content.ToString();
+            FacultyKey = ActiveButton.Content.ToString();
+
+            if (FacultyKey != PreviousKey && PreviousKey != null)
+            {
+                PreviousKey = FacultyKey;
+                Storyboard hideInfo = (Storyboard)Resources["FadeOut"];
+                hideInfo.Completed += hideInfo_Completed;
+                hideInfo.Begin(StaffInfoGrid);
+            }
+
+            if (PreviousKey == null)
+            {
+                PreviousKey = FacultyKey;
+                hideInfo_Completed(new object(), new EventArgs());
+            }
+        }
+
+        private void hideInfo_Completed(object sender, EventArgs e)
+        {
             string FacultyImage = "Resources/" + FacultyItems[FacultyKey][4] + ".jpg";
 
             // Text labels
@@ -184,6 +205,9 @@ namespace eceshowcase
                 FacultyItems[FacultyKey][5] + "\nAuckland\n\nPhone: +64 9 373 7599 ext " +
                 FacultyItems[FacultyKey][4] + "\nEmail: " + FacultyItems[FacultyKey][3];
             DisplayStaffPhoto.Source = new ImageSourceConverter().ConvertFromString(FacultyImage) as ImageSource;
+
+            Storyboard showInfo = (Storyboard)Resources["FadeIn"];
+            showInfo.Begin(StaffInfoGrid);
         }
     }
 }
