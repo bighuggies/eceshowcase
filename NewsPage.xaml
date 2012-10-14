@@ -39,7 +39,7 @@
             <RowDefinition Height="120px" />
             <RowDefinition Height="0" />
             <RowDefinition Height="820*" />
-            <RowDefinition Height="20px" />
+            <RowDefinition Height="120px" />
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="1"
                     Grid.Column="1"
@@ -72,10 +72,8 @@
                FontFamily="Segoe UI Light" />
         </StackPanel>
 
-        <Frame Grid.Column="1" Grid.Row="3" Name="child" />
-
-        <my:SurfaceScrollViewer Name="surfaceScrollViewer1" Grid.Column="1" Width="1344" Grid.Row="3" Margin="168,40">
-            <StackPanel Grid.Column="1" Grid.Row="3" Height="1409" HorizontalAlignment="Center" Name="contentPanel" VerticalAlignment="Top" Width="1289"></StackPanel>
+        <my:SurfaceScrollViewer Name="surfaceScrollViewer1" HorizontalContentAlignment="Center" Grid.Column="1" Grid.Row="3">
+            <StackPanel Grid.Column="1" Grid.Row="3" Name="contentPanel"></StackPanel>
         </my:SurfaceScrollViewer>
     </Grid>
 </Page>
