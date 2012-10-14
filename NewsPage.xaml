@@ -32,6 +32,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="60px" />
             <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="60px" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -43,7 +44,7 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="1"
                     Grid.Column="1"
-                    Orientation="Horizontal">
+                    Orientation="Horizontal" Grid.ColumnSpan="2">
             <Button HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 Foreground="White"
@@ -75,5 +76,7 @@
         <my:SurfaceScrollViewer Name="surfaceScrollViewer1" HorizontalContentAlignment="Center" Grid.Column="1" Grid.Row="3">
             <StackPanel Grid.Column="1" Grid.Row="3" Name="contentPanel"></StackPanel>
         </my:SurfaceScrollViewer>
+        <Image Grid.Column="2" HorizontalAlignment="Left" Margin="62,186,0,254" Grid.Row="3" Source="facebookqrcode.png" Stretch="Fill" Width="280"/>
+        <Image Grid.Column="2" Margin="136,38,0,0" Grid.Row="3" Source="Facebook-Logo.jpg" Stretch="Fill" HorizontalAlignment="Left" Height="120" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Page>
