@@ -4,7 +4,7 @@
         Title="ECE Showcase"
         Height="1080"
         Width="1920"
-        Background="Black"
+        Background="#FF4F2D7F"
         WindowStyle="None"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"

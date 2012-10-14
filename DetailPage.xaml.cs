@@ -44,6 +44,9 @@ namespace eceshowcase
                     break;
             }
 
+            window.hidePage = (window.Resources["SlideAndFadeLeftOut"] as Storyboard).Clone();
+            window.showPage = (window.Resources["SlideAndFadeLeftIn"] as Storyboard).Clone();
+
             OverviewButton.BorderBrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
             child.Content = new OverviewSubpage(this);
         }

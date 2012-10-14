@@ -33,6 +33,9 @@ namespace eceshowcase
             undergrad.Visibility = Visibility.Visible;
             UndergraduateButton.BorderBrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
             currentPage = undergrad;
+
+            window.hidePage = (window.Resources["SlideAndFadeLeftOut"] as Storyboard).Clone();
+            window.showPage = (window.Resources["SlideAndFadeLeftIn"] as Storyboard).Clone();
         }
 
         public void SwitchNavTab(String panelName)

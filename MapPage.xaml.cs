@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace eceshowcase
 {
@@ -25,6 +26,9 @@ namespace eceshowcase
         {
             InitializeComponent();
             window = w;
+
+            window.hidePage = (window.Resources["SlideAndFadeLeftOut"] as Storyboard).Clone();
+            window.showPage = (window.Resources["SlideAndFadeLeftIn"] as Storyboard).Clone();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
