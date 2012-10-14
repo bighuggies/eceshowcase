@@ -161,7 +161,7 @@ namespace eceshowcase
 
                 case "EEE":
                     addImage("4.png", 250, 600);
-                    addImage("5.png", 300, 300);
+                    addImage("5.jpg", 300, 300);
                     addImage("6.png", 250, 450);
                     addImage("7.png", 400, 600);
                     break;
@@ -169,9 +169,9 @@ namespace eceshowcase
                 case "CSE":
                     addImage("8.png", 250, 600);
                     addImage("10.png", 350, 500);
-                    addImage("10.png", 250, 400);
-                    addImage("11.png", 280, 800);
-                    addImage("12.png", 300, 100);
+                    addImage("11.jpg", 250, 400);
+                    addImage("12.png", 280, 800);
+                    addImage("seal.png", 300, 400);
                     break;
             }
             
