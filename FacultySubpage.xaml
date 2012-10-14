@@ -115,7 +115,7 @@
             <TextBlock Grid.Row="1" Grid.Column="0" x:Name="DisplayStaffPosition" FontSize="28px" Foreground="White"/>
             <TextBlock Grid.Row="2" Grid.Column="0" x:Name="ContactDetails" FontSize="28px" Foreground="White"/>
             <TextBlock Grid.Row="3" Grid.Column="0" x:Name="DisplayStaffDetails" FontSize="20px" Foreground="White"/>
-            <Image Grid.Row="2" Grid.RowSpan="2" Height="250"  HorizontalAlignment="Right" Name="DisplayStaffPhoto" Stretch="Fill" VerticalAlignment="Bottom" Width="200" Margin="0,0,100,0"/>
+            <Image Grid.Row="2" Grid.RowSpan="2" Height="250"  HorizontalAlignment="Right" Name="DisplayStaffPhoto" Stretch="Fill" VerticalAlignment="Bottom" Width="200" Margin="0,0,84,0"/>
         </Grid>
 
 
