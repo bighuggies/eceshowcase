@@ -222,9 +222,7 @@
            address="38 Princes Street"
            type="Lecturer">
     </staff>
-    <topic name="General" images="" content="Spoons for everyone!
-           
-           Also the game"></topic>
+    <topic name="General" images="" content="The programme gives excellent insight into the inner workings of computers and involves a diverse set of engineering design skills that are essential in areas ranging from bioengineering to software as well as complex controllers for automotive, military, consumer, medical, communications and electrical systems."></topic>
     <topic name="Topics" images="" content="The main topics provided in Computer Systems Engineering include: Knowledge in computer systems, practical skills in hardware and software design, problem solving skills essential for design and building systems, project work, verbal and written communication, and exposure to a variety of existing and leading edge electronic and electronic engineering including computer and software."></topic>
   </program>
 
@@ -279,7 +277,7 @@
            address="38 Princes Street"
            type="Lecturer">
     </staff>
-    <topic name="General" content="Blah Blah Blah spoon" images="1.png;2.png"></topic>
+    <topic name="General" content="Electrical and Electronic Engineering is an exciting and dynamic field. Electrical engineers are responsible for the generation, transfer and conversion of electrical power, while electronic engineers are concerned with the transfer of information using radio waves, the design of electronic circuits, the design of computer systems and the development of control systems such as aircraft autopilots." images="1.png;2.png"></topic>
     <topic images="" content="The main topics provided in Electrical Engineering include: Power systems, power electronics, communications, radio systems, digital signal processing, computer systems, electrical materials and electronic devices, circuit theory, software design, mathematical models, engineering electromagnetics, and computer systems." name="Topics"></topic>
   </program>
 
@@ -317,7 +315,9 @@
            address="38 Princes Street"
            type="Lecturer">
     </staff>
-    <topic name="General" images="" content="Niko should have a top hat"></topic>
+    <topic name="General" images="" content="The degree programme is oriented towards producing graduates with a whole system view of software engineering. Graduates gain not only sound knowledge of current techniques and technologies for developing software, but are also aware of the business contexts in which software is conceived and developed.
+
+Critical thinking, communication with colleagues and clients, and awareness of the role the profession plays in society are strongly emphasised. Students receive significant exposure to a variety of software processes, project management techniques, quality assurance techniques and software tools."></topic>
     <topic name="Topics" images="" content="The main topics provided in Software Engineering include: Software processes, project management techniques, quality asssurance techniques and software tools and various programming languages. "></topic>
   </program>
 </programs>

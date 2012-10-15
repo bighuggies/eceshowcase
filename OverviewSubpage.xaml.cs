@@ -167,10 +167,10 @@ namespace eceshowcase
                     break;
 
                 case "CSE":
-                    addImage("8.png", 250, 600);
-                    addImage("10.png", 350, 500);
-                    addImage("11.jpg", 250, 400);
-                    addImage("12.png", 280, 800);
+                    addImage("8.png", 250, 500);
+                    addImage("10.png", 350, 800);
+                    addImage("11.jpg", 250, 300);
+                    addImage("12.png", 280, 500);
                     addImage("seal.png", 300, 400);
                     break;
             }
