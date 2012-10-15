@@ -175,8 +175,6 @@ namespace eceshowcase
                     break;
             }
             
-            // Uncomment this when the XML file is complete to initialize with General information as default
-            
             Paragraph p = new Paragraph(new Run("General"));
             p.FontSize = 36;
             p.Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
@@ -192,15 +190,29 @@ namespace eceshowcase
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            String title = ((SurfaceButton)e.OriginalSource).Content.ToString();
+            title = ((SurfaceButton)e.OriginalSource).Content.ToString();
+
+            if (title != previousTitle)
+            {
+                Storyboard hideInfo = (Storyboard)Resources["FadeOut"];
+                hideInfo.Completed += hideInfo_Completed;
+                hideInfo.Begin(generalView);
+                previousTitle = title;
+            }
+
+        }
+
+        private void hideInfo_Completed(object sender, EventArgs e)
+        {
+            Storyboard showInfo = (Storyboard)Resources["FadeIn"];
 
             Paragraph p = new Paragraph(new Run(title));
             p.FontSize = 36;
-            p.Foreground = new SolidColorBrush( Color.FromRgb(255, 255, 255) );
+            p.Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
 
             Paragraph content = new Paragraph(new Run(infoList[title]));
             content.FontSize = 24;
-            content.Foreground = new SolidColorBrush( Color.FromRgb(255, 255, 255) );
+            content.Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
 
             overviewContent.Blocks.Clear();
             overviewContent.Blocks.Add(p);
@@ -216,13 +228,8 @@ namespace eceshowcase
                 rect.Fill = new ImageBrush(img);
                 pictureViewer.Children.Add(rect);
             }
-        }
 
-        private void hideInfo_Completed(object sender, EventArgs e)
-        {
-            Storyboard showInfo = (Storyboard)Resources["FadeIn"];
-
-            
+            showInfo.Begin(generalView);
         }
     }
 }
