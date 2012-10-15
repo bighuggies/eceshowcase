@@ -90,11 +90,31 @@
                    VerticalAlignment="Top"
                    FontFamily="Segoe UI Light" />
         </DockPanel>
-        <s:SurfaceButton x:Name="ee_btn" Content="electrical and electronic" Grid.Column="1" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FF2D57FF" Foreground="White" Click="Electrical_Click" />
-        <s:SurfaceButton x:Name="se_btn" Content="software" Grid.Column="2" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFDC1818" Foreground="White" Click="Software_Click"/>
-        <s:SurfaceButton x:Name="cs_btn" Content="computer systems" Grid.Column="3" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FF00CA28" Foreground="White" Click="Computer_Click"/>
-        <s:SurfaceButton x:Name="futurestudents_btn" Content="future students" Grid.Column="1" Margin="4" Grid.Row="3" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFFF8D00" Grid.ColumnSpan="2" Foreground="White" Click="Future_Click"/>
-        <s:SurfaceButton x:Name="other_btn" Content="news and social media" Grid.Column="3" Margin="4" Grid.Row="3" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Background="#FFBB24DF" Foreground="White" Click="News_Click" />
+        <s:SurfaceButton x:Name="ee_btn" Content="electrical and electronic" Grid.Column="1" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Foreground="White" Click="Electrical_Click">
+            <s:SurfaceButton.Background>
+                <ImageBrush ImageSource="Resources/eee.jpg" Stretch="UniformToFill" />
+            </s:SurfaceButton.Background>
+        </s:SurfaceButton>
+        <s:SurfaceButton x:Name="se_btn" Content="software" Grid.Column="2" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Foreground="White" Click="Software_Click">
+            <s:SurfaceButton.Background>
+                <ImageBrush ImageSource="Resources/se.png" Stretch="UniformToFill" />
+            </s:SurfaceButton.Background>
+        </s:SurfaceButton>
+        <s:SurfaceButton x:Name="cs_btn" Content="computer systems" Grid.Column="3" Margin="4" Grid.Row="2" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Foreground="White" Click="Computer_Click">
+            <s:SurfaceButton.Background>
+                <ImageBrush ImageSource="Resources/cse.png" Stretch="UniformToFill" />
+            </s:SurfaceButton.Background>
+        </s:SurfaceButton>
+        <s:SurfaceButton x:Name="futurestudents_btn" Content="future students" Grid.Column="1" Margin="4" Grid.Row="3" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Grid.ColumnSpan="2" Foreground="White" Click="Future_Click">
+            <s:SurfaceButton.Background>
+                <ImageBrush ImageSource="Resources/future.jpg" Stretch="UniformToFill" />
+            </s:SurfaceButton.Background>
+        </s:SurfaceButton>
+        <s:SurfaceButton x:Name="other_btn" Content="news and social media" Grid.Column="3" Margin="4" Grid.Row="3" VerticalContentAlignment="Bottom" FontSize="32" FontFamily="Segoe UI Light" Foreground="White" Click="News_Click">
+            <s:SurfaceButton.Background>
+                <ImageBrush ImageSource="Resources/news.jpg" Stretch="UniformToFill" />
+            </s:SurfaceButton.Background>
+        </s:SurfaceButton>
         <s:SurfaceButton x:Name="map_btn" Grid.Row="3"
                 Grid.Column="4"
                 Margin="4"

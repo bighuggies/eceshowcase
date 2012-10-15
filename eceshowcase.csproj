@@ -239,15 +239,20 @@
     <Resource Include="Resources\twitterqrcode.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\cse.png" />
+    <Resource Include="Resources\eee.jpg" />
+    <Resource Include="Resources\future.jpg" />
     <Content Include="Resources\logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\news.jpg" />
     <Content Include="Resources\pg1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\schol.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\se.png" />
     <Content Include="Resources\seal.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

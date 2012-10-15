@@ -67,13 +67,13 @@ namespace eceshowcase
                     currentPage = nextPage;
                     if (currentPage == undergrad)
                     {
-                        hidePanel = (Storyboard)Resources["SlideAndFadeLeftOut"];
-                        showPanel = (Storyboard)Resources["SlideAndFadeLeftIn"];
+                        hidePanel = (Storyboard)Resources["SlideAndFadeRightOut"];
+                        showPanel = (Storyboard)Resources["SlideAndFadeRightIn"];
                     }
                     else
                     {
-                        hidePanel = (Storyboard)Resources["SlideAndFadeRightOut"];
-                        showPanel = (Storyboard)Resources["SlideAndFadeRightIn"];
+                        hidePanel = (Storyboard)Resources["SlideAndFadeLeftOut"];
+                        showPanel = (Storyboard)Resources["SlideAndFadeLeftIn"];                       
                     }
                     hidePanel.Completed += hidePanel_Completed;
                     hidePanel.Begin(child);
