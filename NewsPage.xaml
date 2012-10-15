@@ -32,18 +32,9 @@
     	<SolidColorBrush x:Key="ListBorder" Color="#828790"/>
     	<DataTemplate x:Key="itemTemplate">
     		<StackPanel>
-    			<TextBlock Text="{Binding XPath=description}"/>
-    			<TextBlock Text="{Binding XPath=guid}"/>
-    			<TextBlock Text="{Binding XPath=link}"/>
-    			<TextBlock Text="{Binding XPath=pubDate}"/>
-    			<TextBlock Text="{Binding XPath=title}"/>
-    		</StackPanel>
-    	</DataTemplate>
-    	<DataTemplate x:Key="itemTemplate1">
-    		<StackPanel>
     			<TextBlock FontSize="42px" FontFamily="Segoe UI Light" Text="{Binding XPath=title}" Foreground="White"/>
     			<TextBlock Text="{Binding XPath=pubDate}" Foreground="White" FontSize="28"/>
-    			<TextBlock FontSize="22px" TextWrapping="Wrap" Text="{Binding XPath=description}" Foreground="White" Margin="20"/>
+    			<TextBlock FontSize="22px" TextWrapping="Wrap" Text="{Binding XPath=description}" Foreground="White" Margin="20,20,20,30"/>
     		</StackPanel>
     	</DataTemplate>
     </Page.Resources>
@@ -83,7 +74,7 @@
                     Margin="8px"
                     Source="Resources/back-white.png" />
             </Button>
-            <Label Content="news and events"
+            <Label Content="news and social media"
                FontSize="74.667"
                Background="#000079FF"
                Foreground="White"
@@ -100,7 +91,7 @@
         <Image Grid.Column="2" Margin="4" Grid.Row="4" Source="Resources/gplus.png"/>
         <Image Grid.Column="3" Margin="4" Grid.Row="4" Source="Resources/gplusqrcode.png"/>
         <my:SurfaceScrollViewer Margin="4" Grid.RowSpan="3" Grid.Column="1" Grid.Row="2">
-        	<ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" ItemTemplate="{DynamicResource itemTemplate1}" ItemsSource="{Binding XPath=/rss/channel/item}" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="8" Margin="4" Width="1020"/>
+        	<ItemsControl ScrollViewer.HorizontalScrollBarVisibility="Disabled" ItemTemplate="{DynamicResource itemTemplate}" ItemsSource="{Binding XPath=/rss/channel/item}" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="8" Width="1024"/>
         </my:SurfaceScrollViewer>
     </Grid>
 </Page>
