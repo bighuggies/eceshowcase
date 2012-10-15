@@ -73,14 +73,14 @@ namespace eceshowcase
                 title.Foreground = whiteBrush;
                 title.Content = item.title;
                 title.FontSize = 26;
-                contentPanel.Children.Add(title);
+                //contentPanel.Children.Add(title);
 
 
                 Label date = new Label();
                 date.Foreground = whiteBrush;
                 date.Content = item.date;
                 date.FontSize = 26;
-                contentPanel.Children.Add(date);
+                //contentPanel.Children.Add(date);
 
                 TextBlock content = new TextBlock();
                 content.FontSize = 20;
@@ -91,7 +91,7 @@ namespace eceshowcase
                 content.TextAlignment = TextAlignment.Left;
                 content.HorizontalAlignment = HorizontalAlignment.Left;
                 content.Margin = new Thickness(20, 0, 20, 0);
-                contentPanel.Children.Add(content);
+                //contentPanel.Children.Add(content);
             }
 
             window.hidePage = (window.Resources["SlideAndFadeLeftOut"] as Storyboard).Clone();
