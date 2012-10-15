@@ -6,10 +6,10 @@
       xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
       xmlns:System_Windows_Documents="clr-namespace:System.Windows.Documents;assembly=PresentationUI"
       mc:Ignorable="d"
-      x:Class="eceshowcase.FrontPage"
-      Title="eceshowcase"
       Width="1920"
       Height="1080"
+      x:Class="eceshowcase.FrontPage"
+      Title="eceshowcase"
       FontFamily="Segoe UI Light"
       Background="#ff4f2d7f">
     <Page.Resources>
