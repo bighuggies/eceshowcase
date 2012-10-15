@@ -64,7 +64,6 @@ namespace eceshowcase
 
                 case "postgrad":
                     nextPage = postgrad;
-                    currentPage = nextPage;
                     if (currentPage == undergrad)
                     {
                         hidePanel = (Storyboard)Resources["SlideAndFadeRightOut"];
@@ -75,6 +74,7 @@ namespace eceshowcase
                         hidePanel = (Storyboard)Resources["SlideAndFadeLeftOut"];
                         showPanel = (Storyboard)Resources["SlideAndFadeLeftIn"];                       
                     }
+                    currentPage = nextPage;
                     hidePanel.Completed += hidePanel_Completed;
                     hidePanel.Begin(child);
                     PostgraduateButton.BorderBrush = whiteBrush;
@@ -82,7 +82,6 @@ namespace eceshowcase
 
                 case "accommodation":
                     nextPage = accommodation;
-                    currentPage = nextPage;
                     if (currentPage == schol)
                     {
                         hidePanel = (Storyboard)Resources["SlideAndFadeRightOut"];
@@ -93,6 +92,7 @@ namespace eceshowcase
                         hidePanel = (Storyboard)Resources["SlideAndFadeLeftOut"];
                         showPanel = (Storyboard)Resources["SlideAndFadeLeftIn"];
                     }
+                    currentPage = nextPage;
                     hidePanel.Completed += hidePanel_Completed;
                     hidePanel.Begin(child);
                     AccommodationButton.BorderBrush = whiteBrush;

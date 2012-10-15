@@ -30,11 +30,13 @@ namespace eceshowcase
         BarcodeEncoder qrEncoder;
 
         Dictionary<string, string[]> FacultyItems;
+        Dictionary<string, ImageBrush> FacultyQR;
 
         public FacultySubpage(DetailPage dp)
         {
             InitializeComponent();
             FacultyItems = new Dictionary<string, string[]>();
+            FacultyQR = new Dictionary<string, ImageBrush>();
 
             detailPage = dp;
             LoadFacultyData();
@@ -57,9 +59,11 @@ namespace eceshowcase
             qrEncoder.BackColor = Color.FromRgb(79, 45, 127);
             qrEncoder.ForeColor = Color.FromRgb(0, 0, 0);
 
+            string name = data.Substring(0, data.IndexOf(':'));
+
             WriteableBitmap img = qrEncoder.Encode(BarcodeFormat.QRCode, data);
 
-            DisplayQRCode.Fill = new ImageBrush(img);
+            FacultyQR.Add(name, new ImageBrush(img));
         }
 
         private void LoadFacultyData()
@@ -202,6 +206,11 @@ namespace eceshowcase
 
             FacultyKey = ActiveButton.Content.ToString();
 
+            if (!FacultyQR.ContainsKey(FacultyKey))
+            {
+                setQRCode(FacultyKey + ": +6493737599 ext " + FacultyItems[FacultyKey][4] + "\n" + FacultyItems[FacultyKey][3]);
+            }
+
             if (FacultyKey != PreviousKey && PreviousKey != null)
             {
                 PreviousKey = FacultyKey;
@@ -229,8 +238,7 @@ namespace eceshowcase
                 FacultyItems[FacultyKey][5] + "\nAuckland\n\nPhone: +64 9 373 7599 ext " +
                 FacultyItems[FacultyKey][4] + "\nEmail: " + FacultyItems[FacultyKey][3];
             DisplayStaffPhoto.Source = new ImageSourceConverter().ConvertFromString(FacultyImage) as ImageSource;
-
-            setQRCode(FacultyKey + ": +6493737599 ext " + FacultyItems[FacultyKey][4] + "\n" + FacultyItems[FacultyKey][3]);
+            DisplayQRCode.Fill = FacultyQR[FacultyKey];
 
             Storyboard showInfo = (Storyboard)Resources["FadeIn"];
             showInfo.Begin(StaffInfoGrid);
