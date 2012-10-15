@@ -154,16 +154,30 @@ namespace eceshowcase
             switch (dp.Identifier)
             {
                 case "SE":
-                    addImage("1.png", 250, 600);
-                    addImage("2.png", 250, 600);
-                    addImage("3.png", 250, 600);
+                    addImage("SE_0.png", 290, 230);
+                    addImage("SE_2.png", 250, 230);
+                    addImage("SE_1.png", 260, 240);
+                    addImage("SE_3.png", 250, 290);
+                    addImage("SE_4.jpg", 270, 190);
+                    addImage("SE_7.png", 250, 600);
+                    addImage("SE_5.jpg", 250, 170);
+                    addImage("SE_6.png", 200, 150);
+                    addImage("SE_8.jpg", 280, 400);
                     break;
 
                 case "EEE":
-                    addImage("4.png", 250, 600);
-                    addImage("5.jpg", 300, 300);
-                    addImage("6.png", 250, 450);
-                    addImage("7.png", 400, 600);
+                    addImage("EEE_1.png", 250, 350);
+                    addImage("EEE_2.png", 300, 300);
+                    addImage("EEE_3.jpg", 250, 300);
+                    addImage("EEE_6.png", 300, 240);
+                    addImage("EEE_4.jpg", 200, 250);
+                    addImage("EEE_5.png", 270, 200);
+                    // at the moment repeated, need more pictures
+                    addImage("EEE_1.png", 250, 350);
+                    addImage("EEE_2.png", 300, 300);
+                    addImage("EEE_3.jpg", 250, 300);
+                    addImage("EEE_4.jpg", 200, 250);
+                    addImage("EEE_5.png", 270, 200);
                     break;
 
                 case "CSE":
