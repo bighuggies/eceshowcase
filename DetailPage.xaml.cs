@@ -20,10 +20,13 @@ namespace eceshowcase
     /// </summary>
     public partial class DetailPage : Page
     {
+        private Dictionary<TouchDevice, Point> currentTouchDevices = new Dictionary<TouchDevice, Point>();
         private ShowcaseWindow window;
         private Page nextPage;
         private Page currentPage;
         private Storyboard showPanel = null;
+        private List<string> navTabs = new List<string>();
+        private string curTab = "overview";
         public string Identifier { get; private set; }
 
         public DetailPage(ShowcaseWindow w, String id)
@@ -47,6 +50,10 @@ namespace eceshowcase
 
             window.hidePage = (window.Resources["SlideAndFadeLeftOut"] as Storyboard).Clone();
             window.showPage = (window.Resources["SlideAndFadeLeftIn"] as Storyboard).Clone();
+
+            navTabs.Add("overview");
+            navTabs.Add("courses");
+            navTabs.Add("faculty");
 
             OverviewButton.BorderBrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
             child.Content = new OverviewSubpage(this);
@@ -74,6 +81,7 @@ namespace eceshowcase
                     hidePanel.Completed += hidePanel_Completed;
                     hidePanel.Begin(child);
                     OverviewButton.BorderBrush = whiteBrush;
+                    curTab = "overview";
                     break;
 
                 case "courses":
@@ -92,6 +100,7 @@ namespace eceshowcase
                     hidePanel.Completed += hidePanel_Completed;
                     hidePanel.Begin(child);
                     CoursesButton.BorderBrush = whiteBrush;
+                    curTab = "courses";
                     break;
 
                 case "faculty":
@@ -102,6 +111,7 @@ namespace eceshowcase
                     hidePanel.Completed += hidePanel_Completed;
                     hidePanel.Begin(child);
                     FacultyButton.BorderBrush = whiteBrush;
+                    curTab = "faculty";
                     break;
             }
         }
@@ -139,6 +149,68 @@ namespace eceshowcase
             {
                 SwitchNavTab("faculty");
             }
+        }
+
+        private void NextNavTab()
+        {
+            int cur = navTabs.IndexOf(curTab);
+            if (cur != navTabs.Count - 1)
+            {
+                int next = cur + 1;
+                curTab = navTabs[next];
+                SwitchNavTab(curTab);
+            }
+        }
+
+        private void PrevNavTab()
+        {
+            int cur = navTabs.IndexOf(curTab);
+            if (cur != 0)
+            {
+                int next = (cur - 1);
+                curTab = navTabs[next];
+                SwitchNavTab(curTab);
+            }
+        }
+
+        private void Grid_TouchDown(object sender, TouchEventArgs e)
+        {
+            currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetTouchPoint(this).Position);
+        }
+
+        private void Grid_TouchMove(object sender, TouchEventArgs e)
+        {
+            if (currentTouchDevices.Count == 1)
+            {
+                int isLeft = 0;
+                int isRight = 0;
+                foreach (KeyValuePair<TouchDevice, Point> td in currentTouchDevices)
+                {
+                    if (td.Key != null && e.TouchDevice.GetTouchPoint(this).Position.X - td.Value.X > 100)
+                        isRight++;
+                    else if (td.Key != null && td.Value.X - e.TouchDevice.GetTouchPoint(this).Position.X > 100)
+                        isLeft++;
+                    else
+                        return;
+                }
+                if (isLeft == 1 && isRight == 0)
+                {
+                    NextNavTab();
+                    currentTouchDevices.Clear();
+                    return;
+                }
+                else if (isRight == 1 && isLeft == 0)
+                {
+                    PrevNavTab();
+                    currentTouchDevices.Clear();
+                    return;
+                }
+            }
+        }
+
+        private void Grid_TouchUp(object sender, TouchEventArgs e)
+        {
+            currentTouchDevices.Remove(e.TouchDevice);
         }
     }
 }
