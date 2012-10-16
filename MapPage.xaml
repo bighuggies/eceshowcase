@@ -79,7 +79,7 @@
                     Margin="8px"
                     Source="Resources/back-white.png" />
             </Button>
-            <Label Content="map and location"
+            <Label Content="maps and location"
                FontSize="74.667"
                Background="#000079FF"
                Foreground="White"
@@ -98,7 +98,6 @@
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
 
-            <Image Source="Resources/bigmap.png" />
             <FlowDocumentPageViewer Grid.Column="2" Name="welcome_carousel" Foreground="White" FontSize="32" Style="{DynamicResource FlowDocumentPageViewerNoZoom}">
                 <FlowDocumentPageViewer.Resources>
                     <Style x:Key="FlowDocumentPageViewerNoZoom" TargetType="{x:Type FlowDocumentPageViewer}">
@@ -254,13 +253,34 @@
                     </Style>
                 </FlowDocumentPageViewer.Resources>
                 <FlowDocument FontSize="29" Foreground="White" FontFamily="Segoe UI Light" PagePadding="4">
-                        <Section BreakPageBefore="True">
-                            <Paragraph FontSize="42">directions from symonds street to ece reception (green line)</Paragraph>
-                            <Paragraph>When leaving the Engineering main entry, cross the road at the crossing and go left.</Paragraph>
-                            <Paragraph>On the right, there will be stairs and a ramp. Go up the stairs and once at the top there should be a bike enclosure.</Paragraph>
-                            <Paragraph>Take the first left then the first right. Ahead should be the Science Center.</Paragraph>
-                            <Paragraph>Enter the Science Center and walk up the stairs on the left until level two.</Paragraph>
-                        </Section>
+                    <Section BreakPageBefore="True">
+                        <Paragraph FontSize="42">address and contact details</Paragraph>
+                        <Paragraph>
+                            Building 303, Room 240
+                            <LineBreak />
+                            Level 2, Science Centre
+                            <LineBreak />
+                            38 Princes Street
+                            <LineBreak />
+                            Auckland
+                        </Paragraph>
+                        <Paragraph>
+                            Phone: +64 9 373 7599 ext 88158
+                            <LineBreak />
+                            Fax: +64 9 373 7461
+                            <LineBreak />
+                            Email: ece-info@auckland.ac.nz
+                        </Paragraph>
+                        <Paragraph>swipe left or right for detailed instructions</Paragraph>
+                    </Section>
+
+                    <Section BreakPageBefore="True">
+                        <Paragraph FontSize="42">directions from symonds street to ece reception (green line)</Paragraph>
+                        <Paragraph>When leaving the Engineering main entry, cross the road at the crossing and go left.</Paragraph>
+                        <Paragraph>On the right, there will be stairs and a ramp. Go up the stairs and once at the top there should be a bike enclosure.</Paragraph>
+                        <Paragraph>Take the first left then the first right. Ahead should be the Science Center.</Paragraph>
+                        <Paragraph>Enter the Science Center and walk up the stairs on the left until level two.</Paragraph>
+                    </Section>
 
                     <Section BreakPageBefore="True">
                             <Paragraph FontSize="42">directions from princes street to ece reception (blue line)</Paragraph>
@@ -273,6 +293,20 @@
                     </FlowDocument>
             </FlowDocumentPageViewer>
             <Rectangle x:Name="carousel_cover" Grid.Column="2" Margin="4,4,4,51" TouchDown="welcome_carousel_TouchDown" TouchMove="welcome_carousel_TouchMove" TouchUp="welcome_carousel_TouchUp" Fill="Transparent"/>
+            <s:LibraryStack Background="Transparent" MaxWidth="1000" MaxHeight="1000">
+                <s:LibraryBarItem>
+                    <Image Source="Resources/bigmap.png" />
+                </s:LibraryBarItem>
+                <s:LibraryBarItem>
+                    <Image Source="Resources/mapg.png" />
+                </s:LibraryBarItem>
+                <s:LibraryBarItem>
+                    <Image Source="Resources/map1.png" />
+                </s:LibraryBarItem>
+                <s:LibraryBarItem>
+                    <Image Source="Resources/map2.png" />
+                </s:LibraryBarItem>
+            </s:LibraryStack>
         </Grid>
     </Grid>
 </Page>

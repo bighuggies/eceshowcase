@@ -135,9 +135,12 @@
                 VerticalContentAlignment="Bottom"
                 HorizontalContentAlignment="Right"
                 Padding="16"
-                Style="{DynamicResource Tile}"
-                Foreground="{x:Null}"
-                Click="Map_Click">
+                Foreground="Black"
+                Click="Map_Click"
+                FontFamily="Segoe UI Light">
+            <Button.Content>
+                <TextBlock TextAlignment="Right">maps<LineBreak/>and location</TextBlock>
+            </Button.Content>
             <Button.Background>
                 <ImageBrush Stretch="UniformToFill"
                             ImageSource="Resources/map.png" />

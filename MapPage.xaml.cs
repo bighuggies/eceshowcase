@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Maps.MapControl.WPF;
 using System.Windows.Media.Animation;
+using Microsoft.Surface.Presentation.Controls;
 
 namespace eceshowcase
 {

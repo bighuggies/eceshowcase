@@ -132,7 +132,7 @@
                     <ColumnDefinition Width="594*" />
                     <ColumnDefinition Width="1086*" />
                 </Grid.ColumnDefinitions>
-                <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/ug.jpg" Name="ugimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
+                <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/ug.jpg" Name="ugimage1" Stretch="UniformToFill" VerticalAlignment="Stretch" Width="Auto" >
                 </Image>
                 <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="ugtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="29" Padding="16,0">
                     If you are interested in the study and application of software, electricity, electronics and electro-magnetism then we may have the course of study for you. You'll find everything you need here to make a choice about your future.
@@ -147,7 +147,7 @@
                     <ColumnDefinition Width="594*" />
                     <ColumnDefinition Width="1086*" />
                 </Grid.ColumnDefinitions>
-                <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/pg1.jpg" Name="pgimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
+                <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/pg1.jpg" Name="pgimage1" Stretch="UniformToFill" VerticalAlignment="Stretch" Width="Auto" >
                 </Image>
                 <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="pgtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="29" Padding="16,0">
                     <LineBreak/>
@@ -166,7 +166,7 @@
                     <ColumnDefinition Width="594*" />
                     <ColumnDefinition Width="1086*" />
                 </Grid.ColumnDefinitions>
-                <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/horesidence.jpg" Name="accomodationimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
+                <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/horesidence.jpg" Name="accomodationimage1" Stretch="UniformToFill" VerticalAlignment="Stretch" Width="Auto" >
                 </Image>
                 <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="accomodationtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="29" Padding="16,0">
                     The University of Auckland provides quality student accommodation in Auckland City, conveniently located close to our Auckland campuses.
@@ -185,7 +185,7 @@
                     <ColumnDefinition Width="594*" />
                     <ColumnDefinition Width="1086*" />
                 </Grid.ColumnDefinitions>
-                <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/schol.jpg" Name="scholimage1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" >
+                <Image Height="Auto" HorizontalAlignment="Stretch" Source="Resources/schol.jpg" Name="scholimage1" Stretch="UniformToFill" VerticalAlignment="Stretch" Width="Auto" >
                 </Image>
                 <TextBlock Grid.Column="1" Height="Auto" HorizontalAlignment="Stretch" Name="scholtext1" VerticalAlignment="Stretch" Width="Auto" Foreground="White" FontSize="29" Padding="16,0">
                     There are many scholarships on offer for study at the University of Auckland.
