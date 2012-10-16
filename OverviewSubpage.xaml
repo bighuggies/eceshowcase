@@ -82,7 +82,7 @@
 
                     </FlowDocumentScrollViewer>
                 </WrapPanel>
-                    <WrapPanel Name="PictureViewer"></WrapPanel>
+                    <WrapPanel Name="PictureViewer" Margin="32,0,0,0"></WrapPanel>
                 </StackPanel>
             </Grid>
     </Grid>
