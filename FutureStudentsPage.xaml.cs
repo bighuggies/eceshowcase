@@ -20,10 +20,13 @@ namespace eceshowcase
     /// </summary>
     public partial class FutureStudentsPage : Page
     {
+        private Dictionary<TouchDevice, Point> currentTouchDevices = new Dictionary<TouchDevice, Point>();
         private ShowcaseWindow window;
         private Grid nextPage;
         private Grid currentPage;
         private Storyboard showPanel = null;
+        private List<string> navTabs = new List<string>();
+        private string curTab = "undergraduate";
 
         public FutureStudentsPage(ShowcaseWindow w)
         {
@@ -33,6 +36,11 @@ namespace eceshowcase
             undergrad.Visibility = Visibility.Visible;
             UndergraduateButton.BorderBrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
             currentPage = undergrad;
+
+            navTabs.Add("undergrad");
+            navTabs.Add("postgrad");
+            navTabs.Add("accommodation");
+            navTabs.Add("scholarship");
 
             window.hidePage = (window.Resources["SlideAndFadeLeftOut"] as Storyboard).Clone();
             window.showPage = (window.Resources["SlideAndFadeLeftIn"] as Storyboard).Clone();
@@ -60,6 +68,7 @@ namespace eceshowcase
                     hidePanel.Completed += hidePanel_Completed;
                     hidePanel.Begin(child);
                     UndergraduateButton.BorderBrush = whiteBrush;
+                    curTab = "undergrad";
                     break;
 
                 case "postgrad":
@@ -78,6 +87,7 @@ namespace eceshowcase
                     hidePanel.Completed += hidePanel_Completed;
                     hidePanel.Begin(child);
                     PostgraduateButton.BorderBrush = whiteBrush;
+                    curTab = "postgrad";
                     break;
 
                 case "accommodation":
@@ -96,6 +106,7 @@ namespace eceshowcase
                     hidePanel.Completed += hidePanel_Completed;
                     hidePanel.Begin(child);
                     AccommodationButton.BorderBrush = whiteBrush;
+                    curTab = "accommodation";
                     break;
 
                 case "scholarship":
@@ -106,6 +117,7 @@ namespace eceshowcase
                     hidePanel.Completed += hidePanel_Completed;
                     hidePanel.Begin(child);
                     ScholarshipButton.BorderBrush = whiteBrush;
+                    curTab = "scholarship";
                     break;
             }
         }
@@ -155,6 +167,69 @@ namespace eceshowcase
             {
                 SwitchNavTab("scholarship");
             }
+        }
+
+        private void NextNavTab()
+        {
+            int cur = navTabs.IndexOf(curTab);
+            if (cur != navTabs.Count - 1)
+            {
+                int next = cur + 1;
+                curTab = navTabs[next];
+                SwitchNavTab(curTab);
+            }
+        }
+
+        private void PrevNavTab()
+        {
+            int cur = navTabs.IndexOf(curTab);
+            if (cur != 0)
+            {
+                int next = cur - 1;
+                curTab = navTabs[next];
+                SwitchNavTab(curTab);
+            }
+        }
+
+        private void Grid_TouchDown(object sender, TouchEventArgs e)
+        {
+            if (!currentTouchDevices.ContainsKey(e.TouchDevice))
+                currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetTouchPoint(this).Position);
+        }
+
+        private void Grid_TouchMove(object sender, TouchEventArgs e)
+        {
+            if (currentTouchDevices.Count == 1)
+            {
+                int isLeft = 0;
+                int isRight = 0;
+                foreach (KeyValuePair<TouchDevice, Point> td in currentTouchDevices)
+                {
+                    if (td.Key != null && e.TouchDevice.GetTouchPoint(this).Position.X - td.Value.X > 100)
+                        isRight++;
+                    else if (td.Key != null && td.Value.X - e.TouchDevice.GetTouchPoint(this).Position.X > 100)
+                        isLeft++;
+                    else
+                        return;
+                }
+                if (isLeft == 1 && isRight == 0)
+                {
+                    NextNavTab();
+                    currentTouchDevices.Clear();
+                    return;
+                }
+                else if (isRight == 1 && isLeft == 0)
+                {
+                    PrevNavTab();
+                    currentTouchDevices.Clear();
+                    return;
+                }
+            }
+        }
+
+        private void Grid_TouchUp(object sender, TouchEventArgs e)
+        {
+            currentTouchDevices.Remove(e.TouchDevice);
         }
     }
 }
