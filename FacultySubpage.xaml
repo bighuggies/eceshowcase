@@ -4,9 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:my="http://schemas.microsoft.com/surface/2008"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      mc:Ignorable="d" 
-      Width="1680"
-      Height="740"
+      mc:Ignorable="d"
 	  Title="FacultySubpage"
       FontFamily="Segoe UI Light"
       Foreground="White">
@@ -50,7 +48,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="25px" />
+            <ColumnDefinition Width="0" />
             <ColumnDefinition Width="4*"  />
             <ColumnDefinition Width="4*" />
         </Grid.ColumnDefinitions>
@@ -115,8 +113,8 @@
             <TextBlock Grid.Row="1" Grid.Column="0" x:Name="DisplayStaffPosition" FontSize="28px" Foreground="White"/>
             <TextBlock Grid.Row="2" Grid.Column="0" x:Name="ContactDetails" FontSize="28px" Foreground="White"/>
             <TextBlock Grid.Row="3" Grid.Column="0" x:Name="DisplayStaffDetails" FontSize="20px" Foreground="White"/>
-            <Image Grid.Row="2" Grid.RowSpan="2" Height="250"  HorizontalAlignment="Right" Name="DisplayStaffPhoto" Stretch="Fill" VerticalAlignment="Bottom" Width="200" Margin="0,0,100,0"/>
-            <Rectangle Grid.Row="4" Height="200" HorizontalAlignment="Left" Margin="512,26,0,0" Name="DisplayQRCode" Stroke="Transparent" VerticalAlignment="Top" Width="200" />
+            <Image Grid.Row="2" Grid.RowSpan="2" Height="250"  HorizontalAlignment="Right" Name="DisplayStaffPhoto" Stretch="Fill" VerticalAlignment="Bottom" Width="200" Margin="0,0,0,0"/>
+            <Rectangle Grid.Row="4" Height="200" HorizontalAlignment="Right" Margin="512,26,0,0" Name="DisplayQRCode" Stroke="Transparent" VerticalAlignment="Top" Width="200" />
         </Grid>
 
 

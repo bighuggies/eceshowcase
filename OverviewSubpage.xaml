@@ -4,9 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:my="http://schemas.microsoft.com/surface/2008"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      mc:Ignorable="d" 
-      Width="1680"
-      Height="740"
+      mc:Ignorable="d"
       FontFamily="Segoe UI Light"
 	  Title="OverviewSubpage">
     <Page.Resources>
@@ -76,7 +74,6 @@
 
                     </my:SurfaceScrollViewer>
                 </WrapPanel>
-                
             </Grid>
     </Grid>
     </Grid>

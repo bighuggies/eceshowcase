@@ -281,7 +281,7 @@
                         </Section>
                     </FlowDocument>
             </FlowDocumentPageViewer>
-            <Rectangle x:Name="carousel_cover" Grid.Column="2" Margin="4,4,4,51" TouchDown="welcome_carousel_TouchDown" TouchMove="welcome_carousel_TouchMove" TouchUp="welcome_carousel_TouchUp" />
+            <Rectangle x:Name="carousel_cover" Grid.Column="2" Margin="4,4,4,51" TouchDown="welcome_carousel_TouchDown" TouchMove="welcome_carousel_TouchMove" TouchUp="welcome_carousel_TouchUp" Fill="Transparent"/>
         </Grid>
     </Grid>
 </Page>

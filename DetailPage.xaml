@@ -85,7 +85,7 @@
             <RowDefinition Height="120px" />
             <RowDefinition Height="80px" />
             <RowDefinition Height="1*" />
-            <RowDefinition Height="20px" />
+            <RowDefinition Height="120px" />
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="1"
                     Grid.Column="1"

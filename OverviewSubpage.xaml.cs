@@ -181,15 +181,13 @@ namespace eceshowcase
                     break;
 
                 case "CSE":
-                    addImage("8.png", 250, 600);
-                    addImage("10.png", 350, 500);
-                    addImage("11.jpg", 250, 400);
-                    addImage("12.png", 280, 800);
+                    addImage("8.png", 250, 500);
+                    addImage("10.png", 350, 800);
+                    addImage("11.jpg", 250, 300);
+                    addImage("12.png", 280, 500);
                     addImage("seal.png", 300, 400);
                     break;
             }
-            
-            // Uncomment this when the XML file is complete to initialize with General information as default
             
             Paragraph p = new Paragraph(new Run("General"));
             p.FontSize = 36;
@@ -206,15 +204,29 @@ namespace eceshowcase
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            String title = ((SurfaceButton)e.OriginalSource).Content.ToString();
+            title = ((SurfaceButton)e.OriginalSource).Content.ToString();
+
+            if (title != previousTitle)
+            {
+                Storyboard hideInfo = (Storyboard)Resources["FadeOut"];
+                hideInfo.Completed += hideInfo_Completed;
+                hideInfo.Begin(generalView);
+                previousTitle = title;
+            }
+
+        }
+
+        private void hideInfo_Completed(object sender, EventArgs e)
+        {
+            Storyboard showInfo = (Storyboard)Resources["FadeIn"];
 
             Paragraph p = new Paragraph(new Run(title));
             p.FontSize = 36;
-            p.Foreground = new SolidColorBrush( Color.FromRgb(255, 255, 255) );
+            p.Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
 
             Paragraph content = new Paragraph(new Run(infoList[title]));
             content.FontSize = 24;
-            content.Foreground = new SolidColorBrush( Color.FromRgb(255, 255, 255) );
+            content.Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
 
             overviewContent.Blocks.Clear();
             overviewContent.Blocks.Add(p);
@@ -230,13 +242,8 @@ namespace eceshowcase
                 rect.Fill = new ImageBrush(img);
                 pictureViewer.Children.Add(rect);
             }
-        }
 
-        private void hideInfo_Completed(object sender, EventArgs e)
-        {
-            Storyboard showInfo = (Storyboard)Resources["FadeIn"];
-
-            
+            showInfo.Begin(generalView);
         }
     }
 }
