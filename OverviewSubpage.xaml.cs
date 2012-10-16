@@ -207,6 +207,20 @@ namespace eceshowcase
                     addImage("CS_5.png", 200, 250);
                     break;
             }
+
+
+            PictureViewer.Children.Clear();
+
+            foreach (BitmapImage img in pictureList["General"])
+            {
+                Rectangle rect = new Rectangle();
+                rect.Height = img.Height;
+                rect.Width = img.Width;
+                rect.Margin = new Thickness(2);
+
+                rect.Fill = new ImageBrush(img);
+                PictureViewer.Children.Add(rect);
+            }
             
             Paragraph p = new Paragraph(new Run("General"));
             p.FontSize = 36;
@@ -251,15 +265,17 @@ namespace eceshowcase
             overviewContent.Blocks.Add(p);
             overviewContent.Blocks.Add(content);
 
+            PictureViewer.Children.Clear();
+
             foreach (BitmapImage img in pictureList[title])
             {
                 Rectangle rect = new Rectangle();
-                rect.Height = 200;
-                rect.Width = 200;
+                rect.Height = img.Height;
+                rect.Width = img.Width;
                 rect.Margin = new Thickness(2);
 
                 rect.Fill = new ImageBrush(img);
-                pictureViewer.Children.Add(rect);
+                PictureViewer.Children.Add(rect);
             }
 
             showInfo.Begin(generalView);

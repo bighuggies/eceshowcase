@@ -308,6 +308,8 @@
                     </Paragraph>
                     <Paragraph FontSize="28" FontFamily="Segoe UI Light" TextAlignment="Right">
                         Zoran Salcic
+                        <LineBreak/>
+                        Head of Department
                     </Paragraph>
                 </Section>
 
