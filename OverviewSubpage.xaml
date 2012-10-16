@@ -41,25 +41,26 @@
     </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400px" />
             <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="300px" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
         <WrapPanel x:Name="ButtonPanel" ItemHeight="150" ItemWidth="200" Grid.Row="1" />
+
         <my:SurfaceScrollViewer PanningMode="HorizontalOnly" Grid.ColumnSpan="2" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled">
             <StackPanel Orientation="Horizontal" Name="Carousel"></StackPanel>
         </my:SurfaceScrollViewer>
+
         <Grid Name="views"
               Grid.Column="1"
               Grid.Row="1">
-            <Grid Name="generalView">
-                
-                    <WrapPanel Name="pictureViewer" >
-                        <my:SurfaceScrollViewer HorizontalScrollBarVisibility="Disabled"
-                                            VerticalScrollBarVisibility="Hidden">
+            <Grid Name="generalView">    
+                    <WrapPanel Name="pictureViewer">
+                        <FlowDocumentScrollViewer HorizontalScrollBarVisibility="Disabled"
+                                                  VerticalScrollBarVisibility="Hidden">
                         <FlowDocument FontFamily="Segoe UI Light"
                                   FontSize="28px"
                                   Background="Transparent"
@@ -67,12 +68,11 @@
                                   TextAlignment="Left"
                                   Name="overviewContent">
                             <List Name="contentList">
-
                             </List>
                         </FlowDocument>
 
 
-                    </my:SurfaceScrollViewer>
+                    </FlowDocumentScrollViewer>
                 </WrapPanel>
             </Grid>
     </Grid>
