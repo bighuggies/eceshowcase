@@ -167,7 +167,7 @@ namespace eceshowcase
             int cur = navTabs.IndexOf(curTab);
             if (cur != 0)
             {
-                int next = (cur - 1);
+                int next = cur - 1;
                 curTab = navTabs[next];
                 SwitchNavTab(curTab);
             }
