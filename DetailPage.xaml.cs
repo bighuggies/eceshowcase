@@ -175,7 +175,8 @@ namespace eceshowcase
 
         private void Grid_TouchDown(object sender, TouchEventArgs e)
         {
-            currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetTouchPoint(this).Position);
+            if (!currentTouchDevices.ContainsKey(e.TouchDevice))
+                currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetTouchPoint(this).Position);
         }
 
         private void Grid_TouchMove(object sender, TouchEventArgs e)
