@@ -291,7 +291,6 @@
     <Content Include="Resources\twitterqrcode.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\twitter.xcf" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\EEE_6.png">
