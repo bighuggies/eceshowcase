@@ -57,8 +57,16 @@
         <Grid Name="views"
               Grid.Column="1"
               Grid.Row="1">
-            <Grid Name="generalView">    
-                    <WrapPanel Name="pictureViewer">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid Name="generalView"> 
+                <StackPanel>
+                <WrapPanel>
                         <FlowDocumentScrollViewer HorizontalScrollBarVisibility="Disabled"
                                                   VerticalScrollBarVisibility="Hidden">
                         <FlowDocument FontFamily="Segoe UI Light"
@@ -74,6 +82,8 @@
 
                     </FlowDocumentScrollViewer>
                 </WrapPanel>
+                    <WrapPanel Name="PictureViewer"></WrapPanel>
+                </StackPanel>
             </Grid>
     </Grid>
     </Grid>
