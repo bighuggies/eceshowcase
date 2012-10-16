@@ -33,7 +33,7 @@
     	<DataTemplate x:Key="itemTemplate">
     		<StackPanel>
     			<TextBlock FontSize="42px" FontFamily="Segoe UI Light" Text="{Binding XPath=title}" Foreground="White"/>
-    			<TextBlock Text="{Binding XPath=pubDate}" Foreground="White" FontSize="28"/>
+    			<TextBlock Text="{Binding XPath=pubDate}" Foreground="Gray" FontSize="28"/>
     			<TextBlock FontSize="22px" TextWrapping="Wrap" Text="{Binding XPath=description}" Foreground="White" Margin="20,20,20,30"/>
     		</StackPanel>
     	</DataTemplate>
