@@ -182,8 +182,8 @@ namespace eceshowcase
                         ManagerPanel.Children.Add(myButton);
                         break;
 
-                    case "Course Adviser":
-                        AdviserPanel.Children.Add(myButton);
+                    case "Course Advisor":
+                        AdvisorPanel.Children.Add(myButton);
                         break;
 
                     case "Lecturer":

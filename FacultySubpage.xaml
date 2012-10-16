@@ -83,8 +83,8 @@
                 <TextBlock FontSize="42" Grid.Row="4" Margin="0,0,0,8">managers</TextBlock>
                 <WrapPanel x:Name="ManagerPanel" ItemHeight="150" ItemWidth="200" Grid.Row="5" />
 
-                <TextBlock FontSize="42" Grid.Row="6" Margin="0,0,0,8">course advisers</TextBlock>
-                <WrapPanel x:Name="AdviserPanel" ItemHeight="150" ItemWidth="200" Grid.Row="7" />
+                <TextBlock FontSize="42" Grid.Row="6" Margin="0,0,0,8">course advisors</TextBlock>
+                <WrapPanel x:Name="AdvisorPanel" ItemHeight="150" ItemWidth="200" Grid.Row="7" />
 
                 <TextBlock FontSize="42" Grid.Row="8" Margin="0,0,0,8">lecturers</TextBlock>
                 <WrapPanel x:Name="LecturerPanel" ItemHeight="150" ItemWidth="200" Grid.Row="9" />
