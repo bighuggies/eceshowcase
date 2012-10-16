@@ -68,7 +68,7 @@
         </Storyboard>
 
         <Storyboard x:Key="FadeOut">
-            <DoubleAnimation Duration="0:0:.5"
+            <DoubleAnimation Duration="0:0:.4"
                              Storyboard.TargetProperty="Opacity"
                              To="0" />
         </Storyboard>
@@ -163,7 +163,7 @@
                                         </Grid.ColumnDefinitions>
                                         <Border x:Name="PART_FindToolBarHost" Grid.Column="0" HorizontalAlignment="Left" Uid="Border_60" Visibility="Collapsed" VerticalAlignment="Center"/>
                                         <StackPanel Grid.Column="1" HorizontalAlignment="Center" Orientation="Horizontal" Uid="StackPanel_1" VerticalAlignment="Center">
-                                            <RepeatButton Command="NavigationCommands.PreviousPage" Focusable="False" IsEnabled="{TemplateBinding CanGoToPreviousPage}" ToolTip="Previous Page" Uid="RepeatButton_3">
+                                            <RepeatButton Click="previousPage" Focusable="False" IsEnabled="{TemplateBinding CanGoToPreviousPage}" ToolTip="Previous Page" Uid="RepeatButton_3">
                                                 <RepeatButton.Style>
                                                     <Style TargetType="{x:Type RepeatButton}">
                                                         <Setter Property="Padding" Value="5"/>
@@ -226,7 +226,7 @@
         										</InlineUIContainer><Run Text=" "/><Run Text=" of "/><Run Text=" "/><InlineUIContainer>
         											<TextBlock Text="{Binding PageCount, RelativeSource={RelativeSource TemplatedParent}}" Uid="TextBlock_7"/>
         										</InlineUIContainer><Run Text=" "/><Run Text=" "/></TextBlock>
-                                            <RepeatButton Command="NavigationCommands.NextPage" Focusable="False" IsEnabled="{TemplateBinding CanGoToNextPage}" ToolTip="Next Page" Uid="RepeatButton_4">
+                                            <RepeatButton Click="nextPage" Focusable="False" IsEnabled="{TemplateBinding CanGoToNextPage}" ToolTip="Next Page" Uid="RepeatButton_4">
                                                 <RepeatButton.Style>
                                                     <Style TargetType="{x:Type RepeatButton}">
                                                         <Setter Property="Padding" Value="5"/>

@@ -21,6 +21,7 @@ namespace eceshowcase
     public partial class FrontPage : Page
     {
         private Dictionary<TouchDevice, Point> currentTouchDevices = new Dictionary<TouchDevice, Point>();
+        private string direction;
 
         private ShowcaseWindow window;
 
@@ -65,6 +66,24 @@ namespace eceshowcase
             window.ShowPage(new FutureStudentsPage(window));
         }
 
+        private void previousPage(object sender, RoutedEventArgs e)
+        {
+            direction = "previous";
+
+            Storyboard hideInfo = (Storyboard)Resources["FadeOut"];
+            hideInfo.Completed += hideInfo_Completed;
+            hideInfo.Begin(welcome_carousel);
+        }
+
+        private void nextPage(object sender, RoutedEventArgs e)
+        {
+            direction = "next";
+
+            Storyboard hideInfo = (Storyboard)Resources["FadeOut"];
+            hideInfo.Completed += hideInfo_Completed;
+            hideInfo.Begin(welcome_carousel);
+        }
+
         private void welcome_carousel_TouchMove(object sender, TouchEventArgs e)
         {
             if (currentTouchDevices.Count == 1)
@@ -81,15 +100,19 @@ namespace eceshowcase
                         return;
                 }
 
+                Storyboard hideInfo = (Storyboard)Resources["FadeOut"];
+                hideInfo.Completed += hideInfo_Completed;
+                hideInfo.Begin(welcome_carousel);
+
                 if (isLeft == 1 && isRight == 0)
                 {
                     if (!welcome_carousel.CanGoToNextPage)
                     {
-                        welcome_carousel.FirstPage();
+                        direction = "first";
                     }
                     else
                     {
-                        welcome_carousel.NextPage();
+                        direction = "next";
                     }
                     currentTouchDevices.Clear();
                     return;
@@ -98,15 +121,47 @@ namespace eceshowcase
                 {
                     if (!welcome_carousel.CanGoToPreviousPage)
                     {
-                        welcome_carousel.LastPage();
+                        direction = "last";
                     }
                     else
                     {
-                        welcome_carousel.PreviousPage();
+                        direction = "previous";
                     }
                     currentTouchDevices.Clear();
                     return;
                 }
+            }
+        }
+
+        private void hideInfo_Completed(object sender, EventArgs e)
+        {
+            switch (direction)
+            {
+                case "next":
+                    welcome_carousel.NextPage();
+                    direction = "";
+                    break;
+
+                case "previous":
+                    welcome_carousel.PreviousPage();
+                    direction = "";
+                    break;
+
+                case "first":
+                    welcome_carousel.FirstPage();
+                    direction = "";
+                    break;
+
+                case "last":
+                    welcome_carousel.LastPage();
+                    direction = "";
+                    break;
+            }
+
+            if (direction == "")
+            {
+                Storyboard showInfo = (Storyboard)Resources["FadeIn"];
+                showInfo.Begin(welcome_carousel);
             }
         }
 
