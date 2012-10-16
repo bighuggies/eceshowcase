@@ -74,7 +74,7 @@
                              To="0" />
         </Storyboard>
     </Page.Resources>
-    <Grid>
+    <Grid TouchDown="Grid_TouchDown" TouchMove="Grid_TouchMove" TouchUp="Grid_TouchUp">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="60px" />
             <ColumnDefinition Width="1*" />
