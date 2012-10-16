@@ -276,15 +276,6 @@
     <Content Include="Resources\gplusqrcode.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Resources\SE_clubhub.png" />
-    <Resource Include="Resources\SE_datacom.png" />
-    <Resource Include="Resources\SE_genesis.png" />
-    <Resource Include="Resources\SE_google.png" />
-    <Resource Include="Resources\SE_koordinates.png" />
-    <Resource Include="Resources\SE_microsoft.png" />
-    <Resource Include="Resources\SE_orion.png" />
-    <Resource Include="Resources\SE_slingshot.png" />
-    <Resource Include="Resources\SE_vero.png" />
     <Content Include="Resources\twitter.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -294,7 +285,6 @@
     <None Include="Resources\twitter.xcf" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
     <Content Include="Resources\EEE_6.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
