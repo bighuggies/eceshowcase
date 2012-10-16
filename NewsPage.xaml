@@ -11,7 +11,8 @@
       FontFamily="Segoe UI Light"
 	  Title="NewsPage">
     <Page.Resources>
-    	<XmlDataProvider x:Key="ECERSSFeed" Source="http://www.engineering.auckland.ac.nz/uoa/home/template/news_feed.rss" d:IsDataSource="True"/>
+    	<XmlDataProvider x:Key="LocalECERSSFeed" Source="Resources\ecenews.rss" d:IsDataSource="True"/>
+    	<XmlDataProvider x:Key="ECERSSFeed" Source="http://web.ece.auckland.ac.nz/uoa/home/template/news_feed.rss" d:IsDataSource="True"/>
     	<Style x:Key="Tile"
     		TargetType="{x:Type Button}">
     		<Setter Property="Template">
@@ -38,7 +39,7 @@
     		</StackPanel>
     	</DataTemplate>
     </Page.Resources>
-    <Grid DataContext="{Binding Source={StaticResource ECERSSFeed}}">
+    <Grid DataContext="{Binding Source={StaticResource LocalECERSSFeed}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="60px" />
             <ColumnDefinition Width="3*" />

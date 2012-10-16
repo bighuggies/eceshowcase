@@ -166,6 +166,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Resource Include="Resources\ecenews.rss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\bigmap.png" />
     <Content Include="Resources\CS_0.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
