@@ -154,38 +154,57 @@ namespace eceshowcase
             switch (dp.Identifier)
             {
                 case "SE":
-                    addImage("SE_0.png", 290, 230);
-                    addImage("SE_2.png", 250, 230);
-                    addImage("SE_1.png", 260, 240);
-                    addImage("SE_3.png", 250, 290);
+                    addImage("SE_0.png", 280, 210);
+                    addImage("SE_2.png", 210, 250);
+                    addImage("SE_5.jpg", 250, 200);
+                    addImage("SE_3.png", 220, 270);
+                    addImage("SE_1.png", 260, 230);
+                    addImage("SE_6.png", 200, 160);
                     addImage("SE_4.jpg", 270, 190);
-                    addImage("SE_7.png", 250, 600);
-                    addImage("SE_5.jpg", 250, 170);
-                    addImage("SE_6.png", 200, 150);
-                    addImage("SE_8.jpg", 280, 400);
+                    addImage("SE_8.jpg", 240, 350);
+                    // repeated if time replace with new
+                    addImage("SE_0.png", 280, 210);
+                    addImage("SE_2.png", 210, 250);
+                    addImage("SE_5.jpg", 250, 200);
+                    addImage("SE_3.png", 220, 270);
+                    addImage("SE_1.png", 260, 230);
+                    addImage("SE_6.png", 200, 160);
+                    addImage("SE_4.jpg", 270, 190);
+                    addImage("SE_8.jpg", 240, 350);
                     break;
 
                 case "EEE":
                     addImage("EEE_1.png", 250, 350);
-                    addImage("EEE_2.png", 300, 300);
+                    addImage("EEE_2.png", 280, 280);
                     addImage("EEE_3.jpg", 250, 300);
-                    addImage("EEE_6.png", 300, 240);
+                    addImage("EEE_6.png", 300, 250);
                     addImage("EEE_4.jpg", 200, 250);
                     addImage("EEE_5.png", 270, 200);
                     // at the moment repeated, need more pictures
                     addImage("EEE_1.png", 250, 350);
-                    addImage("EEE_2.png", 300, 300);
+                    addImage("EEE_2.png", 280, 280);
                     addImage("EEE_3.jpg", 250, 300);
+                    addImage("EEE_6.png", 300, 250);
                     addImage("EEE_4.jpg", 200, 250);
                     addImage("EEE_5.png", 270, 200);
                     break;
 
                 case "CSE":
-                    addImage("8.png", 250, 500);
-                    addImage("10.png", 350, 800);
-                    addImage("11.jpg", 250, 300);
-                    addImage("12.png", 280, 500);
-                    addImage("seal.png", 300, 400);
+                    addImage("CS_0.png", 160, 300);
+                    addImage("CS_2.png", 250, 200);
+                    addImage("CS_1.png", 210, 250);
+                    addImage("CS_6.png", 240, 190);
+                    addImage("CS_3.png", 220, 230);
+                    addImage("CS_4.png", 260, 290);
+                    addImage("CS_5.png", 200, 250);
+                    // repeat
+                    addImage("CS_0.png", 160, 300);
+                    addImage("CS_2.png", 250, 200);
+                    addImage("CS_1.png", 210, 250);
+                    addImage("CS_6.png", 240, 190);
+                    addImage("CS_3.png", 220, 230);
+                    addImage("CS_4.png", 260, 290);
+                    addImage("CS_5.png", 200, 250);
                     break;
             }
             
