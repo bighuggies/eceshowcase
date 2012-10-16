@@ -96,11 +96,11 @@
                 <ColumnDefinition Width="*"  />
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Row="0" Grid.Column="0" x:Name="DisplayCourseCode" FontSize="42px" Foreground="White">
-                select a course from the left
+            <TextBlock Grid.Row="0" Grid.Column="0" x:Name="DisplayCourseCode" FontSize="56" Foreground="White">
+				    select a course from the left
             </TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="0" x:Name="DisplayCourseName" FontSize="28px" Foreground="White"/>
-            <TextBlock Grid.Row="2" Grid.Column="0" x:Name="DisplayCourseInfo" FontSize="20px" Foreground="White"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" x:Name="DisplayCourseName" FontSize="36" Foreground="White"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" x:Name="DisplayCourseInfo" FontSize="26" Foreground="White"/>
         </Grid>
 
 

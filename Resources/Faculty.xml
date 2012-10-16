@@ -225,6 +225,11 @@
     <topic name="General" images="" content="The programme gives excellent insight into the inner workings of computers and involves a diverse set of engineering design skills that are essential in areas ranging from bioengineering to software as well as complex controllers for automotive, military, consumer, medical, communications and electrical systems."></topic>
     <topic name="Topics" images="" content="The main topics provided in Computer Systems Engineering include: Knowledge in computer systems, practical skills in hardware and software design, problem solving skills essential for design and building systems, project work, verbal and written communication, and exposure to a variety of existing and leading edge electronic and electronic engineering including computer and software."></topic>
     <topic name="Companies" content="Where a degree in computer systems engineering can take you:" images="Logo_CSE_AirNZ.png;Logo_CSE_Aviat.png;Logo_CSE_fnphealthcare.png;Logo_CSE_lion_nathan.png;Logo_CSE_compac.png;Logo_CSE_cubic.png;Logo_CSE_ibm.png;Logo_CSE_rakon.png" />
+    <topic name="Course Adviser" images="" content="Partha Roop
+Senior Lecturer / CSE Programme Director
+
+Phone: +64 9 373 7599 ext 85583
+Email: p.roop@auckland.ac.nz" />
   </program>
 
 
@@ -281,6 +286,11 @@
     <topic name="General" content="Electrical and Electronic Engineering is an exciting and dynamic field. Electrical engineers are responsible for the generation, transfer and conversion of electrical power, while electronic engineers are concerned with the transfer of information using radio waves, the design of electronic circuits, the design of computer systems and the development of control systems such as aircraft autopilots." images=""></topic>
     <topic images="" content="The main topics provided in Electrical Engineering include: Power systems, power electronics, communications, radio systems, digital signal processing, computer systems, electrical materials and electronic devices, circuit theory, software design, mathematical models, engineering electromagnetics, and computer systems." name="Topics"></topic>
     <topic name="Companies" images="EE_beca.png;EE_Fonterra.png;EE_fp.png;EE_kiwiRAIL.png;EE_Protech.png;EE_Telecom.png;EE_vector.png" content="Where a degree in electrical and electronics engineering can take you:" />
+    <topic name="Course Adviser" images="" content="Stevan Berber
+Senior Lecturer / EEE Programme Director
+
+Phone: +64 9 373 7599 ext 88966
+Email: s.berber@auckland.ac.nz" />
   </program>
 
 
@@ -322,5 +332,10 @@
 Critical thinking, communication with colleagues and clients, and awareness of the role the profession plays in society are strongly emphasised. Students receive significant exposure to a variety of software processes, project management techniques, quality assurance techniques and software tools."></topic>
     <topic name="Topics" images="" content="The main topics provided in Software Engineering include: Software processes, project management techniques, quality asssurance techniques and software tools and various programming languages. "></topic>
     <topic name="Companies" images="SE_google.png;SE_koordinates.png;SE_clubhub.png;SE_datacom.png;SE_genesis.png;SE_microsoft.png;SE_orion.png;SE_slingshot.png;SE_vero.png" content="Where a degree in software engineering can take you:" />
+    <topic name="Course Adviser" images="" content="Catherine Watson
+Senior Lecturer / CSE Programme Director
+
+Phone: +64 9 373 7599 ext 85979
+Email: c.watson@auckland.ac.nz" />
   </program>
 </programs>
