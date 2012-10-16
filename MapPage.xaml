@@ -98,30 +98,7 @@
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
 
-            <bing:Map Mode="Road"
-                  Name="bingMap"
-                  HorizontalAlignment="Stretch"
-                  VerticalAlignment="Stretch"
-                  AnimationLevel="Full"
-                  Center="-36.852512,174.767838"
-                  ZoomLevel="18"
-                  CredentialsProvider="AgLyknzJBYKAb9nHA75q_EYfQRqHsNW79H87o9itaJvE_BYCpHcVfkttCVJuk6nr"
-                  Grid.Column="0">
-                <bing:Pushpin Location="-36.852512,174.767838" />
-                <bing:MapPolyline Stroke="Green"
-                                  StrokeThickness="5">
-                    <bing:MapPolyline.Locations>
-                        <bing:LocationCollection>
-                            <bing:Location Latitude="-36.85302345768201" Longitude="174.7691952456085" />
-                            <bing:Location Latitude="-36.852939754234" Longitude="174.76911209712904" />
-                            <bing:Location Latitude="-36.852710105841865" Longitude="174.76875804553907" />
-                            <bing:Location Latitude="-36.8528624894314" Longitude="174.76860515962522" />
-                            <bing:Location Latitude="-36.85275732332461" Longitude="174.76848714242857" />
-                        </bing:LocationCollection>
-                    </bing:MapPolyline.Locations>
-                </bing:MapPolyline>
-            </bing:Map>
-
+            <Image Source="Resources/bigmap.png" />
             <FlowDocumentPageViewer Grid.Column="2" Name="welcome_carousel" Foreground="White" FontSize="32" Style="{DynamicResource FlowDocumentPageViewerNoZoom}">
                 <FlowDocumentPageViewer.Resources>
                     <Style x:Key="FlowDocumentPageViewerNoZoom" TargetType="{x:Type FlowDocumentPageViewer}">
